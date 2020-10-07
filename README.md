@@ -29,7 +29,7 @@ None).
 
 Pip can be customized in setup.py, so no change. 
 
-To generate environment.yaml, run
+To generate environment.yaml, add src to PYTHONPATH and run
 ```python dep_setup.py conda```
 
 To setup local dev environment, run 
