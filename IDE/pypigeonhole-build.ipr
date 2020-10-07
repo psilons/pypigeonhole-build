@@ -8,6 +8,12 @@
       <jdbc-url>jdbc:sqlite:D:\00dev\python\projects\pypigeonhole-build\.coverage</jdbc-url>
     </data-source>
   </component>
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>

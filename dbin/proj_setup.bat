@@ -8,10 +8,10 @@ IF NOT EXIST dep_setup.py (
     EXIT /B 1
 )
 
-python dep_setup.py
+python dep_setup.py conda
 REM environment.yaml should be created for conda installation
 
-FOR /F %%I IN ('python dep_setup.py env') DO SET new_env=%%I
+FOR /F %%I IN ('python dep_setup.py conda_env') DO SET new_env=%%I
 echo new env: %new_env%
 
 REM we have to CALL in the front, otherwise conda stop the whole batch.

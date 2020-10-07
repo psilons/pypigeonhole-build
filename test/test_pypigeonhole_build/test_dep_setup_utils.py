@@ -56,19 +56,36 @@ class DependencyTest(unittest.TestCase):
         CONDA.env = 'py385_bld'  # change to your environment name
         CONDA.channels = ['defaults']  # update channels, if needed.
 
-        conda_dep_utils.gen_conda_yaml(self.dep_libs, '/tmp/environment.yaml')
+        output_file = '/tmp/environment.yaml'
+        conda_dep_utils.gen_conda_yaml(self.dep_libs, output_file)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
         env_file = os.path.join(dir_path, 'environment.yaml')
 
-        # find diff
+        diff = self._comp_cont(output_file, env_file)
+        print(diff)
+        self.assertTrue(len(diff) == 0)
+
+    def test_pip_req_txt(self):
+        output_file = '/tmp/requirements.txt'
+        pip_dep_utils.gen_req_txt(self.dep_libs, output_file)
+
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        env_file = os.path.join(dir_path, 'requirements.txt')
+
+        diff = self._comp_cont(output_file, env_file)
+        print(diff)
+        self.assertTrue(len(diff) == 0)
+
+    @staticmethod
+    def _comp_cont(file1, file2):
         diff = []
-        with open('/tmp/environment.yaml', 'r') as f1:
+        with open(file1, 'r') as f1:
             lines1 = f1.readlines()
-            with open(env_file, 'r') as f2:
+            with open(file2, 'r') as f2:
                 lines2 = f2.readlines()
                 for i, j in zip(lines1, lines2):
                     if i.strip() != j.strip():
                         diff.append((i, j))
-        print(diff)
-        self.assertTrue(len(diff) == 0)
+
+        return diff

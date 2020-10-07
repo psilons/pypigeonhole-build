@@ -1,3 +1,4 @@
+import sys
 from dataclasses import dataclass, field
 
 INSTALL = 'INSTALL'
@@ -44,14 +45,24 @@ def _find_dep_for_scope(libs, scope):
             else:
                 ret.append(f'{lib.name}{lib.version}')
 
-    print(f'{scope} dependencies: {ret}')
+    print(f'{scope} dependencies: {ret}', file=sys.stderr)
     return ret
 
 
 def get_python_requires(libs):
     for lib in libs:
         if lib.name.lower() == 'python':
-            print('use python version: ', lib.version)
+            print('use python version: ' + lib.version, file=sys.stderr)
             return lib.version
 
     return None
+
+
+def gen_req_txt(libs, target_file):
+    with open(target_file, 'w') as f:
+        for lib in libs:
+            if lib.name.lower() != 'python':
+                if lib.version:
+                    f.write(f'{lib.name}=={lib.version}\n')
+                else:
+                    f.write(f'{lib.name}\n')

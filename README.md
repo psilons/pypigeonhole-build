@@ -37,4 +37,9 @@ To setup local dev environment, run
 This will create a new conda environment with the name specified in CONDA.env.
 The old environment will be deleted.
 
+There is a *nix port on windows,
+```conda install conda-build unxutils```
+We could use the tee command to save command output to logs.
+
+
 For more info, see dep_setup.py and unit tests.

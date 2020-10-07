@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 
 # If this is needed during dev by others, cd this folder and run pip install -e .
 setup(name='pypigeonhole-build',
-      version='0.1.3',  # major.minor.patch
+      version='0.1.4',  # major.minor.patch
       description='Python build & packaging tool',
       url='https://github.com/psilons/pypigeonhole-build',
       long_description=README,

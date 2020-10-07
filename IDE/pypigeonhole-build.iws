@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../bbin/upload.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bbin/upload_test.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../coverage.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/cleanup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/cleanup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/cleanup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/cleanup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/proj_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/proj_setup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/proj_setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/proj_setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dep_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../environment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_dep_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_dep_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +33,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="JupyterTrust" id="0f2245f7-2e08-4298-a8a0-4eee9328be5b" />
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -24,6 +44,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1iXe9JXjLHmuWOZ4WQRGC9kqSQt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -32,19 +53,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../src/pypigeonhole_build" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bbin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19703704" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\test\test_pypigeonhole_build" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build\dep" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_dep_setup_utils.py">
+  <component name="RunManager" selected="Python tests.Unittests for test_dep_setup_utils.DependencyTest.test_pip_req_txt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -92,21 +122,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_dep_setup_utils.DependencyTest.test_conda_env_not_set" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="pypigeonhole-build" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_dep_setup_utils.DependencyTest.test_conda_env_not_set&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for test_dep_setup_utils.DependencyTest.test_pip" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="pypigeonhole-build" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,6 +134,21 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_dep_setup_utils.DependencyTest.test_pip&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_dep_setup_utils.DependencyTest.test_pip_req_txt" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="pypigeonhole-build" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_dep_setup_utils.DependencyTest.test_pip_req_txt&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -154,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_dep_setup_utils.DependencyTest.test_pip_req_txt" />
         <item itemvalue="Python tests.Unittests in test_dep_setup_utils.py" />
         <item itemvalue="Python tests.Unittests for test_dep_setup_utils.DependencyTest.test_conda" />
         <item itemvalue="Python tests.Unittests in test_pypigeonhole_build" />
         <item itemvalue="Python tests.Unittests for test_dep_setup_utils.DependencyTest.test_pip" />
-        <item itemvalue="Python tests.Unittests for test_dep_setup_utils.DependencyTest.test_conda_env_not_set" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +200,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602025271747</updated>
-      <workItem from="1602025272950" duration="29224000" />
+      <workItem from="1602025272950" duration="29369000" />
+      <workItem from="1602058211390" duration="1574000" />
+      <workItem from="1602084940354" duration="3619000" />
+      <workItem from="1602098916498" duration="6043000" />
     </task>
     <servers />
   </component>
@@ -178,10 +211,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="130" key="#Project_Structure" timestamp="1602041164980">
+    <state x="542" y="130" key="#Project_Structure" timestamp="1602058229931">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="542" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602041164980" />
+    <state x="542" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602058229931" />
     <state x="516" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602032391371">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -198,43 +231,48 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="1164" y="202" width="490" height="583" key="#xdebugger.evaluate/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602035615188" />
-    <state width="1803" height="342" key="GridCell.Tab.0.bottom" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.0.bottom" timestamp="1602106705580">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
-    <state width="1803" height="342" key="GridCell.Tab.0.center" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705580" />
+    <state width="1551" height="129" key="GridCell.Tab.0.center" timestamp="1602106705579">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
-    <state width="1803" height="342" key="GridCell.Tab.0.left" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705579" />
+    <state width="1551" height="129" key="GridCell.Tab.0.left" timestamp="1602106705579">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
-    <state width="1803" height="342" key="GridCell.Tab.0.right" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705579" />
+    <state width="1551" height="129" key="GridCell.Tab.0.right" timestamp="1602106705579">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
-    <state width="1803" height="342" key="GridCell.Tab.1.bottom" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705579" />
+    <state width="1551" height="129" key="GridCell.Tab.1.bottom" timestamp="1602106705580">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.1.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
-    <state width="1803" height="342" key="GridCell.Tab.1.center" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.1.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705580" />
+    <state width="1551" height="129" key="GridCell.Tab.1.center" timestamp="1602106705580">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.1.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
-    <state width="1803" height="342" key="GridCell.Tab.1.left" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.1.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705580" />
+    <state width="1551" height="129" key="GridCell.Tab.1.left" timestamp="1602106705580">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.1.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
-    <state width="1803" height="342" key="GridCell.Tab.1.right" timestamp="1602057108903">
+    <state width="1551" height="129" key="GridCell.Tab.1.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705580" />
+    <state width="1551" height="129" key="GridCell.Tab.1.right" timestamp="1602106705580">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1803" height="342" key="GridCell.Tab.1.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602057108903" />
+    <state width="1551" height="129" key="GridCell.Tab.1.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602106705580" />
+    <state x="782" y="307" width="585" height="534" key="find.popup" timestamp="1602104051878">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="782" y="307" width="585" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602104051878" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_pip.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_pip Coverage Results" MODIFIED="1602039863161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_dep_setup_utils_py.coverage" NAME="Unittests in test_dep_setup_utils.py Coverage Results" MODIFIED="1602057108887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_conda.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_conda Coverage Results" MODIFIED="1602057059845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_pip_req_txt.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_pip_req_txt Coverage Results" MODIFIED="1602106705562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_conda_env_not_set.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_conda_env_not_set Coverage Results" MODIFIED="1602039405410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest Coverage Results" MODIFIED="1602031818399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_pypigeonhole_build.coverage" NAME="Unittests in test_pypigeonhole_build Coverage Results" MODIFIED="1602039868035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />

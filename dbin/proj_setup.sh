@@ -15,8 +15,9 @@ if [ ! -f "dep_setup.py"]; then
     echo "Please create dep_setup.py in project root first!"
     exit 1
 fi
+python dep_setup.py conda
 
-export new_env=$(python dep_setup.py)
+export new_env=$(python dep_setup.py conda_env)
 echo "new_env: $new_env"
 
 conda env create -f environment.yaml

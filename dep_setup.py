@@ -10,9 +10,11 @@ CONDA.env = 'py385_pybuild'  # change to your environment name
 
 dependent_libs = [
     Dependency(name='python', version='>=3.5', scope=INSTALL, installer=CONDA),
+    Dependency(name='pip', installer=CONDA),
     Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),
     Dependency(name='pipdeptree', scope=DEV, installer=PIP),
     Dependency(name='coverage-badge'),  # default to DEV and PIP automatically.
+    Dependency(name='twine'),  # uploading to pypi
 ]
 
 install_required = pip_dep_utils.get_install_required(dependent_libs)
@@ -22,7 +24,14 @@ test_required = pip_dep_utils.get_test_required(dependent_libs)
 python_requires = pip_dep_utils.get_python_requires(dependent_libs)
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 2:  # This is to print env name to shell so conda activates this env.
-        print(CONDA.env)
-    else:  # This generates environment.yaml for conda to create new environment
+    if len(sys.argv) < 2:
+        raise ValueError('need to pass in parameters: pip, conda, conda_env')
+
+    if sys.argv[1] == 'pip':
+        pip_dep_utils.gen_req_txt(dependent_libs, 'test/test_pypigeonhole_build/requirements.txt')
+    elif sys.argv[1] == 'conda':
         conda_dep_utils.gen_conda_yaml(dependent_libs, './environment.yaml')
+    elif sys.argv[1] == 'conda_env':
+        print(CONDA.env)
+    else:
+        raise ValueError(f'unkown parameter {sys.argv[1]}')

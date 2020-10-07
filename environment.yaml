@@ -2,7 +2,9 @@ name: py385_pybuild
 
 dependencies:
     - python>=3.5
+    - pip
     - coverage==5.3
     - pip:
         - pipdeptree
         - coverage-badge
+        - twine
