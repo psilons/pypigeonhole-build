@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../bbin/upload.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bbin/upload_test.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coverage.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../coverage.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/cleanup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/cleanup.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/cleanup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/cleanup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/proj_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/proj_setup.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/proj_setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/proj_setup.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dep_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_dep_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_dep_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +187,7 @@
       <workItem from="1602025272950" duration="29369000" />
       <workItem from="1602058211390" duration="1574000" />
       <workItem from="1602084940354" duration="3619000" />
-      <workItem from="1602098916498" duration="6043000" />
+      <workItem from="1602098916498" duration="7143000" />
     </task>
     <servers />
   </component>
