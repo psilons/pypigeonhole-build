@@ -3,6 +3,7 @@ SET BatchDir=%~dp0
 SET ProjDir= %BatchDir%..
 
 call %BatchDir%cleanup.bat
+if %errorlevel% neq 0 EXIT /B %errorlevel%
 
 cd %ProjDir%
 REM Other options are bdist, bdist_egg

@@ -13,7 +13,7 @@ class DependencyTest(unittest.TestCase):
     def setUp(self):
         self.dep_libs = [
             # Always use CONDA for python installation
-            Dependency(name='python', version='==3.8.5', scope=INSTALL, installer=CONDA),
+            Dependency(name='python', version='>=3.5', scope=INSTALL, installer=CONDA),
 
             # scope default to DEV
             Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),
@@ -42,7 +42,7 @@ class DependencyTest(unittest.TestCase):
 
         python_requires = pip_dep_utils.get_python_requires(self.dep_libs)
         print(python_requires)
-        self.assertTrue(python_requires == '==3.8.5')
+        self.assertTrue(python_requires == '>=3.5')
 
     def test_env(self):
         CONDA.env = None

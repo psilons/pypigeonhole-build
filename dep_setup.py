@@ -1,16 +1,15 @@
+import sys
+
 import pypigeonhole_build.pip_dep_utils as pip_dep_utils
 from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
 
 import pypigeonhole_build.conda_dep_utils as conda_dep_utils
 from pypigeonhole_build.conda_dep_utils import CONDA
 
-import sys
-
 CONDA.env = 'py385_pybuild'  # change to your environment name
-CONDA.channels = ['defaults']  # update channels, if needed.
 
 dependent_libs = [
-    Dependency(name='python', version='==3.5', scope=INSTALL, installer=CONDA),
+    Dependency(name='python', version='>=3.5', scope=INSTALL, installer=CONDA),
     Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),
     Dependency(name='pipdeptree', scope=DEV, installer=PIP),
     Dependency(name='coverage-badge'),  # default to DEV and PIP automatically.

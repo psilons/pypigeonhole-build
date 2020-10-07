@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 
-INSTALL = 'install'
-DEV = 'dev'
+INSTALL = 'INSTALL'
+DEV = 'DEV'
 
 
 @dataclass
@@ -11,7 +11,7 @@ class Installer:
     channels: list = field(default_factory=list)
 
 
-PIP = Installer(name='pip')
+PIP = Installer(name='PIP')
 
 
 @dataclass
@@ -44,12 +44,14 @@ def _find_dep_for_scope(libs, scope):
             else:
                 ret.append(f'{lib.name}{lib.version}')
 
+    print(f'{scope} dependencies: {ret}')
     return ret
 
 
 def get_python_requires(libs):
     for lib in libs:
         if lib.name.lower() == 'python':
+            print('use python version: ', lib.version)
             return lib.version
 
     return None

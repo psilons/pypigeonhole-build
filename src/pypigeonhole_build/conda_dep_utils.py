@@ -1,6 +1,6 @@
 from pypigeonhole_build.pip_dep_utils import Installer, PIP
 
-CONDA = Installer(name='conda')
+CONDA = Installer(name='CONDA')
 
 
 def gen_conda_yaml(libs, target_file):  # output all libs, install or dev.
