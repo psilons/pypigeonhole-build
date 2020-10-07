@@ -1,0 +1,12 @@
+name: py385_bld
+
+channels:
+    - defaults
+
+dependencies:
+    - python==3.8.5
+    - coverage==5.3
+    - pip:
+        - pipdeptree==1.0.0
+        - coverage-badge
+        - github+https://github.com/willmcgugan/rich.git
