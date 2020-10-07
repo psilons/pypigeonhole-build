@@ -28,7 +28,18 @@ jobs:
     - name: Unit Tests
       id: unit-tests
       run: |
-        dbin/unittest.sh
+        pwd
+        ls -ltr
+        conda info
+        conda list
+        which conda
+        which python
+
+        conda run coverage run --omit test/* -m unittest discover -s test
+        conda run coverage report --omit test/*
+
+        rm -rf coverage.svg
+        conda run coverage-badge -o coverage.svg
     # This is a temporary solution to save badge
     - name: Commit badge
       run: |
