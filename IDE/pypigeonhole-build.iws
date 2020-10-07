@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/python-package-conda.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/python-package-conda.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602025271747</updated>
-      <workItem from="1602025272950" duration="18146000" />
+      <workItem from="1602025272950" duration="19186000" />
     </task>
     <servers />
   </component>

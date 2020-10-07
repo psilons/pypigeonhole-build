@@ -29,4 +29,12 @@ None).
 
 Pip can be customized in setup.py, so no change. 
 
+To generate environment.yaml, run
+```python dep_setup.py conda```
+
+To setup local dev environment, run 
+```dbin\proj_setup```
+This will create a new conda environment with the name specified in CONDA.env.
+The old environment will be deleted.
+
 For more info, see dep_setup.py and unit tests.
