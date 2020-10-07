@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../LICENSE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dep_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602025271747</updated>
-      <workItem from="1602025272950" duration="19186000" />
+      <workItem from="1602025272950" duration="22743000" />
     </task>
     <servers />
   </component>
@@ -187,6 +189,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="516" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602032391371" />
+    <state x="825" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602045849872">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="825" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602045849872" />
     <state x="792" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602032553865">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

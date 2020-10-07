@@ -10,7 +10,7 @@ CONDA.env = 'py385_pybuild'  # change to your environment name
 CONDA.channels = ['defaults']  # update channels, if needed.
 
 dependent_libs = [
-    Dependency(name='python', version='==3.8.5', scope=INSTALL, installer=CONDA),
+    Dependency(name='python', version='==3.5', scope=INSTALL, installer=CONDA),
     Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),
     Dependency(name='pipdeptree', scope=DEV, installer=PIP),
     Dependency(name='coverage-badge'),  # default to DEV and PIP automatically.
