@@ -6,7 +6,7 @@ from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
 import pypigeonhole_build.conda_dep_utils as conda_dep_utils
 from pypigeonhole_build.conda_dep_utils import CONDA
 
-app_version = '0.1.6'  # major.minor.patch, keep this line format, release uses it.
+app_version = '0.1.7'  # major.minor.patch, keep this line format, release uses it.
 
 CONDA.env = 'py385_pybuild'  # change to your environment name
 

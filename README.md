@@ -12,7 +12,8 @@ needed info.
 We also added scope to indicate whether dependencies are needed during runtime.
 
 #### Usage
-** shell scripts are not fully tested! **
+** *nix shell scripts are not fully tested! **
+
 Add dependencies in the dep_setup.py. Each dependency has the following fields:
 - name: required. If name == python, the "python_requires" field in the 
   setup.py will be touched.
