@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/dep_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/file_edit_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/file_edit_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/release.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +214,7 @@
       <workItem from="1602058211390" duration="1574000" />
       <workItem from="1602084940354" duration="3619000" />
       <workItem from="1602098916498" duration="20537000" />
-      <workItem from="1602176990118" duration="12193000" />
+      <workItem from="1602176990118" duration="12419000" />
     </task>
     <servers />
   </component>

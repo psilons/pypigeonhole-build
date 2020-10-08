@@ -26,7 +26,7 @@ REM bump_version1 keeps single digit on minor and patch, xx.x.x
 FOR /F %%I IN ('python -c "import pypigeonhole_build.file_edit_utils as fu; print(fu.bump_version1(""%app_version%"", ""src\dep_setup.py""))"') DO SET new_version=%%I
 echo new version: %new_version%
 
-git add dep_setup.py
+git add src\dep_setup.py
 git commit -m "release: bump version %app_version% up to %new_version%"
 
 git pull
