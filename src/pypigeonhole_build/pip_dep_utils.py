@@ -61,8 +61,10 @@ def get_python_requires(libs):
 def gen_req_txt(libs, target_file):
     with open(target_file, 'w') as f:
         for lib in libs:
-            if lib.name.lower() != 'python':
-                if lib.version:
+            if lib.name.lower() != 'python' and lib.scope != DEV:
+                if lib.url:
+                    f.write(lib.url)
+                elif lib.version:
                     f.write(f'{lib.name}=={lib.version}\n')
                 else:
                     f.write(f'{lib.name}\n')

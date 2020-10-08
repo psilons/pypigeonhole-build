@@ -20,7 +20,7 @@ setup(name='pypigeonhole-build',
       author_email='psilons.quanta@gmail.com',
 
       package_dir={'': 'src'},
-      packages=find_packages("src", exclude=["test"]),
+      packages=find_packages("src", exclude=["test"]) + ['.'],
 
       python_requires=dep_setup.python_requires if dep_setup.python_requires else '>=3',
 

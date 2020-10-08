@@ -60,7 +60,7 @@ class DependencyTest(unittest.TestCase):
         conda_dep_utils.gen_conda_yaml(self.dep_libs, output_file)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        env_file = os.path.join(dir_path, 'environment.yaml')
+        env_file = os.path.join(dir_path, 'environment_verify.yaml')
 
         diff = self._comp_cont(output_file, env_file)
         print(diff)
@@ -71,21 +71,40 @@ class DependencyTest(unittest.TestCase):
         pip_dep_utils.gen_req_txt(self.dep_libs, output_file)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        env_file = os.path.join(dir_path, 'requirements.txt')
+        env_file = os.path.join(dir_path, 'requirements_verify.txt')
 
         diff = self._comp_cont(output_file, env_file)
         print(diff)
         self.assertTrue(len(diff) == 0)
 
-    @staticmethod
-    def _comp_cont(file1, file2):
+    def _comp_cont(self, file1, file2):
         diff = []
         with open(file1, 'r') as f1:
             lines1 = f1.readlines()
             with open(file2, 'r') as f2:
                 lines2 = f2.readlines()
+                self.assertTrue(len(lines1) == len(lines2))
                 for i, j in zip(lines1, lines2):
                     if i.strip() != j.strip():
                         diff.append((i, j))
 
         return diff
+
+    def test_url(self):
+        CONDA.env = 'py385_bld'
+        dep_libs = [
+            Dependency(name='coverage-badge', installer=PIP, scope=INSTALL,),
+            Dependency(name='pipdeptree', version='==1.0.0', scope=INSTALL),
+            Dependency(name='rich', desc='rich console print', scope=INSTALL,
+                       url='github+https://github.com/willmcgugan/rich.git')
+        ]
+
+        output_file = '/tmp/requirements.txt'
+        pip_dep_utils.gen_req_txt(dep_libs, output_file)
+        with open(output_file, 'r') as f:
+            line = f.readline()
+            self.assertTrue(line.strip() == 'coverage-badge')
+            line = f.readline()
+            self.assertTrue(line.strip() == 'pipdeptree====1.0.0')
+            line = f.readline()
+            self.assertTrue(line.strip() == 'github+https://github.com/willmcgugan/rich.git')

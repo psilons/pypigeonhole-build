@@ -2,16 +2,19 @@ SET WorkDir=%cd%
 SET BatchDir=%~dp0
 
 CD %BatchDir%..
-IF NOT EXIST dep_setup.py (
-    ECHO Please create dep_setup.py in project root first!
+IF NOT EXIST src\dep_setup.py (
+    ECHO Please create dep_setup.py in project src folder first!
     CD %WorkDir%
     EXIT /B 1
 )
 
-python dep_setup.py conda
+python src\dep_setup.py conda
 REM environment.yaml should be created for conda installation
 
-FOR /F %%I IN ('python dep_setup.py conda_env') DO SET new_env=%%I
+REM we need to generate requirements.txt as well since github needs for dependency graph
+python src\dep_setup.py pip
+
+FOR /F %%I IN ('python src\dep_setup.py conda_env') DO SET new_env=%%I
 echo new env: %new_env%
 
 REM we have to CALL in the front, otherwise conda stop the whole batch.

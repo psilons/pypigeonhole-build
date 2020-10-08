@@ -11,13 +11,15 @@ echo $PROJ_DIR
 
 cd $PROJ_DIR
 
-if [ ! -f "dep_setup.py"]; then
-    echo "Please create dep_setup.py in project root first!"
+if [ ! -f "src/dep_setup.py"]; then
+    echo "Please create dep_setup.py in project src first!"
     exit 1
 fi
-python dep_setup.py conda
+python src/dep_setup.py conda
 
-export new_env=$(python dep_setup.py conda_env)
+python src/dep_setup.py pip
+
+export new_env=$(python src/dep_setup.py conda_env)
 echo "new_env: $new_env"
 
 conda env create -f environment.yaml

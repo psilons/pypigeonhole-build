@@ -1,4 +1,4 @@
-name: py385_pybuild
+name: py385_bld
 
 dependencies:
     - python>=3.5

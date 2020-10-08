@@ -6,14 +6,15 @@ from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
 import pypigeonhole_build.conda_dep_utils as conda_dep_utils
 from pypigeonhole_build.conda_dep_utils import CONDA
 
-app_version = '0.1.7'  # major.minor.patch, keep this line format, release uses it.
+app_version = "0.1.8"
 
-CONDA.env = 'py385_pybuild'  # change to your environment name
+CONDA.env = 'py39_bld'  # change to your environment name
+CONDA.channels = ['defaults']  # update channels, if needed.
 
 dependent_libs = [
-    Dependency(name='python', version='>=3.5', scope=INSTALL, installer=CONDA),
-    Dependency(name='pip', installer=CONDA),
-    Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),
+    Dependency(name='python', version='==3.9.0', scope=INSTALL, installer=CONDA),
+    Dependency(name='pip', installer=CONDA),  # Without this Conda complains
+    Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),  # DEV
     Dependency(name='pipdeptree', scope=DEV, installer=PIP),
     Dependency(name='coverage-badge'),  # default to DEV and PIP automatically.
     Dependency(name='twine'),  # uploading to pypi
@@ -31,10 +32,12 @@ if __name__ == "__main__":
         raise ValueError('need to pass in parameters: pip, conda, conda_env')
 
     if sys.argv[1] == 'pip':
-        pip_dep_utils.gen_req_txt(dependent_libs, './requirements.txt')
+        pip_dep_utils.gen_req_txt(dependent_libs, 'requirements.txt')
     elif sys.argv[1] == 'conda':
-        conda_dep_utils.gen_conda_yaml(dependent_libs, './environment.yaml')
+        conda_dep_utils.gen_conda_yaml(dependent_libs, 'environment.yaml')
     elif sys.argv[1] == 'conda_env':
         print(CONDA.env)
+    elif sys.argv[1] == 'app_env':
+app_version = "0.1.8"
     else:
         raise ValueError(f'unknown parameter {sys.argv[1]}')
