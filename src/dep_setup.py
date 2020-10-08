@@ -7,14 +7,14 @@ import pypigeonhole_build.conda_dep_utils as conda_dep_utils
 from pypigeonhole_build.conda_dep_utils import CONDA
 
 # release script is looking for this pattern: app_version =
-# so don't use this pattern else where.
+# so don't use this pattern else where. we should have 2 assignment anyway.
 app_version = "0.1.9"
 
 CONDA.env = 'py39_bld'  # change to your environment name
 CONDA.channels = ['defaults']  # update channels, if needed.
 
 dependent_libs = [
-    Dependency(name='python', version='==3.9.0', scope=INSTALL, installer=CONDA),
+    Dependency(name='python', version='>=3.6', scope=INSTALL, installer=CONDA),
     Dependency(name='pip', installer=CONDA),  # Without this Conda complains
     Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),  # DEV
     Dependency(name='pipdeptree', scope=DEV, installer=PIP),

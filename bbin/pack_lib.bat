@@ -1,6 +1,8 @@
 SET WorkDir=%cd%
 SET BatchDir=%~dp0
-SET ProjDir= %BatchDir%..
+SET ProjDir=%BatchDir%..
+
+echo Project Folder: %ProjDir%
 
 call %BatchDir%cleanup.bat
 if %errorlevel% neq 0 EXIT /B %errorlevel%
