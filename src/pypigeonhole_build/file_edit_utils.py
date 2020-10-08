@@ -42,7 +42,7 @@ def version_inc_2(version: str) -> str:
     return f'{seg1}.{seg2}.{seg3}'
 
 
-def bump_version1(curr_version, file_name, line_pattern='app_version'):
+def bump_version1(curr_version, file_name, line_pattern='app_version = '):
     new_ver = version_inc_1(curr_version)
     replace_line(file_name, line_pattern, 'app_version = "' + new_ver + '"')
     return new_ver

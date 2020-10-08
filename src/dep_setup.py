@@ -38,6 +38,6 @@ if __name__ == "__main__":
     elif sys.argv[1] == 'conda_env':
         print(CONDA.env)
     elif sys.argv[1] == 'app_env':
-app_version = "0.1.8"
+        print(app_version)
     else:
         raise ValueError(f'unknown parameter {sys.argv[1]}')
