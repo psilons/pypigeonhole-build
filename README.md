@@ -12,6 +12,7 @@ needed info.
 We also added scope to indicate whether dependencies are needed during runtime.
 
 #### Usage
+** shell scripts are not fully tested! **
 Add dependencies in the dep_setup.py. Each dependency has the following fields:
 - name: required. If name == python, the "python_requires" field in the 
   setup.py will be touched.
@@ -30,15 +31,27 @@ None).
 Pip can be customized in setup.py, so no change. 
 
 To generate environment.yaml, add src to PYTHONPATH and run
+
 ```python dep_setup.py conda```
 
+To generate environment.txt, add src to PYTHONPATH and run
+
+```python dep_setup.py pip```
+
+This file is different from the one generated from pip, it does not have
+dependent libraries.
+
 To setup local dev environment, run 
-```dbin\proj_setup```
+
+```dbin\py_dev_env_setup```
+
 This will create a new conda environment with the name specified in CONDA.env.
 The old environment will be deleted.
 
 There is a *nix port on windows,
+
 ```conda install conda-build unxutils```
+
 We could use the tee command to save command output to logs.
 
 

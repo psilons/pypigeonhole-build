@@ -7,8 +7,9 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 # If this is needed during dev by others, cd this folder and run pip install -e .
+# This is reusable in normal cases.
 setup(name='pypigeonhole-build',
-      version='0.1.5',  # major.minor.patch
+      version=dep_setup.app_version,  # major.minor.patch
       description='Python build & packaging tool',
       url='https://github.com/psilons/pypigeonhole-build',
       long_description=README,
