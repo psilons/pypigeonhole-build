@@ -6,7 +6,7 @@ from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
 import pypigeonhole_build.conda_dep_utils as conda_dep_utils
 from pypigeonhole_build.conda_dep_utils import CONDA
 
-app_version = "0.1.8"
+app_version = "0.1.9"
 
 CONDA.env = 'py39_bld'  # change to your environment name
 CONDA.channels = ['defaults']  # update channels, if needed.
