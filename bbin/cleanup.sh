@@ -1,12 +1,10 @@
 #!/bin/bash
 
-export CURR_DIR=$(pwd)
-echo $CURR_DIR
-
-export SCRIPT_DIR=$(dirname $(readlink -f $0))
-echo $SCRIPT_DIR
-
-export PROJ_DIR=$SCRIPT_DIR/..
+export PROJ_DIR=$(pwd)
+if [ ! -f "setup.py"]; then
+    echo "Please go to project folder!"
+    exit 1
+fi
 echo $PROJ_DIR
 
 rm -rf $PROJ_DIR/build

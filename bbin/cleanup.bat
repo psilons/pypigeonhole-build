@@ -1,6 +1,8 @@
-SET BatchDir=%~dp0
-SET ProjDir=%BatchDir%..
-
+SET ProjDir=%cd%
+IF NOT EXIST setup.py (
+    ECHO Please go to project folder!
+    EXIT /B 1
+)
 echo Project Folder: %ProjDir%
 
 RMDIR /Q /S %ProjDir%\build
@@ -8,9 +10,6 @@ if exist %ProjDir%\build EXIT /B 1
 
 RMDIR /Q /S %ProjDir%\dist
 if exist %ProjDir%\dist EXIT /B 1
-
-RMDIR /Q /S %ProjDir%\__pycache__
-if exist %ProjDir%\__pycache__ EXIT /B 1
 
 FOR /d %%G IN ("%ProjDir%\*.egg-info") DO RMDIR /Q /S "%%~G"
 

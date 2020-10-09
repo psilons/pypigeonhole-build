@@ -1,7 +1,10 @@
-name: py385_bld
+name: py390_bld
+
+channels:
+    - defaults
 
 dependencies:
-    - python>=3.5
+    - python>=3.6
     - pip
     - coverage==5.3
     - pip:

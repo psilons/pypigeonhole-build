@@ -1,7 +1,10 @@
-SET WorkDir=%cd%
-SET BatchDir=%~dp0
+SET ProjDir=%cd%
+IF NOT EXIST setup.py (
+    ECHO Please go to project folder!
+    EXIT /B 1
+)
+echo Project Folder: %ProjDir%
 
-cd %BatchDir%..
 REM Need to make sure the test coverage is only for src, not for both src and test
 REM --omit -> exclude test coverage counts
 CALL conda run coverage run --omit test/* -m unittest discover -s test

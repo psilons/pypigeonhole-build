@@ -1,20 +1,17 @@
 #!/bin/bash
 
-export CURR_DIR=$(pwd)
-echo $CURR_DIR
-
-export SCRIPT_DIR=$(dirname $(readlink -f $0))
-echo $SCRIPT_DIR
-
-export PROJ_DIR=$SCRIPT_DIR/..
+export PROJ_DIR=$(pwd)
+if [ ! -f "setup.py"]; then
+    echo "Please go to project folder!"
+    exit 1
+fi
 echo $PROJ_DIR
-
-cd $PROJ_DIR
 
 if [ ! -f "src/dep_setup.py"]; then
     echo "Please create dep_setup.py in project src first!"
     exit 1
 fi
+
 python src/dep_setup.py conda
 
 python src/dep_setup.py pip
@@ -45,5 +42,3 @@ else
     conda activate $new_env
     pipdeptree
 fi
-
-cd $CURR_DIR

@@ -1,9 +1,8 @@
-REM This is for application packaging, assuming build is done, if necessary
-
-SET WorkDir=%cd%
-
-SET BatchDir=%~dp0
-SET ProjDir=%BatchDir%..
+SET ProjDir=%cd%
+IF NOT EXIST setup.py (
+    ECHO Please go to project folder!
+    EXIT /B 1
+)
 echo Project Folder: %ProjDir%
 
 for %%a in ("%ProjDir%") do set "proj_name=%%~nxa"

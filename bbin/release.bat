@@ -1,10 +1,14 @@
-SET WorkDir=%cd%
-SET BatchDir=%~dp0
-SET ProjDir=%BatchDir%..
-
+SET ProjDir=%cd%
+IF NOT EXIST setup.py (
+    ECHO Please go to project folder!
+    EXIT /B 1
+)
 echo Project Folder: %ProjDir%
 
-cd %ProjDir%
+IF NOT EXIST src\dep_setup.py (
+    ECHO Please create dep_setup.py in project src folder first!
+    EXIT /B 1
+)
 
 REM To setup user/pswd for command line
 REM git config --global credential.github.com.useHttpPath true
@@ -32,4 +36,3 @@ git commit -m "release: bump version %app_version% up to %new_version%"
 git pull
 git push
 
-cd %WorkDir%

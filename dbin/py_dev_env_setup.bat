@@ -1,10 +1,12 @@
-SET WorkDir=%cd%
-SET BatchDir=%~dp0
+SET ProjDir=%cd%
+IF NOT EXIST setup.py (
+    ECHO Please go to project folder!
+    EXIT /B 1
+)
+echo Project Folder: %ProjDir%
 
-CD %BatchDir%..
 IF NOT EXIST src\dep_setup.py (
     ECHO Please create dep_setup.py in project src folder first!
-    CD %WorkDir%
     EXIT /B 1
 )
 
@@ -58,5 +60,3 @@ CALL conda activate %new_env%
 
 REM print dependency tree, it's taking some time
 pipdeptree
-
-cd %WorkDir%
