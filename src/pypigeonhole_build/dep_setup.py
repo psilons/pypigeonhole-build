@@ -8,7 +8,7 @@ from pypigeonhole_build.conda_dep_utils import CONDA
 
 # release script is looking for this pattern: app_version =
 # so don't use this pattern else where. we should have 2 assignment anyway.
-app_version = "0.2.0"
+app_version = "0.2.1"
 
 CONDA.env = 'py390_bld'  # change to your environment name
 CONDA.channels = ['defaults']  # update channels, if needed.
@@ -20,6 +20,8 @@ dependent_libs = [
     Dependency(name='pipdeptree', scope=DEV, installer=PIP),
     Dependency(name='coverage-badge'),  # default to DEV and PIP automatically.
     Dependency(name='twine'),  # uploading to pypi
+    Dependency(name='conda-build', installer=CONDA),
+    Dependency(name='anaconda-client', installer=CONDA),
 ]
 
 install_required = pip_dep_utils.get_install_required(dependent_libs)
@@ -39,7 +41,7 @@ if __name__ == "__main__":
         conda_dep_utils.gen_conda_yaml(dependent_libs, 'environment.yaml')
     elif sys.argv[1] == 'conda_env':
         print(CONDA.env)
-    elif sys.argv[1] == 'app_env':
+    elif sys.argv[1] == 'app_env':  # same as python setup.py --version
         print(app_version)
     else:
         raise ValueError(f'unknown parameter {sys.argv[1]}')

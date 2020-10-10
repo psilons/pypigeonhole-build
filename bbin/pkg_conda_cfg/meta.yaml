@@ -1,0 +1,35 @@
+# https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html
+# https://docs.conda.io/projects/conda-build/en/latest/index.html
+{% set data = load_setup_py_data() %}
+{% set name = data.get('name') %}
+{% set version = data.get('version')  %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+#  sha256: 9a3045c787fb1f5f24f5e37ce9ecb1689e579fa4eb3cc631fe88bda4b6ff3f97
+  path: ../..
+
+build:
+  number: 0
+  noarch: python
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - pypigeonhole_build
+
+about:
+  home: https://github.com/psilons/pypigeonhole-build
+  license: MIT
+  license_family: MIT
+  summary: build tool for Python

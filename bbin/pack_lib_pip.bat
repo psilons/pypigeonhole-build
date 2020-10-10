@@ -8,7 +8,7 @@ IF NOT EXIST setup.py (
 echo Project Folder: %ProjDir%
 
 call %BatchDir%cleanup.bat
-if %errorlevel% neq 0 EXIT /B %errorlevel%
+if %errorlevel 1 EXIT /B %errorlevel%
 
 set PYTHONPATH=src;%PYTHONPATH
 REM Other options are bdist, bdist_egg
