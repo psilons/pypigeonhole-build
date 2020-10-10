@@ -29,7 +29,8 @@ Standard SDLC process is:
 
 We exclude deployment because it varies too much to be predictable.
 
-We leave the compiling step out too.
+We leave the compiling step out too for the same reason. There could be C/C++ 
+compiling, PyInstaller, Cython, etc.
 
 
 Our goals are:
@@ -110,26 +111,32 @@ If Conda is used, need to set the CONDA.env field, which is mapped to the first
 line in the environment.yaml. CONDA.channels can be alternated too (default to
 None).
 
-Pip can be customized in setup.py, so no change. 
+Pip can be customized in setup.py, if needed. 
 
 Then in the project folder, run the following:
-- run py_dev_env_setup.bat. The existing environment will be deleted and
-  a new environment will be created.
+- run py_dev_env_setup.bat. The existing environment with sane env name will 
+  be deleted, and a new environment will be created.
 - set up IDE and can start coding.
-- run unittest.bat to generate coverage badge.
+- run unittest.bat to generate coverage badge, when we are done with coding.
 - If all goes weill, call one or more of the package scripts. For this project,
   we call pack_lib_pip and then pack_lib_conda.
 - Then upload artifacts to servers. For this project, we call upload_pip,
   upload_test, and upload_conda.
 
-For any runs, we use ``` script 2>&1 | tee my.log ``` since some commands
-clear command window screen, and so we lose screen prints.
+For any runs, we use ``` <script> 2>&1 | tee my.log ``` to save the log to
+local file, since some commands clear command window screen, and so we lose 
+screen prints.
 
 
 For more info, see dep_setup.py and unit tests.
+
+If these tools are not suitable, we just create other scripts local to the
+project we work on. The existing scripts / Python code should not interfere
+the extension.
 
 #### Side Notes and Future improvements
 
 - During CI, we check the svg file back to GIT, so that the above percentage
   shows up. This requires every checkin to re-pull. 
 - Sometimes, windows is not stable due to locking. Rerun should work.
+- package_data in setup.py is not supported (yet).
