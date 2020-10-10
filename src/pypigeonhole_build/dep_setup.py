@@ -8,7 +8,7 @@ from pypigeonhole_build.conda_dep_utils import CONDA
 
 # release script is looking for this pattern: app_version =
 # so don't use this pattern else where. we should have 2 assignment anyway.
-app_version = "0.2.1"
+app_version = "0.2.3"
 
 CONDA.env = 'py390_bld'  # change to your environment name
 CONDA.channels = ['defaults']  # update channels, if needed.
@@ -21,6 +21,7 @@ dependent_libs = [
     Dependency(name='coverage-badge'),  # default to DEV and PIP automatically.
     Dependency(name='twine'),  # uploading to pypi
     Dependency(name='conda-build', installer=CONDA),
+    Dependency(name='conda-verify', installer=CONDA),
     Dependency(name='anaconda-client', installer=CONDA),
 ]
 
