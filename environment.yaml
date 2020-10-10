@@ -7,6 +7,8 @@ dependencies:
     - python>=3.6
     - pip
     - coverage==5.3
+    - conda-build
+    - anaconda-client
     - pip:
         - pipdeptree
         - coverage-badge

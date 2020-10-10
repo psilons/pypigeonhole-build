@@ -5,24 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bbin/cleanup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/cleanup.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/cleanup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/cleanup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_app.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_app.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_app.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_app.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib_conda.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib_conda.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib_pip.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bbin/release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/release.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/release.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/release.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/upload.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/upload.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/upload_test.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload_test.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/upload_test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload_test.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/tee.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/upload_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload_conda.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/upload_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload_pip.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dbin/py_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/py_dev_env_setup.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/py_dev_env_setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/py_dev_env_setup.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dbin/unittest.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/unittest.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/unittest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/unittest.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../environment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,25 +67,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dbin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bbin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19703704" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\test\test_pypigeonhole_build" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build\dep" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\dbin" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin\conda" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\dbin" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
     </key>
   </component>
@@ -231,7 +229,7 @@
       <workItem from="1602058211390" duration="1574000" />
       <workItem from="1602084940354" duration="3619000" />
       <workItem from="1602098916498" duration="20537000" />
-      <workItem from="1602176990118" duration="19145000" />
+      <workItem from="1602176990118" duration="51867000" />
     </task>
     <servers />
   </component>
@@ -239,10 +237,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="130" key="#Project_Structure" timestamp="1602125883610">
-      <screen x="0" y="0" width="2048" height="1152" />
+    <state x="2636" y="130" key="#Project_Structure" timestamp="1602310344910">
+      <screen x="2110" y="0" width="1986" height="1152" />
     </state>
     <state x="542" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602125883610" />
+    <state x="2636" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602310344910" />
     <state x="516" y="211" width="1297" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602125858032">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -311,10 +310,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="542" y="225" key="SettingsEditor/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602125374502" />
-    <state x="782" y="307" width="704" height="534" key="find.popup" timestamp="1602188690647">
-      <screen x="0" y="0" width="2048" height="1152" />
+    <state x="2868" y="307" width="691" height="534" key="find.popup" timestamp="1602306125284">
+      <screen x="2110" y="0" width="1986" height="1152" />
     </state>
     <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602188690647" />
+    <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602306125284" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

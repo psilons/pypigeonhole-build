@@ -9,7 +9,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../__pycache__" />
       <excludeFolder url="file://$MODULE_DIR$/../build" />
       <excludeFolder url="file://$MODULE_DIR$/../dist" />
+      <excludeFolder url="file://$MODULE_DIR$/../dist_conda" />
       <excludeFolder url="file://$MODULE_DIR$/../pypigeonhole_build.egg-info" />
+      <excludeFolder url="file://$MODULE_DIR$/../src/__pycache__" />
+      <excludeFolder url="file://$MODULE_DIR$/../test/test_pypigeonhole_build/__pycache__" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

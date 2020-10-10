@@ -5,4 +5,5 @@ IF NOT EXIST setup.py (
 )
 echo Project Folder: %ProjDir%
 
+REM make sure the setup in ~/.pyirc has pypi entry
 twine upload -r pypi %ProjDir%/dist/*

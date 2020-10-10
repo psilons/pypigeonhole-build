@@ -1,3 +1,5 @@
+@echo off
+
 SET ProjDir=%cd%
 IF NOT EXIST setup.py (
     ECHO Please go to project folder!
@@ -5,30 +7,35 @@ IF NOT EXIST setup.py (
 )
 echo Project Folder: %ProjDir%
 
-IF NOT EXIST src\dep_setup.py (
+IF NOT EXIST src\pypigeonhole_build\dep_setup.py (
     ECHO Please create dep_setup.py in project src folder first!
     EXIT /B 1
 )
 
-python src\dep_setup.py conda
+echo create conda environment.yaml
+python src\pypigeonhole_build\dep_setup.py conda
+if errorlevel 1 exit /B 1
 REM environment.yaml should be created for conda installation
 
+echo create pip requirements.txt
 REM we need to generate requirements.txt as well since github needs for dependency graph
-python src\dep_setup.py pip
+python src\pypigeonhole_build\dep_setup.py pip
+if errorlevel 1 exit /B 1
 
-FOR /F %%I IN ('python src\dep_setup.py conda_env') DO SET new_env=%%I
+FOR /F %%I IN ('python src\pypigeonhole_build\dep_setup.py conda_env') DO SET new_env=%%I
+if errorlevel 1 exit /B 1
 echo new env: %new_env%
 
 REM we have to CALL in the front, otherwise conda stop the whole batch.
 CALL conda env create -f environment.yaml
 
-SET cerr=%ERRORLEVEL%
-ECHO create return code: %cerr%
-if "%cerr%" == "1" (
+if errorlevel 1 (
+    ECHO env[%new_env%] exists, removing it ...
     GOTO retry1
 )
 
 CALL conda activate %new_env%
+if errorlevel 1 exit /B 1
 
 REM print dependency tree
 pipdeptree
@@ -52,9 +59,11 @@ IF "%curr_env%" == "%new_env%" (
 
 :retry2
 CALL conda env remove -n %new_env%
+if errorlevel 1 exit /B 1
 
 REM update is not good enough because of pip install, so remove all.
 CALL conda env create -f environment.yaml
+if errorlevel 1 exit /B 1
 
 CALL conda activate %new_env%
 

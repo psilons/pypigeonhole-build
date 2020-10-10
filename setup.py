@@ -1,7 +1,14 @@
 from setuptools import setup, find_packages
 import pathlib
+import sys
+import os.path
+from os.path import dirname
 
-import dep_setup
+# To add source folder to the path, otherwise below import would fail.
+src_path = os.path.join(dirname(__file__), 'src')
+sys.path.append(src_path)
+
+from pypigeonhole_build import dep_setup
 
 HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
@@ -21,7 +28,9 @@ setup(name='pypigeonhole-build',
 
       package_dir={'': 'src'},
       # setup complains last ".", but it works to include top des_setup.py
-      packages=find_packages("src", exclude=["test"]) + ['.'],
+      # not needed anymore
+      # packages=find_packages("src", exclude=["test"]) + ['.'],
+      packages=find_packages("src", exclude=["test"]),
 
       python_requires=dep_setup.python_requires if dep_setup.python_requires else '>=3',
 
@@ -31,3 +40,12 @@ setup(name='pypigeonhole-build',
 
       extras_require={},
       )
+
+# To test: 3 cases
+#     python setup.py install
+#     pip install . -t <target dir>
+#         make sure there is no egg-info folder here, otherwise error with no
+#         .egg file found, thought the package is installed successfully.
+#     python -m pip install . --no-deps --ignore-installed -vv
+# To remove:
+#     pip uninstall pypigeonhole-build
