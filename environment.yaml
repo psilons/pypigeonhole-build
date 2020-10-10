@@ -8,6 +8,7 @@ dependencies:
     - pip
     - coverage==5.3
     - conda-build
+    - conda-verify
     - anaconda-client
     - pip:
         - pipdeptree

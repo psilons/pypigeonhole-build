@@ -7,7 +7,3 @@ IF NOT EXIST setup.py (
 echo Project Folder: %ProjDir%
 
 conda-build bbin\pkg_conda_cfg --output-folder dist_conda
-
-REM test with:
-REM conda install --use-local pypigeonhole-build
-REM conda remove pypigeonhole-build

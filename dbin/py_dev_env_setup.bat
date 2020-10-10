@@ -7,22 +7,27 @@ IF NOT EXIST setup.py (
 )
 echo Project Folder: %ProjDir%
 
-IF NOT EXIST src\pypigeonhole_build\dep_setup.py (
+for %%a in ("%ProjDir%") do set "proj_name=%%~nxa"
+echo project name: %proj_name%
+set pkg=%proj_name:-=_%
+echo top package name: %pkg%
+
+IF NOT EXIST src\%pkg%\dep_setup.py (
     ECHO Please create dep_setup.py in project src folder first!
     EXIT /B 1
 )
 
 echo create conda environment.yaml
-python src\pypigeonhole_build\dep_setup.py conda
+python src\%pkg%\dep_setup.py conda
 if errorlevel 1 exit /B 1
 REM environment.yaml should be created for conda installation
 
 echo create pip requirements.txt
 REM we need to generate requirements.txt as well since github needs for dependency graph
-python src\pypigeonhole_build\dep_setup.py pip
+python src\%pkg%\dep_setup.py pip
 if errorlevel 1 exit /B 1
 
-FOR /F %%I IN ('python src\pypigeonhole_build\dep_setup.py conda_env') DO SET new_env=%%I
+FOR /F %%I IN ('python src\%pkg%\dep_setup.py conda_env') DO SET new_env=%%I
 if errorlevel 1 exit /B 1
 echo new env: %new_env%
 

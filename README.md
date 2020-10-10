@@ -2,7 +2,37 @@
 
 ![Python Package using Conda](https://github.com/psilons/pypigeonhole-build/workflows/Python%20Package%20using%20Conda/badge.svg)
 ![Test Coverage](coverage.svg)
+[![PyPI version](https://badge.fury.io/py/pypigeonhole-build.svg)](https://badge.fury.io/py/pypigeonhole-build)
+![Anaconda version](https://anaconda.org/psilons/pypigeonhole-build/badges/version.svg)
+![Anaconda_platform](https://anaconda.org/psilons/pypigeonhole-build/badges/platforms.svg)
+![License](https://anaconda.org/psilons/pypigeonhole-build/badges/license.svg)
 
+This is a Python SDLC tool to shorten the time we spend on SDLC without
+sacrificing quality. It does so by hard-coding certain parts. Freedom could
+lead to confusion and low efficiency. We borrow the idea from Java's mature
+tool, [Maven](http://maven.apache.org/).
+
+Our goals are:
+
+- Make simple/routine steps efficient
+- Make out of routine steps possible, i.e., our code should not add more
+  hassle when you expand it.
+
+A sample project is in a separate repo: 
+[Project Template](https://github.com/psilons/pypigeonhole-proj-tmplt)
+
+#### This library does the following:
+
+- Hard code src and test folders for source code and testing code. 
+>We don't think the freedom naming of these 2 folders help us anything.
+
+>We want to separate src and test completely, not one inside another.
+
+- For applications, we hard code bin folder for start-up and other scripts.
+  We hard code conf folder for configurations.
+
+- We isolate to one place to specify dependencies (along with the name and
+  version), this place is src
 To avoid duplicated dependency information in setup.py and Anaconda 
 environment.yaml.
 

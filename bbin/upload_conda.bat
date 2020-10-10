@@ -20,5 +20,3 @@ REM conda convert --platform all %pkg% -o conda_output/
 REM anaconda login
 
 anaconda upload %pkg%
-
-REM For testing: conda install -c psilons pypigeonhole-build

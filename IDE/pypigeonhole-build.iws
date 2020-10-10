@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/cleanup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/cleanup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib_conda.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib_conda.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pack_lib_pip.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bbin/release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/release.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/tee.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bbin/upload_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload_conda.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/upload_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/upload_pip.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dbin/py_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/py_dev_env_setup.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/unittest.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/unittest.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../environment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +222,7 @@
       <workItem from="1602058211390" duration="1574000" />
       <workItem from="1602084940354" duration="3619000" />
       <workItem from="1602098916498" duration="20537000" />
-      <workItem from="1602176990118" duration="51867000" />
+      <workItem from="1602176990118" duration="56330000" />
     </task>
     <servers />
   </component>
@@ -310,11 +303,11 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="542" y="225" key="SettingsEditor/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602125374502" />
-    <state x="2868" y="307" width="691" height="534" key="find.popup" timestamp="1602306125284">
+    <state x="2868" y="307" width="691" height="534" key="find.popup" timestamp="1602315103258">
       <screen x="2110" y="0" width="1986" height="1152" />
     </state>
     <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602188690647" />
-    <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602306125284" />
+    <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602315103258" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
