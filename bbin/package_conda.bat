@@ -1,3 +1,4 @@
+REM package both lib and app, driven by bld.bat
 @echo off
 SET ProjDir=%cd%
 IF NOT EXIST setup.py (

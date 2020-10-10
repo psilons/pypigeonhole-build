@@ -1,4 +1,4 @@
-### Python Build Tools
+# Python Build Tools
 
 ![Python Package using Conda](https://github.com/psilons/pypigeonhole-build/workflows/Python%20Package%20using%20Conda/badge.svg)
 ![Test Coverage](coverage.svg)
@@ -10,85 +10,80 @@
 **Linux version of shell scripts is not working yet.**
 
 This is a Python SDLC tool to shorten the time we spend on SDLC without
-sacrificing quality. It does so by hard-coding certain parts. Freedom could
-lead to confusion and low efficiency. We borrow the idea from Java's mature
-tool, [Maven](http://maven.apache.org/).
+sacrificing quality. It does so by hard-coding certain flexible parts. 
+Flexibility could lead to confusion and low efficiency because there is
+no standard and thus we cannot build tools on top of that to improve
+efficiency. 
 
-Standard SDLC process is:
-- environment setup: py_dev_env_setup.bat
-- **coding**: We should spend most time on this.
-- unit test: unittest.bat
-- package: pack_lib_pip.bat, pack_lib_conda.bat, pack_app_zip.bat 
-  (pack_app_conda.bat is not there yet).
-  There are 2 dimensions: lib/app, pip/conda/zip
-- release: release.bat, to tag versions and bump the current version to next.
-  We use major.minor.patch format. The minor and patch increments are bounded
-  by 10 to keep them single digit. A major version with 100 minors/patches
-  should be enough in normal cases. 
-- upload artifacts to central servers, pip and conda.
-
-We exclude deployment because it varies too much to be predictable.
-
-We leave the compiling step out too for the same reason. There could be C/C++ 
-compiling, PyInstaller, Cython, etc.
+A good example for efficiency is Java's mature tool, [Maven](http://maven.apache.org/).
 
 
-Our goals are:
+## Goals
 
-- Make simple/routine steps efficient.
+- set up a standard project structure. 
+- create reusable tools to minimize the necessary work for dependency management 
+  and CI.
+- Make routine steps efficient.
 - Make out-of-routine steps not more painful, i.e., our code should not add 
   more hassle when you extend/modify it.
-
-A sample project is in a separate repo: 
-[Project Template](https://github.com/psilons/pypigeonhole-proj-tmplt).
-In fact, this project is set up in the way mentioned here too.
-
-#### What This library Does
-
-- Hard code src and test folders for source code and testing code. 
-  >We don't think the naming freedom of these 2 folders help us anything.
-
-  >We want to separate src and test completely, not one inside another.
-
-- For applications, we hard code bin folder for start-up and other scripts.
-  We hard code conf folder for configurations.
-
-- We isolate to one place to specify dependencies (along with the name and
-  version), this place is under src. We assume that there is a top package
-  under src with the same name of the project, except replacing - with _.
-  For example, if a project folder is foo-bar, then this is the project name
-  and there is a file: foo-bar\src\foo_bar\dep_setup.py, where foo_bar is
-  the top package name.
-  >We have to get hint on where the dependency file is. We don't want to put
-  dep_setup.py under src. Otherwise, the installation would put this file
-  outside packages under site-packages.
   
-  >The file name dep_setup.py is hard-coded as well.
+  
+## Standard SDLC Process Acceleration
 
-- The dependencies in dep_setup.py is populated to setup.py, Anaconda 
-  environment.yaml, and requirements.txt during conda virtual environment
-  setup. Whenever we change dependencies, we need to rerun setup.
+- environment setup: ```py_dev_env_setup.bat```
+  >The existing conda environment with same env name will be deleted, and a new 
+  environment will be created.
   
-- We use conda to set up virtual environments. Python, by nature, could have 
-  some C/C++ library dependencies, such as numpy, PyQt, etc. These C/C++ libs 
-  sometimes require compilation (and thus a compiler). This creates headaches 
-  in the past, very painful. Anaconda comes with pre-compiled packages and gets 
-  rid of these headaches for most commonly used libraries. So we use Anaconda 
-  packages whenever possible here. If Anaconda does not have a package, then 
-  we fall back to pip.
-  >This does not mean that C/C++ is a drag for Python. In fact, this is a 
-  strength Python has. If we need something faster than Python can do, do it 
-  in C++ and wrap it.
-  
-- We added scope to indicate whether dependencies are for dev or runtime.
-  setup.py has install_requires and test_require, but environment.yaml and 
-  requirements.txt miss it. So we need to fill the gap here. 
-  
-- The version is in dep_setup.py too. The release.bat would auto-increment
-  this value.
+  >requirements.txt and environment.yaml are generated as well. Whenever 
+  we change dependencies, we need to rerun this script to re-generate the 
+  files.
 
 
-#### Usage
+- **coding**: We should spend most time on this. We leave out the IDE set up.
+- compile: This is out of scope due to varieties, C/C++, PyInstaller, Cython, 
+  or no compiling at all, etc. 
+- unit test: ```unittest.bat``` 
+  >generate test coverage report and coverage badge.
+  
+  >The script is based on Python unittest package. You may create another 
+  script for pytest or other packages.
+  
+  >In order to run test at the project root folder, we add a src reference in
+  the __init__.py under test top package. Otherwise, tests can run only from
+  the src folder.
+  
+  
+- package: 
+    - ```package_pip.bat``` to pack Python libraries.
+    - ```package_conda.bat``` to pack both libraries and applications.
+    - ```pack_app_zip.bat``` to pack applications, include src, bin, and conf.
+      Since this is a customized way, there is no associated upload tool and 
+      users need to deal with uploading by themselves.
+      
+  conda version is more flexible to customize.
+- release: ```release.bat``` to tag versions and bump the current version to the 
+  next. 
+  >We use major.minor.patch format in versions. The minor and patch 
+  increments are single digit, bounded by 10. A major version with 81 
+  minors/patches should be enough in normal cases. 
+- upload: ```upload_pip.bat/upload_pip_test.bat``` and ```upload.conda.bat``` 
+  to upload artifacts to central pip and conda central servers. We leave
+  out the complexity of artifact server setup. Variations are:
+    - local pip/anaconda channels, for testing.
+    - http tunnel through local channels.
+    - local/internal pip/anaconda official servers through vendor support.
+    - remote pip/anaconda official/central servers through internet.
+    - 3rd party vendors, such asArtifactory servers.
+- install/deploy: 
+    - lib installation: use pip or conda
+    - app deployment: conda can bundle scripts and Python code. So we use conda
+      as the transport to deploy apps. 
+      >There are many other ways, ground or cloud, to deploy apps, such as 
+      kubernetes, Ansible, etc. We leave these out due to high available 
+      customization (i.e., no predictable patterns).
+
+
+## Usage
 
 Add this project as one of the dependencies. The installation installs the
 reusable scripts to <virtual env>\Scripts folder, in addition to the Python
@@ -111,22 +106,18 @@ If Conda is used, need to set the CONDA.env field, which is mapped to the first
 line in the environment.yaml. CONDA.channels can be alternated too (default to
 None).
 
-Pip can be customized in setup.py, if needed. 
+Pip can be customized in setup.py, if needed. This file can be reused except
+the import in most cases.
 
-Then in the project folder, run the following:
-- run py_dev_env_setup.bat. The existing environment with sane env name will 
-  be deleted, and a new environment will be created.
-- set up IDE and can start coding.
-- run unittest.bat to generate coverage badge, when we are done with coding.
-- If all goes weill, call one or more of the package scripts. For this project,
-  we call pack_lib_pip and then pack_lib_conda.
-- Then upload artifacts to servers. For this project, we call upload_pip,
-  upload_test, and upload_conda.
+Now we could follow the previous SDLC steps.
 
 For any runs, we use ``` <script> 2>&1 | tee my.log ``` to save the log to
 local file, since some commands clear command window screen, and so we lose 
 screen prints.
 
+A sample project is in a separate repo: 
+[Project Template](https://github.com/psilons/pypigeonhole-proj-tmplt).
+In fact, we set up this project in the same way mentioned here too.
 
 For more info, see dep_setup.py and unit tests.
 
@@ -134,9 +125,8 @@ If these tools are not suitable, we just create other scripts local to the
 project we work on. The existing scripts / Python code should not interfere
 the extension.
 
-#### Side Notes and Future improvements
 
-- During CI, we check the svg file back to GIT, so that the above percentage
-  shows up. This requires every checkin to re-pull. 
+## Side Notes and Future improvements
+
 - Sometimes, windows is not stable due to locking. Rerun should work.
 - package_data in setup.py is not supported (yet).
