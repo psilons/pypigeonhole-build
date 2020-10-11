@@ -5,16 +5,19 @@ IF NOT EXIST setup.py (
 )
 echo Project Folder: %ProjDir%
 
-RMDIR /Q /S %ProjDir%\build
+if exist %ProjDir%\build RMDIR /Q /S %ProjDir%\build
 if exist %ProjDir%\build EXIT /B 1
 
-RMDIR /Q /S %ProjDir%\dist
+if exist %ProjDir%\dist RMDIR /Q /S %ProjDir%\dist
 if exist %ProjDir%\dist EXIT /B 1
 
-RMDIR /Q /S %ProjDir%\dist_conda
+if exist %ProjDir%\dist_conda RMDIR /Q /S %ProjDir%\dist_conda
 if exist %ProjDir%\dist_conda EXIT /B 1
 
 FOR /d %%G IN ("%ProjDir%\*.egg-info") DO RMDIR /Q /S "%%~G"
 
 REM come from pip install -e .
 FOR /d %%G IN ("%ProjDir%\src\*.egg-info") DO RMDIR /Q /S "%%~G"
+
+REM if we miss these 2, that's fine.
+exit /b 0

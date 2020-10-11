@@ -60,7 +60,11 @@ A good example for efficiency is Java's mature tool, [Maven](http://maven.apache
       Since this is a customized way, there is no associated upload tool and 
       users need to deal with uploading by themselves.
       
-  conda version is more flexible to customize.
+  The pip and zip output folder is dist, and the conda output folder is 
+  dist_conda.
+     
+  Conda version is more flexible to customize because of the extra references to
+  meta.yaml and build scripts. Please check conda-build documents.
 - release: ```release.bat``` to tag versions and bump the current version to the 
   next. 
   >We use major.minor.patch format in versions. The minor and patch 

@@ -8,7 +8,7 @@ IF NOT EXIST setup.py (
 )
 echo Project Folder: %ProjDir%
 
-call %BatchDir%cleanup.bat
+call %BatchDir%pph_cleanup.bat
 if errorlevel 1 exit /B 1
 
 REM Other options are bdist, bdist_egg

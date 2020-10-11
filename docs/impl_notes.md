@@ -88,3 +88,25 @@ still pointing to the system wide Python executable. So we have to use
 >During CI, we check the svg file back to GIT, so that the above percentage
 shows up. This requires every checkin to re-pull. There are other ways to 
 get badges.
+
+
+## Testing
+
+To test pip packages:
+
+pip uninstall pypigeonhole-build -y
+pip install pypigeonhole-build
+check <env>\Lib\site-packages\pypigeonhole_build for 4 files
+pip uninstall pypigeonhole-build -y
+
+To test conda packages:
+
+conda remove pypigeonhole-build -y
+conda install -c psilons pypigeonhole-build -y
+check <env>\Scripts for script files
+check <env>\Lib\site-packages\pypigeonhole_build for 4 files
+conda remove pypigeonhole-build -y
+
+
+To install from local:
+conda install --use-local pypigeonhole-build

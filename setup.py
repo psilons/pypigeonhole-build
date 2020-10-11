@@ -19,12 +19,13 @@ setup(name='pypigeonhole-build',
       version=dep_setup.app_version,  # major.minor.patch
       description='Python build & packaging tool',
       url='https://github.com/psilons/pypigeonhole-build',
-      long_description=README,
-      long_description_content_type="text/markdown",
-      license="MIT",
 
       author='psilons',
       author_email='psilons.quanta@gmail.com',
+
+      long_description=README,
+      long_description_content_type="text/markdown",
+      license="MIT",
 
       package_dir={'': 'src'},
       # setup complains last ".", but it works to include top des_setup.py

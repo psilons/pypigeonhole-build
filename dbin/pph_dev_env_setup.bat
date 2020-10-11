@@ -1,4 +1,4 @@
-@echo off
+REM @echo off
 
 SET ProjDir=%cd%
 IF NOT EXIST setup.py (
@@ -31,46 +31,35 @@ FOR /F %%I IN ('python src\%pkg%\dep_setup.py conda_env') DO SET new_env=%%I
 if errorlevel 1 exit /B 1
 echo new env: %new_env%
 
+CALL conda info --envs
+
+SET curr_env=%CONDA_DEFAULT_ENV%
+ECHO current env: %curr_env%
+IF "%curr_env%" NEQ "" (
+    CALL conda deactivate
+    echo current env after deactivate: %CONDA_DEFAULT_ENV%
+)
+
 REM we have to CALL in the front, otherwise conda stop the whole batch.
 CALL conda env create -f environment.yaml
 
 if errorlevel 1 (
     ECHO env[%new_env%] exists, removing it ...
-    GOTO retry1
+    CALL conda env remove -n %new_env%
+    if errorlevel 1 exit /B 1
+
+    CALL conda env create -f environment.yaml
+    if errorlevel 1 exit /B 1
 )
 
 CALL conda activate %new_env%
 if errorlevel 1 exit /B 1
+echo current conda env: %CONDA_DEFAULT_ENV%
 
 REM print dependency tree
 pipdeptree
 
-EXIT /B 0
-
-:retry1
-REM check whether we are in the env that we want to delete
-SET curr_env=%CONDA_DEFAULT_ENV%
-ECHO current env: %curr_env%
-
-IF "%curr_env%" == "" (
-    GOTO retry2
-)
-
-IF "%curr_env%" == "%new_env%" (
-    REM if we are in this env now, get out first
-    CALL conda deactivate
-)
-
-
-:retry2
-CALL conda env remove -n %new_env%
-if errorlevel 1 exit /B 1
-
-REM update is not good enough because of pip install, so remove all.
-CALL conda env create -f environment.yaml
-if errorlevel 1 exit /B 1
-
-CALL conda activate %new_env%
-
-REM print dependency tree, it's taking some time
-pipdeptree
+echo
+echo run "conda activate %new_env%" to activate environment
+echo
+echo conda info --envs to check current activated environment

@@ -10,7 +10,7 @@ if [ ! -f "setup.py"]; then
 fi
 echo $PROJ_DIR
 
-$SCRIPT_DIR/cleanup.sh
+$SCRIPT_DIR/pph_cleanup.sh
 
 python setup.py bdist_wheel sdist
 

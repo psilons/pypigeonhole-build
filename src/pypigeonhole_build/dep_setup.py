@@ -42,7 +42,5 @@ if __name__ == "__main__":
         conda_dep_utils.gen_conda_yaml(dependent_libs, 'environment.yaml')
     elif sys.argv[1] == 'conda_env':
         print(CONDA.env)
-    elif sys.argv[1] == 'app_env':  # same as python setup.py --version
-        print(app_version)
     else:
         raise ValueError(f'unknown parameter {sys.argv[1]}')

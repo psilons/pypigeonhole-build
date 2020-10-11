@@ -5,13 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../impl_notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docs/local_conda_repo_setup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docs/local_pip_repo_setup.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/package_conda.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/package_conda.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/package_pip.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pack_lib_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/package_pip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/cleanup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_cleanup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/cleanup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_cleanup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pack_app_zip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pack_app_zip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/package_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_package_conda.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/package_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_package_conda.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/package_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_package_pip.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/package_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_package_pip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/release.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/upload_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/upload_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/upload_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/upload_pip_test.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip_test.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/upload_pip_test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip_test.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/py_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/py_dev_env_setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/unittest.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_unittest.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/unittest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_unittest.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,18 +89,18 @@
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\src" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\test\test_pypigeonhole_build" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build\dep" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin\conda" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\dbin" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\docs" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\src" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\test\test_pypigeonhole_build" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests for test_dep_setup_utils.DependencyTest.test_url">
@@ -223,7 +244,7 @@
       <workItem from="1602098916498" duration="20537000" />
       <workItem from="1602176990118" duration="67594000" />
       <workItem from="1602363281978" duration="4755000" />
-      <workItem from="1602368663142" duration="1151000" />
+      <workItem from="1602368663142" duration="19418000" />
     </task>
     <servers />
   </component>
@@ -308,10 +329,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="542" y="225" key="SettingsEditor/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602125374502" />
-    <state x="2868" y="307" width="691" height="534" key="find.popup" timestamp="1602360562474">
-      <screen x="2110" y="0" width="1986" height="1152" />
+    <state x="782" y="307" width="704" height="534" key="find.popup" timestamp="1602391398310">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602188690647" />
+    <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602391398310" />
     <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602360562474" />
   </component>
   <component name="XDebuggerManager">
