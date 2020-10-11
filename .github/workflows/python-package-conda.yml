@@ -40,6 +40,14 @@ jobs:
 
         rm -rf coverage.svg
         conda run coverage-badge -o coverage.svg
+    - name: Save badge
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: coverage.svg
+        tag: ${{ github.ref }}  
+        overwrite: true
+        body: "Coverage Badge"   
     # This is a temporary solution to save badge
     - name: Commit badge
       run: |
