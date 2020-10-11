@@ -1,7 +1,7 @@
 # Python Build Tools
 
 ![Python Package using Conda](https://github.com/psilons/pypigeonhole-build/workflows/Python%20Package%20using%20Conda/badge.svg)
-![Test Coverage](![Test Coverage](https://github.com/psilons/pypigeonhole-build/releases/download/master/coverage.svg))
+![Test Coverage](![Test Coverage](https://github.com/psilons/pypigeonhole-build/releases/download/build_output/coverage.svg))
 [![PyPI version](https://badge.fury.io/py/pypigeonhole-build.svg)](https://badge.fury.io/py/pypigeonhole-build)
 ![Anaconda version](https://anaconda.org/psilons/pypigeonhole-build/badges/version.svg)
 ![Anaconda_platform](https://anaconda.org/psilons/pypigeonhole-build/badges/platforms.svg)
