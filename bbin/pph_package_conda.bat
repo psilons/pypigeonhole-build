@@ -10,3 +10,5 @@ echo Project Folder: %ProjDir%
 if exist %ProjDir%\dist_conda RMDIR /Q /S %ProjDir%\dist_conda
 
 conda-build bbin\pkg_conda_cfg --output-folder dist_conda
+
+conda build purge

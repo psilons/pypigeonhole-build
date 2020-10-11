@@ -1,4 +1,4 @@
-REM @echo off
+@echo off
 
 SET ProjDir=%cd%
 IF NOT EXIST setup.py (
@@ -48,6 +48,8 @@ if errorlevel 1 (
     CALL conda env remove -n %new_env%
     if errorlevel 1 exit /B 1
 
+    conda clean -a
+
     CALL conda env create -f environment.yaml
     if errorlevel 1 exit /B 1
 )
@@ -59,7 +61,7 @@ echo current conda env: %CONDA_DEFAULT_ENV%
 REM print dependency tree
 pipdeptree
 
-echo
+echo --
 echo run "conda activate %new_env%" to activate environment
-echo
+echo --
 echo conda info --envs to check current activated environment
