@@ -45,7 +45,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: coverage.svg
-        tag: ${{ github.ref }}  
+        tag: refs/tags/build_output  
         overwrite: true
         body: "Coverage Badge"   
     # This is a temporary solution to save badge
