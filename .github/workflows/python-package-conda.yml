@@ -40,14 +40,15 @@ jobs:
 
         rm -rf coverage.svg
         conda run coverage-badge -o coverage.svg
+    # This is not working, http ref is download with attachment
     - name: Save badge
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: coverage.svg
-        tag: refs/tags/build_output  
+        tag: refs/tags/build_output
         overwrite: true
-        body: "Coverage Badge"   
+        body: "Coverage Badge"
     # This is a temporary solution to save badge
     - name: Commit badge
       run: |

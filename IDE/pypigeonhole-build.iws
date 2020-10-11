@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/python-package-conda.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/python-package-conda.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/local_conda_repo_setup.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/local_pip_repo_setup.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +221,7 @@
       <workItem from="1602176990118" duration="67594000" />
       <workItem from="1602363281978" duration="4755000" />
       <workItem from="1602368663142" duration="19418000" />
-      <workItem from="1602448958794" duration="1743000" />
+      <workItem from="1602448958794" duration="2727000" />
     </task>
     <servers />
   </component>
