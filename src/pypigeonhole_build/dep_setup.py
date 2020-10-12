@@ -1,4 +1,5 @@
 import sys
+import os
 
 import pypigeonhole_build.pip_dep_utils as pip_dep_utils
 from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
@@ -6,11 +7,22 @@ from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
 import pypigeonhole_build.conda_dep_utils as conda_dep_utils
 from pypigeonhole_build.conda_dep_utils import CONDA
 
+curr_dir = os.path.dirname(os.path.realpath(__file__))
+# go 2 levels above, parent(top package), "src", to the project folder
+proj_dir = os.path.dirname(os.path.dirname(curr_dir))
+app_name = os.path.basename(proj_dir)
+top_pkg = app_name.replace('-', '_')
+
+# ##############################################################################
+# These are application specific information
+# ##############################################################################
+python_version = 'py390'  # take 3 digits, major, minor, patch
+
 # release script is looking for this pattern: app_version =
 # so don't use this pattern else where. we should have 2 assignment anyway.
-app_version = "0.2.4"
+app_version = "0.2.4"  # follow same style, 3 digits, major, minor, patch
 
-CONDA.env = 'py390_bld'  # change to your environment name
+CONDA.env = python_version + '_' + top_pkg
 CONDA.channels = ['defaults']  # update channels, if needed.
 
 dependent_libs = [
@@ -24,6 +36,10 @@ dependent_libs = [
     Dependency(name='conda-verify', installer=CONDA),
     Dependency(name='anaconda-client', installer=CONDA),
 ]
+
+# ##############################################################################
+# No need to change below, unless you want to customize
+# ##############################################################################
 
 install_required = pip_dep_utils.get_install_required(dependent_libs)
 
