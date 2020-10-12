@@ -43,6 +43,8 @@ and see how it goes.
     - The error: [Errno 13] Permission denied: '...\\vcruntime140.dll' happens
       when IntelliJ uses this environment, and we want to recreate this env.
       So close IntelliJ before re-creating conda environments.
+    - conda-build could screw up environments in windows if failed. In that 
+      case, open a new command window.
 
 
 ## Dependency Management

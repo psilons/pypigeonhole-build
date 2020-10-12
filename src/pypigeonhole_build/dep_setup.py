@@ -8,11 +8,13 @@ import pypigeonhole_build.conda_translator as conda_translator
 from pypigeonhole_build.conda_translator import CONDA
 
 # Leave these lines here so users could override them. These are defaults.
+
+# assume this file's folder is the top package
+# do not go outside of src, since project content is copied to a "work" location
+# during conda packaging, so project folder is not stable.
 curr_dir = os.path.dirname(os.path.realpath(__file__))
-# go 2 levels above, parent(top package), "src", to the project folder
-proj_dir = os.path.dirname(os.path.dirname(curr_dir))
-app_name = os.path.basename(proj_dir)  # needed by setup.py
-top_pkg = app_name.replace('-', '_')  # part of environment name
+top_pkg = os.path.basename(curr_dir)  # part of environment name
+app_name = top_pkg.replace('_', '-')  # needed by setup.py
 
 # ##############################################################################
 # These are application specific information. We leave some flexibility here
