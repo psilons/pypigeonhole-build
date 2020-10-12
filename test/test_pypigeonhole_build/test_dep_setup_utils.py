@@ -2,11 +2,11 @@ import unittest
 import os
 import traceback
 
-import pypigeonhole_build.pip_dep_utils as pip_dep_utils
-from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
+import pypigeonhole_build.pip_translator as pip_dep_utils
+from pypigeonhole_build.dependency import Dependency, INSTALL, DEV, PIP
 
-import pypigeonhole_build.conda_dep_utils as conda_dep_utils
-from pypigeonhole_build.conda_dep_utils import CONDA
+import pypigeonhole_build.conda_translator as conda_dep_utils
+from pypigeonhole_build.conda_translator import CONDA
 
 
 class DependencyTest(unittest.TestCase):

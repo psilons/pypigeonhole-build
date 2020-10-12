@@ -1,20 +1,22 @@
 import sys
 import os
 
-import pypigeonhole_build.pip_dep_utils as pip_dep_utils
-from pypigeonhole_build.pip_dep_utils import INSTALL, DEV, PIP, Dependency
+import pypigeonhole_build.pip_translator as pip_translator
+from pypigeonhole_build.dependency import Dependency, INSTALL, DEV, PIP
 
-import pypigeonhole_build.conda_dep_utils as conda_dep_utils
-from pypigeonhole_build.conda_dep_utils import CONDA
+import pypigeonhole_build.conda_translator as conda_translator
+from pypigeonhole_build.conda_translator import CONDA
 
+# Leave these lines here so users could override them. These are defaults.
 curr_dir = os.path.dirname(os.path.realpath(__file__))
 # go 2 levels above, parent(top package), "src", to the project folder
 proj_dir = os.path.dirname(os.path.dirname(curr_dir))
-app_name = os.path.basename(proj_dir)
-top_pkg = app_name.replace('-', '_')
+app_name = os.path.basename(proj_dir)  # needed by setup.py
+top_pkg = app_name.replace('-', '_')  # part of environment name
 
 # ##############################################################################
-# These are application specific information
+# These are application specific information. We leave some flexibility here
+# for further customization. Don't want to tie the knots too much.
 # ##############################################################################
 python_version = 'py390'  # take 3 digits, major, minor, patch
 
@@ -42,21 +44,22 @@ dependent_libs = [
 # No need to change below, unless you want to customize
 # ##############################################################################
 
-install_required = pip_dep_utils.get_install_required(dependent_libs)
+# send these to setup.py
+install_required = pip_translator.get_install_required(dependent_libs)
 
-test_required = pip_dep_utils.get_test_required(dependent_libs)
+test_required = pip_translator.get_test_required(dependent_libs)
 
-python_requires = pip_dep_utils.get_python_requires(dependent_libs)
+python_requires = pip_translator.get_python_requires(dependent_libs)
 
 # we can't abstract this out since it knows pip and conda, maybe more later on.
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        raise ValueError('need to pass in parameters: pip, conda, conda_env')
+        raise ValueError('need to pass in parameters: pip, conda, conda_env, etc')
 
     if sys.argv[1] == 'pip':
-        pip_dep_utils.gen_req_txt(dependent_libs, 'requirements.txt')
+        pip_translator.gen_req_txt(dependent_libs, 'requirements.txt')
     elif sys.argv[1] == 'conda':
-        conda_dep_utils.gen_conda_yaml(dependent_libs, 'environment.yaml')
+        conda_translator.gen_conda_yaml(dependent_libs, 'environment.yaml')
     elif sys.argv[1] == 'conda_env':
         print(CONDA.env)
     else:

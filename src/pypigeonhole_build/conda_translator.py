@@ -1,4 +1,4 @@
-from pypigeonhole_build.pip_dep_utils import Installer, PIP
+from pypigeonhole_build.dependency import Installer, PIP
 
 CONDA = Installer(name='CONDA')
 

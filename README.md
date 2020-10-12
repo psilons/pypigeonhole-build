@@ -8,6 +8,7 @@
 ![License](https://anaconda.org/psilons/pypigeonhole-build/badges/license.svg)
 
 **Linux version of shell scripts is not working yet.**
+**Anaconda badge is broken too. Use pypi version.**
 
 This is a Python SDLC tool to shorten the time we spend on SDLC without
 sacrificing quality. It does so by hard-coding certain flexible parts. 
@@ -140,3 +141,4 @@ the extension.
 - Sometimes, windows is not stable due to locking. Rerun should work.
 - package_data in setup.py is not supported (yet).
 - dependency information is not populated to meta.yaml, used by conda-build
+- Need a network storage to store build/test results with http access.

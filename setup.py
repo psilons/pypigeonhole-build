@@ -8,14 +8,15 @@ from os.path import dirname
 src_path = os.path.join(dirname(__file__), 'src')
 sys.path.append(src_path)
 
-from pypigeonhole_build import dep_setup
-
 HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
+from pypigeonhole_build import dep_setup
+
+
 # If this is needed during dev by others, cd this folder and run pip install -e .
 # This is reusable in normal cases.
-setup(name='pypigeonhole-build',
+setup(name=dep_setup.app_name,
       version=dep_setup.app_version,  # major.minor.patch
       description='Python build & packaging tool',
       url='https://github.com/psilons/pypigeonhole-build',
@@ -48,5 +49,3 @@ setup(name='pypigeonhole-build',
 #         make sure there is no egg-info folder here, otherwise error with no
 #         .egg file found, thought the package is installed successfully.
 #     python -m pip install . --no-deps --ignore-installed -vv
-# To remove:
-#     pip uninstall pypigeonhole-build

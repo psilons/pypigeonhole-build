@@ -1,28 +1,6 @@
 import sys
-from dataclasses import dataclass, field
 
-INSTALL = 'INSTALL'
-DEV = 'DEV'
-
-
-@dataclass
-class Installer:
-    name: str
-    env: str = None
-    channels: list = field(default_factory=list)
-
-
-PIP = Installer(name='PIP')
-
-
-@dataclass
-class Dependency:
-    name: str
-    version: str = ''
-    url: str = None
-    scope: str = DEV
-    installer: Installer = PIP
-    desc: str = None
+from pypigeonhole_build.dependency import INSTALL, DEV
 
 
 def get_install_required(libs):

@@ -2,7 +2,7 @@ import unittest
 import os
 import shutil
 
-import pypigeonhole_build.file_edit_utils as file_edit_utils
+import pypigeonhole_build.app_version_control as app_version_control
 
 
 class FileEditorUtilsTest(unittest.TestCase):
@@ -13,7 +13,7 @@ class FileEditorUtilsTest(unittest.TestCase):
         shutil.copyfile(src_file, target_file)
 
         new_str = 'You DO! You LIKE US'
-        file_edit_utils.replace_line(target_file, 'I DO! I LIKE THEM', new_str)
+        app_version_control.replace_line(target_file, 'I DO! I LIKE THEM', new_str)
 
         with open(target_file, 'r') as f:
             lines = f.read()
@@ -22,13 +22,13 @@ class FileEditorUtilsTest(unittest.TestCase):
         os.remove(target_file)
 
     def test_version_inc(self):
-        self.assertTrue(file_edit_utils.version_inc_1('1.2.3') == '1.2.4')
-        self.assertTrue(file_edit_utils.version_inc_1('1.2.9') == '1.3.0')
-        self.assertTrue(file_edit_utils.version_inc_1('1.9.9') == '2.0.0')
+        self.assertTrue(app_version_control.version_inc_1('1.2.3') == '1.2.4')
+        self.assertTrue(app_version_control.version_inc_1('1.2.9') == '1.3.0')
+        self.assertTrue(app_version_control.version_inc_1('1.9.9') == '2.0.0')
 
-        self.assertTrue(file_edit_utils.version_inc_1('1.2.3') == '1.2.4')
-        self.assertTrue(file_edit_utils.version_inc_2('1.9.9') == '1.9.10')
-        self.assertTrue(file_edit_utils.version_inc_2('1.9.15') == '1.9.16')
+        self.assertTrue(app_version_control.version_inc_1('1.2.3') == '1.2.4')
+        self.assertTrue(app_version_control.version_inc_2('1.9.9') == '1.9.10')
+        self.assertTrue(app_version_control.version_inc_2('1.9.15') == '1.9.16')
 
     def test_bump_version(self):
         tmp_file = '/tmp/test1'
@@ -36,8 +36,8 @@ class FileEditorUtilsTest(unittest.TestCase):
         with open(tmp_file, 'w') as f:  # open a tmp file, save 1.2.3 in it.
             f.write('app_version=' + v)
 
-        file_edit_utils.bump_version1(v, tmp_file)  # bump 1.2.3 to 1.2.4
-        file_edit_utils.bump_version2('1.2.4', tmp_file)  # bump 1.2.4 to 1.2.5
+        app_version_control.bump_version1(v, tmp_file)  # bump 1.2.3 to 1.2.4
+        app_version_control.bump_version2('1.2.4', tmp_file)  # bump 1.2.4 to 1.2.5
 
         with open(tmp_file, 'r') as f:
             line = f.readline()
