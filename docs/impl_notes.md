@@ -157,4 +157,6 @@ Check change:
 
 https://github.com/psilons/pypigeonhole-build/network
 
+```pph_cleanup.bat``` to clean all temporary staging folders.
 
+When we commit changes, changes will be all intentional. Check carefully.
