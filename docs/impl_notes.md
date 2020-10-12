@@ -30,6 +30,19 @@ and see how it goes.
   only place where we need to use properties files. Please keep app_version
   assignment in the code unique so the search on this string returns unique 
   result.
+  
+- To manage dependencies, pip is not enough, so we have to use conda. However,
+  conda is tricky sometimes, especially in scripts and on windows. Here are 
+  what we know unstable practices on windows:
+    - do not call conda deactivate in a script with other conda commands. It
+      does nothing sometimes.
+    - do not call conda activate in a script, expecting you are in that 
+      environment once you are out of the script. You are in that environment
+      only when you are in the script.
+    - do not call conda clean -a in a script with other conda commands.
+    - The error: [Errno 13] Permission denied: '...\\vcruntime140.dll' happens
+      when IntelliJ uses this environment, and we want to recreate this env.
+      So close IntelliJ before re-creating conda environments.
 
 
 ## Dependency Management
@@ -160,3 +173,9 @@ https://github.com/psilons/pypigeonhole-build/network
 ```pph_cleanup.bat``` to clean all temporary staging folders.
 
 When we commit changes, changes will be all intentional. Check carefully.
+
+## Testing Notes
+For this project's testing, we need to do this for jumpstart:
+set PYTHONPATH=src;%PYTHONPATH%
+
+Library users don't need to do this because they have this lib installed already.

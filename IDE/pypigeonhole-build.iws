@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dependency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_release.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/conda_dep_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/conda_translator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/file_edit_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/app_version_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_dep_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_translator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_file_edit_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_app_version_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +60,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19703704" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
@@ -238,7 +229,9 @@
       <workItem from="1602363281978" duration="4755000" />
       <workItem from="1602368663142" duration="19418000" />
       <workItem from="1602448958794" duration="10830000" />
-      <workItem from="1602464710350" duration="6169000" />
+      <workItem from="1602464710350" duration="9634000" />
+      <workItem from="1602474604664" duration="32000" />
+      <workItem from="1602474643628" duration="1227000" />
     </task>
     <servers />
   </component>
@@ -246,10 +239,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="130" key="#Project_Structure" timestamp="1602467310384">
+    <state x="542" y="130" key="#Project_Structure" timestamp="1602475123320">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="542" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602467310384" />
+    <state x="542" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602475123320" />
     <state x="2636" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602310344910" />
     <state x="516" y="211" width="1297" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602125858032">
       <screen x="0" y="0" width="2048" height="1152" />
@@ -279,25 +272,25 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="842" y="311" key="FileChooserDialogImpl/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602468935160" />
-    <state width="1639" height="235" key="GridCell.Tab.0.bottom" timestamp="1602469839112">
+    <state width="1639" height="235" key="GridCell.Tab.0.bottom" timestamp="1602474363171">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1639" height="235" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602469839112" />
+    <state width="1639" height="235" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602474363171" />
     <state width="1551" height="245" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
-    <state width="1639" height="235" key="GridCell.Tab.0.center" timestamp="1602469839112">
+    <state width="1639" height="235" key="GridCell.Tab.0.center" timestamp="1602474363171">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1639" height="235" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602469839112" />
+    <state width="1639" height="235" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602474363171" />
     <state width="1551" height="245" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
-    <state width="1639" height="235" key="GridCell.Tab.0.left" timestamp="1602469839112">
+    <state width="1639" height="235" key="GridCell.Tab.0.left" timestamp="1602474363171">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1639" height="235" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602469839112" />
+    <state width="1639" height="235" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602474363171" />
     <state width="1551" height="245" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
-    <state width="1639" height="235" key="GridCell.Tab.0.right" timestamp="1602469839112">
+    <state width="1639" height="235" key="GridCell.Tab.0.right" timestamp="1602474363171">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1639" height="235" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602469839112" />
+    <state width="1639" height="235" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602474363171" />
     <state width="1551" height="245" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
     <state width="1640" height="224" key="GridCell.Tab.1.bottom" timestamp="1602464692119">
       <screen x="0" y="0" width="2048" height="1152" />

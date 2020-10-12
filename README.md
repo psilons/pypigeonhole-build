@@ -8,7 +8,8 @@
 ![License](https://anaconda.org/psilons/pypigeonhole-build/badges/license.svg)
 
 **Linux version of shell scripts is not working yet.**
-**Anaconda badge is broken too. Use pypi version.**
+
+**Anaconda badge is broken. Use pypi version.**
 
 This is a Python SDLC tool to shorten the time we spend on SDLC without
 sacrificing quality. It does so by hard-coding certain flexible parts. 
@@ -42,10 +43,11 @@ run subsequent scripts in the environment as well (activate the environment).
   we change dependencies, we need to rerun this script to re-generate the 
   files.
 
-
 - **coding**: We should spend most time on this. We leave out the IDE set up.
+
 - compile: This is out of scope due to varieties, C/C++, PyInstaller, Cython, 
   or no compiling at all, etc. 
+  
 - unit test: ```pph_unittest.bat``` 
   >generate test coverage report and coverage badge.
   
@@ -55,7 +57,6 @@ run subsequent scripts in the environment as well (activate the environment).
   >In order to run test at the project root folder, we add a src reference in
   the __init__.py under test top package. Otherwise, tests can run only from
   the src folder.
-  
   
 - package: 
     - ```pph_package_pip.bat``` to pack Python libraries.
@@ -69,25 +70,28 @@ run subsequent scripts in the environment as well (activate the environment).
      
   Conda version is more flexible to customize because of the extra references to
   meta.yaml and build scripts. Please check conda-build documents.
-- release: ```pph_release.bat``` to tag versions and bump the current version to the 
-  next. 
-  >We use major.minor.patch format in versions. The minor and patch 
-  increments are single digit, bounded by 10. A major version with 81 
-  minors/patches should be enough in normal cases. 
+
 - upload: 
     - ```pph_upload_pip.bat``` to upload library to the pip central server.
     - ```pph_upload_pip_test.bat``` to upload library to the pip test central server.
-    - ```upload.conda.bat``` to upload library to the conda central server.
+    - ```pph_upload_conda.bat``` to upload library to the conda central server.
   We leave out the complexity of local artifact server setup. Variations are:
     - local pip/anaconda channels, for testing.
     - http tunnel through local channels.
     - local/internal pip/anaconda official servers through vendor support.
     - remote pip/anaconda official/central servers through internet.
     - 3rd party vendors, such as Artifactory servers.
+    
+- release: ```pph_release.bat``` to tag versions and bump the current version to the 
+  next. 
+  >We use major.minor.patch format in versions. The minor and patch 
+  increments are single digit, bounded by 10. A major version with 81 
+  minors/patches should be enough in normal cases. 
+
 - install/deploy: 
     - lib installation: use pip and/or conda.
     - app deployment: conda can bundle scripts and Python code. So we use conda
-      as the transport to deploy apps. 
+      as the transport to deploy apps to conda environments. 
       >There are many other ways, ground or cloud, to deploy apps, such as 
       kubernetes, Ansible, etc. We leave these out due to high available 
       customization (i.e., no predictable patterns).
@@ -96,9 +100,9 @@ run subsequent scripts in the environment as well (activate the environment).
 ## Usage
 
 Add this project as one of the dependencies. The installation installs the
-reusable scripts to <virtual env>\Scripts folder, in addition to the Python
+reusable scripts to <env>\Scripts folder, in addition to the Python
 code installed in <virtual env>\Lib\site_packages\pypigeonhole_build. The
-Scripts folder should be in PATH so that we can call them. They assume we
+<env>\Scripts folder should be in PATH so that we can call them. They assume we
 are in the project folder. 
 
 Add dependencies in the dep_setup.py. Each dependency has the following fields:
@@ -121,7 +125,7 @@ the import and name in most cases.
 
 Now we could follow the previous SDLC steps.
 
-For any runs, we use ``` <script> 2>&1 | tee my.log ``` to save the log to
+For any runs, we use ```<script> 2>&1 | tee my.log``` to save the log to
 local file, since some commands clear command window screen, and so we lose 
 screen prints.
 
@@ -141,4 +145,4 @@ the extension.
 - Sometimes, windows is not stable due to locking. Rerun should work.
 - package_data in setup.py is not supported (yet).
 - dependency information is not populated to meta.yaml, used by conda-build
-- Need a network storage to store build/test results with http access.
+- Need a network storage to store build/test results with http access for CI.

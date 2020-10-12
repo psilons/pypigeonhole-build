@@ -37,6 +37,7 @@ SET curr_env=%CONDA_DEFAULT_ENV%
 ECHO current env: %curr_env%
 IF "%curr_env%" NEQ "" (
     CALL conda deactivate
+    if errorlevel 1 exit /B 1
     echo current env after deactivate: %CONDA_DEFAULT_ENV%
 )
 
@@ -47,8 +48,6 @@ if errorlevel 1 (
     ECHO env[%new_env%] exists, removing it ...
     CALL conda env remove -n %new_env%
     if errorlevel 1 exit /B 1
-
-    conda clean -a
 
     CALL conda env create -f environment.yaml
     if errorlevel 1 exit /B 1
@@ -64,4 +63,6 @@ pipdeptree
 echo --
 echo run "conda activate %new_env%" to activate environment
 echo --
-echo conda info --envs to check current activated environment
+echo run "conda info --envs" to check current activated environment
+
+CALL conda deactivate
