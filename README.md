@@ -30,7 +30,10 @@ A good example for efficiency is Java's mature tool, [Maven](http://maven.apache
   
 ## Standard SDLC Process Acceleration
 
-- environment setup: ```py_dev_env_setup.bat```
+All scripts run in the project folder. Once Conda environment is created, 
+run subsequent scripts in the environment as well (activate the environment).
+
+- environment setup: ```pph_dev_env_setup.bat```
   >The existing conda environment with same env name will be deleted, and a new 
   environment will be created.
   
@@ -42,7 +45,7 @@ A good example for efficiency is Java's mature tool, [Maven](http://maven.apache
 - **coding**: We should spend most time on this. We leave out the IDE set up.
 - compile: This is out of scope due to varieties, C/C++, PyInstaller, Cython, 
   or no compiling at all, etc. 
-- unit test: ```unittest.bat``` 
+- unit test: ```pph_unittest.bat``` 
   >generate test coverage report and coverage badge.
   
   >The script is based on Python unittest package. You may create another 
@@ -54,9 +57,9 @@ A good example for efficiency is Java's mature tool, [Maven](http://maven.apache
   
   
 - package: 
-    - ```package_pip.bat``` to pack Python libraries.
-    - ```package_conda.bat``` to pack both libraries and applications.
-    - ```pack_app_zip.bat``` to pack applications, include src, bin, and conf.
+    - ```pph_package_pip.bat``` to pack Python libraries.
+    - ```pph_package_conda.bat``` to pack both libraries and applications.
+    - ```pph_pack_app_zip.bat``` to pack applications, include src, bin, and conf.
       Since this is a customized way, there is no associated upload tool and 
       users need to deal with uploading by themselves.
       
@@ -65,21 +68,23 @@ A good example for efficiency is Java's mature tool, [Maven](http://maven.apache
      
   Conda version is more flexible to customize because of the extra references to
   meta.yaml and build scripts. Please check conda-build documents.
-- release: ```release.bat``` to tag versions and bump the current version to the 
+- release: ```pph_release.bat``` to tag versions and bump the current version to the 
   next. 
   >We use major.minor.patch format in versions. The minor and patch 
   increments are single digit, bounded by 10. A major version with 81 
   minors/patches should be enough in normal cases. 
-- upload: ```upload_pip.bat/upload_pip_test.bat``` and ```upload.conda.bat``` 
-  to upload artifacts to central pip and conda central servers. We leave
-  out the complexity of artifact server setup. Variations are:
+- upload: 
+    - ```pph_upload_pip.bat``` to upload library to the pip central server.
+    - ```pph_upload_pip_test.bat``` to upload library to the pip test central server.
+    - ```upload.conda.bat``` to upload library to the conda central server.
+  We leave out the complexity of local artifact server setup. Variations are:
     - local pip/anaconda channels, for testing.
     - http tunnel through local channels.
     - local/internal pip/anaconda official servers through vendor support.
     - remote pip/anaconda official/central servers through internet.
-    - 3rd party vendors, such asArtifactory servers.
+    - 3rd party vendors, such as Artifactory servers.
 - install/deploy: 
-    - lib installation: use pip or conda
+    - lib installation: use pip and/or conda.
     - app deployment: conda can bundle scripts and Python code. So we use conda
       as the transport to deploy apps. 
       >There are many other ways, ground or cloud, to deploy apps, such as 
@@ -111,7 +116,7 @@ line in the environment.yaml. CONDA.channels can be alternated too (default to
 None).
 
 Pip can be customized in setup.py, if needed. This file can be reused except
-the import in most cases.
+the import and name in most cases.
 
 Now we could follow the previous SDLC steps.
 

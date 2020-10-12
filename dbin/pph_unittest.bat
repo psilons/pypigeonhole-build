@@ -12,7 +12,7 @@ REM --omit -> exclude test code from coverage counts
 REM conda run clears screen all the time, so we leave it out, but in the workflow.
 REM dep_setup.py is not counted since we start with test side. So if we miss any
 REM class, we won't know.
-CALL coverage run --omit test/* -m unittest discover -s test
+CALL coverage run --source=src --omit test/* -m unittest discover -s test
 if errorlevel 1 exit /B 1
 
 CALL coverage report --omit test/*

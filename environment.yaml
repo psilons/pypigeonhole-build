@@ -1,4 +1,4 @@
-name: py390_bld
+name: py390_pypigeonhole_build
 
 channels:
     - defaults

@@ -18,6 +18,7 @@ top_pkg = app_name.replace('-', '_')
 # ##############################################################################
 python_version = 'py390'  # take 3 digits, major, minor, patch
 
+# follow same style, 3 digits, major, minor, patch
 # release script is looking for this pattern: app_version =
 # so don't use this pattern else where. we should have 2 assignment anyway.
 app_version = "0.2.5"

@@ -1,11 +1,20 @@
 # Implementation Details
 
+It all started with dependencies, then one thing leads to another.
+Ok, enough is enough once I get spoiled by Java Maven. Just want to see
+how much time I can save from this. Maven has a plugin infrastructure for 
+extensions. That's too much to build. So let's start from something smaller
+and see how it goes.
+
+临渊羡鱼 不如退而结网
+
 ## Standard Project Structure
 
 - The project folder name is words connected with -. The Python top
-  package name is the project name, replacing - with _. This package name
+  package name is the project name, replacing - with _ . This package name
   has to be globally unique, otherwise the first encounter wins during
-  import.
+  import. We use the top package name for conda environments as well,
+  'py' + python version + '_' + top package name.
   
 - Hard code "src" and "test" folders for source code and testing code. 
   >We don't think the naming freedom of these 2 folders help us anything.
@@ -14,6 +23,13 @@
 
 - For applications, we hard code "bin" folder for start-up and other scripts.
   We hard code "conf" folder for configurations.
+  
+- we use python code for configurations, rather than a property file. 
+  The drawback is when we update versions, it's ugly to update the code.
+  Maybe AST helps, or externalize version information. This is so far the
+  only place where we need to use properties files. Please keep app_version
+  assignment in the code unique so the search on this string returns unique 
+  result.
 
 
 ## Dependency Management
@@ -92,21 +108,53 @@ get badges.
 
 ## Testing
 
-To test pip packages:
+In all cases, check the version deployed.
+- https://pypi.org/project/pypigeonhole-build
+- https://anaconda.org/psilons/pypigeonhole-build
 
-pip uninstall pypigeonhole-build -y
-pip install pypigeonhole-build
-check <env>\Lib\site-packages\pypigeonhole_build for 4 files
-pip uninstall pypigeonhole-build -y
+#### To test pip packages locally:
+___
+pip uninstall pypigeonhole-build -y  
+pip install dist\pypigeonhole-build-0.2.4.tar.gz  
+python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+pip uninstall pypigeonhole-build -y  
 
-To test conda packages:
+pip install dist\pypigeonhole_build-0.2.4-py3-none-any.whl  
+python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+pip uninstall pypigeonhole-build -y  
 
-conda remove pypigeonhole-build -y
-conda install -c psilons pypigeonhole-build -y
-check <env>\Scripts for script files
-check <env>\Lib\site-packages\pypigeonhole_build for 4 files
-conda remove pypigeonhole-build -y
+#### To test conda packages locally:
+___
+conda remove pypigeonhole-build -y  
+conda install dist_conda\noarch\pypigeonhole-build-0.2.4-py_0.tar.bz2  
+check envs\py390_pypigeonhole_build\Scripts for scripts  
+python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+conda remove pypigeonhole-build -y  
+
+#### To test pip packages remotely:
+___
+pip uninstall pypigeonhole-build -y  
+pip install pypigeonhole-build   
+python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+pip uninstall pypigeonhole-build -y  
+
+#### To test conda packages remotely:
+___
+conda remove pypigeonhole-build -y  
+conda install -c psilons pypigeonhole-build  
+check envs\py390_pypigeonhole_build\Scripts for scripts  
+python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+conda remove pypigeonhole-build -y  
+check envs\py390_pypigeonhole_build\Scripts for scripts removal  
+
+## Release
+
+conda install -c psilons pypigeonhole-build
+
+```pph_release``` to bump up version number
+
+Check change:
+
+https://github.com/psilons/pypigeonhole-build/network
 
 
-To install from local:
-conda install --use-local pypigeonhole-build
