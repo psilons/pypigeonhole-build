@@ -1,5 +1,4 @@
 import sys
-import os
 
 import pypigeonhole_build.pip_translator as pip_translator
 from pypigeonhole_build.dependency import Dependency, INSTALL, DEV, PIP
@@ -7,30 +6,19 @@ from pypigeonhole_build.dependency import Dependency, INSTALL, DEV, PIP
 import pypigeonhole_build.conda_translator as conda_translator
 from pypigeonhole_build.conda_translator import CONDA
 
-# Leave these lines here so users could override them. These are defaults.
-
-# assume this file's folder is the top package
-# do not go outside of src, since project content is copied to a "work" location
-# during conda packaging, so project folder is not stable.
-curr_dir = os.path.dirname(os.path.realpath(__file__))
-top_pkg = os.path.basename(curr_dir)  # part of environment name
-app_name = top_pkg.replace('_', '-')  # needed by setup.py
+import pypigeonhole_build.app_setup as app_setup
 
 # ##############################################################################
 # These are application specific information. We leave some flexibility here
 # for further customization. Don't want to tie the knots too much.
+# This file is used by setup.py for users and conda env setup script for dev.
 # ##############################################################################
-python_version = 'py390'  # take 3 digits, major, minor, patch
+__python_version = 'py390'  # take 3 digits, major, minor, patch
 
-# follow same style, 3 digits, major, minor, patch
-# release script is looking for this pattern: app_version =
-# so don't use this pattern else where. we should have 2 assignment anyway.
-app_version = "0.2.6"
-
-CONDA.env = python_version + '_' + top_pkg
+CONDA.env = __python_version + '_' + app_setup.get_top_pkg()
 CONDA.channels = ['defaults']  # update channels, if needed.
 
-dependent_libs = [
+_dependent_libs = [
     Dependency(name='python', version='>=3.6', scope=INSTALL, installer=CONDA),
     Dependency(name='pip', installer=CONDA),  # Without this Conda complains
     Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),  # DEV
@@ -46,22 +34,24 @@ dependent_libs = [
 # No need to change below, unless you want to customize
 # ##############################################################################
 
-# send these to setup.py
-install_required = pip_translator.get_install_required(dependent_libs)
+# used by setup.py, hide details - how we compute these values.
+install_required = pip_translator.get_install_required(_dependent_libs)
 
-test_required = pip_translator.get_test_required(dependent_libs)
+test_required = pip_translator.get_test_required(_dependent_libs)
 
-python_requires = pip_translator.get_python_requires(dependent_libs)
+python_required = pip_translator.get_python_requires(_dependent_libs)
 
-# we can't abstract this out since it knows pip and conda, maybe more later on.
+# we can't abstract this out since it knows pip and conda, maybe more tools
+# later on, such as poetry.
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         raise ValueError('need to pass in parameters: pip, conda, conda_env, etc')
 
+    # scripts use these
     if sys.argv[1] == 'pip':
-        pip_translator.gen_req_txt(dependent_libs, 'requirements.txt')
+        pip_translator.gen_req_txt(_dependent_libs, 'requirements.txt')
     elif sys.argv[1] == 'conda':
-        conda_translator.gen_conda_yaml(dependent_libs, 'environment.yaml')
+        conda_translator.gen_conda_yaml(_dependent_libs, 'environment.yaml')
     elif sys.argv[1] == 'conda_env':
         print(CONDA.env)
     else:

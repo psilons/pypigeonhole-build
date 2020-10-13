@@ -11,13 +11,13 @@ sys.path.append(src_path)
 HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
+from pypigeonhole_build import app_setup
 from pypigeonhole_build import dep_setup
-
 
 # If this is needed during dev by others, cd this folder and run pip install -e .
 # This is reusable in normal cases.
-setup(name=dep_setup.app_name,
-      version=dep_setup.app_version,  # major.minor.patch
+setup(name=app_setup.get_app_name(),
+      version=app_setup.get_app_version(),  # major.minor.patch
       description='Python build & packaging tool',
       url='https://github.com/psilons/pypigeonhole-build',
 
@@ -34,7 +34,7 @@ setup(name=dep_setup.app_name,
       # packages=find_packages("src", exclude=["test"]) + ['.'],
       packages=find_packages("src", exclude=["test"]),
 
-      python_requires=dep_setup.python_requires if dep_setup.python_requires else '>=3',
+      python_requires=dep_setup.python_required if dep_setup.python_required else '>=3',
 
       install_requires=dep_setup.install_required,
 

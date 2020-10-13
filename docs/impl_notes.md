@@ -6,7 +6,7 @@ how much time I can save from this. Maven has a plugin infrastructure for
 extensions. That's too much to build. So let's start from something smaller
 and see how it goes.
 
-临渊羡鱼 不如退而结网
+工欲善其事，必先利其器。
 
 ## Standard Project Structure
 

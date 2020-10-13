@@ -2,10 +2,10 @@ import unittest
 import os
 import traceback
 
-import pypigeonhole_build.pip_translator as pip_dep_utils
+import pypigeonhole_build.pip_translator as pip_translator
 from pypigeonhole_build.dependency import Dependency, INSTALL, DEV, PIP
 
-import pypigeonhole_build.conda_translator as conda_dep_utils
+import pypigeonhole_build.conda_translator as conda_translator
 from pypigeonhole_build.conda_translator import CONDA
 
 
@@ -30,24 +30,24 @@ class DependencyTest(unittest.TestCase):
         ]
 
     def test_pip(self):
-        install_required = pip_dep_utils.get_install_required(self.dep_libs)
+        install_required = pip_translator.get_install_required(self.dep_libs)
         print(install_required)
         self.assertTrue(install_required == [])
 
-        test_required = pip_dep_utils.get_test_required(self.dep_libs)
+        test_required = pip_translator.get_test_required(self.dep_libs)
         print(test_required)
         self.assertTrue(test_required == ['coverage==5.3', 'pipdeptree==1.0.0',
                                           'coverage-badge',
                                           'rich @ github+https://github.com/willmcgugan/rich.git'])
 
-        python_requires = pip_dep_utils.get_python_requires(self.dep_libs)
+        python_requires = pip_translator.get_python_requires(self.dep_libs)
         print(python_requires)
         self.assertTrue(python_requires == '>=3.5')
 
     def test_env(self):
         CONDA.env = None
         try:
-            conda_dep_utils.gen_conda_yaml(self.dep_libs, '/tmp/environment.yaml')
+            conda_translator.gen_conda_yaml(self.dep_libs, '/tmp/environment.yaml')
         except ValueError as ve:
             self.assertTrue(ve.args[0] == 'Need to define conda env name!')
             print(traceback.format_exc())
@@ -57,7 +57,7 @@ class DependencyTest(unittest.TestCase):
         CONDA.channels = ['defaults']  # update channels, if needed.
 
         output_file = '/tmp/environment.yaml'
-        conda_dep_utils.gen_conda_yaml(self.dep_libs, output_file)
+        conda_translator.gen_conda_yaml(self.dep_libs, output_file)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
         env_file = os.path.join(dir_path, 'environment_verify.yaml')
@@ -68,7 +68,7 @@ class DependencyTest(unittest.TestCase):
 
     def test_pip_req_txt(self):
         output_file = '/tmp/requirements.txt'
-        pip_dep_utils.gen_req_txt(self.dep_libs, output_file)
+        pip_translator.gen_req_txt(self.dep_libs, output_file)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
         env_file = os.path.join(dir_path, 'requirements_verify.txt')
@@ -100,7 +100,7 @@ class DependencyTest(unittest.TestCase):
         ]
 
         output_file = '/tmp/requirements.txt'
-        pip_dep_utils.gen_req_txt(dep_libs, output_file)
+        pip_translator.gen_req_txt(dep_libs, output_file)
         with open(output_file, 'r') as f:
             line = f.readline()
             self.assertTrue(line.strip() == 'coverage-badge')
