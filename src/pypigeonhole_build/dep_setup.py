@@ -51,7 +51,7 @@ if __name__ == "__main__":
     if sys.argv[1] == 'pip':
         pip_translator.gen_req_txt(_dependent_libs, 'requirements.txt')
     elif sys.argv[1] == 'conda':
-        conda_translator.gen_conda_yaml(_dependent_libs, 'environment.yml')
+        conda_translator.gen_conda_yaml(_dependent_libs, 'environment.yaml')
     elif sys.argv[1] == 'conda_env':
         print(CONDA.env)
     else:
