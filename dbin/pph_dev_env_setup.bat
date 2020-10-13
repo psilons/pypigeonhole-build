@@ -17,6 +17,8 @@ IF NOT EXIST src\%pkg%\dep_setup.py (
     EXIT /B 1
 )
 
+PYTHONPATH=src;%PYTHONPATH%
+
 echo create conda environment.yaml
 python src\%pkg%\dep_setup.py conda
 if errorlevel 1 exit /B 1

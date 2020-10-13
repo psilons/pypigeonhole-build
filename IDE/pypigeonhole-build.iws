@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/app_setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_app_setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_release.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coverage.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../coverage.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/pph_unittest.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_unittest.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/app_version_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/app_version_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_app_version_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_app_version_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dependency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +222,7 @@
       <workItem from="1602464710350" duration="9634000" />
       <workItem from="1602474604664" duration="32000" />
       <workItem from="1602474643628" duration="9130000" />
-      <workItem from="1602515620952" duration="17314000" />
+      <workItem from="1602515620952" duration="18813000" />
     </task>
     <servers />
   </component>
@@ -286,25 +273,25 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="842" y="311" key="FileChooserDialogImpl/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602541963988" />
-    <state width="1901" height="215" key="GridCell.Tab.0.bottom" timestamp="1602554928646">
+    <state width="1901" height="257" key="GridCell.Tab.0.bottom" timestamp="1602556888846">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1901" height="215" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602554928646" />
+    <state width="1901" height="257" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602556888846" />
     <state width="1551" height="245" key="GridCell.Tab.0.bottom/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
-    <state width="1901" height="215" key="GridCell.Tab.0.center" timestamp="1602554928646">
+    <state width="1901" height="257" key="GridCell.Tab.0.center" timestamp="1602556888846">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1901" height="215" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602554928646" />
+    <state width="1901" height="257" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602556888846" />
     <state width="1551" height="245" key="GridCell.Tab.0.center/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
-    <state width="1901" height="215" key="GridCell.Tab.0.left" timestamp="1602554928644">
+    <state width="1901" height="257" key="GridCell.Tab.0.left" timestamp="1602556888846">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1901" height="215" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602554928644" />
+    <state width="1901" height="257" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602556888846" />
     <state width="1551" height="245" key="GridCell.Tab.0.left/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
-    <state width="1901" height="215" key="GridCell.Tab.0.right" timestamp="1602554928646">
+    <state width="1901" height="257" key="GridCell.Tab.0.right" timestamp="1602556888846">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1901" height="215" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602554928646" />
+    <state width="1901" height="257" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602556888846" />
     <state width="1551" height="245" key="GridCell.Tab.0.right/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602363271065" />
     <state width="1901" height="215" key="GridCell.Tab.1.bottom" timestamp="1602554928646">
       <screen x="0" y="0" width="2048" height="1152" />
