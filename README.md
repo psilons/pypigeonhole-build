@@ -9,22 +9,30 @@
 
 **Linux version of shell scripts is not working yet.**
 
-**Anaconda badge is broken. Use pypi version.**
-
 This is a Python SDLC tool to shorten the time we spend on SDLC without
 sacrificing quality. It does so by hard-coding certain flexible parts. 
 Flexibility could lead to confusion and low efficiency because there is
 no standard and thus we cannot build tools on top of that to improve
 efficiency. 
 
-A good example for efficiency is Java's mature tool, [Maven](http://maven.apache.org/).
+Specifically, we tackle the following areas:
+- dependency management: create central structure and populate information to 
+  setup.py and requirements.txt/environment.yml.
+- version management: tag GIT code with the current version and then bump the 
+  version (save back to GIT too).
+- identify the key steps in terms of scripts. These scripts' functionalities 
+  are important abstractions. The implementation can be altered if needed,
+  e.g., our unittest script is unittest based, you may have a pytest version.
+
+A good example for efficiency is Java's mature tool, 
+[Maven](http://maven.apache.org/).
 
 
 ## Goals
 
 - set up a standard project structure. 
-- create reusable tools to minimize the necessary work for dependency management 
-  and CI.
+- create reusable tools to minimize the necessary work for dependency 
+  management and CI. 
 - Make routine steps efficient.
 - Make out-of-routine steps not more painful, i.e., our code should not add 
   more hassle when you extend/modify it.
@@ -36,23 +44,32 @@ All scripts run in the project folder. Once Conda environment is created,
 run subsequent scripts in the environment as well (activate the environment).
 
 - environment setup: ```pph_dev_env_setup.bat```
-  >The existing conda environment with same env name will be deleted, and a new 
-  environment will be created.
+
+  In order to run this script, you need to 
+  install this lib first. The scripts are installed in the <env>/Scripts.
+  Running this in a new window is preferred. During our testing, we found that
+  sometimes, conda env is corrupted after conda-build.
+  >The existing conda environment with same env name will be deleted, and a 
+  new environment will be created. 
   
   >requirements.txt and environment.yaml are generated as well. Whenever 
   we change dependencies, we need to rerun this script to re-generate the 
-  files.
+  files. Conda uses environment.yml, without "a" in yaml. However, Github 
+  action uses environment.yaml, with "a" in yaml.
 
-- **coding**: We should spend most time on this. We leave out the IDE set up.
+- **coding**: We hard code two filenames, 
+  ```app_setup.py``` and ```dep_setup.py```
+  under top package. These are used by the scripts(also used in setup.py). 
+  The code in these 2 files are minimal in the sense:
+    - the information is required, such as name and version.
+    - they can be overwritten or extended.
 
 - compile: This is out of scope due to varieties, C/C++, PyInstaller, Cython, 
   or no compiling at all, etc. 
   
 - unit test: ```pph_unittest.bat``` 
-  >generate test coverage report and coverage badge.
   
-  >The script is based on Python unittest package. You may create another 
-  script for pytest or other packages.
+  generate test coverage report and coverage badge.
   
   >In order to run test at the project root folder, we add a src reference in
   the __init__.py under test top package. Otherwise, tests can run only from
@@ -61,20 +78,24 @@ run subsequent scripts in the environment as well (activate the environment).
 - package: 
     - ```pph_package_pip.bat``` to pack Python libraries.
     - ```pph_package_conda.bat``` to pack both libraries and applications.
-    - ```pph_pack_app_zip.bat``` to pack applications, include src, bin, and conf.
+    - ```pph_pack_app_zip.bat``` to pack applications with binaries generated.
       Since this is a customized way, there is no associated upload tool and 
       users need to deal with uploading by themselves.
       
-  The pip and zip output folder is dist, and the conda output folder is 
-  dist_conda.
+  The pip output folder is dist, the conda output folder is dist_conda, and 
+  the zip output folder is dist_bin.
      
-  Conda version is more flexible to customize because of the extra references to
-  meta.yaml and build scripts. Please check conda-build documents.
+  Conda version is more flexible to customize because of the extra references 
+  to meta.yaml and build scripts. Please check conda-build documents. 
+  Furthermore, we use conda as the transport to deliver artifacts to target 
+  machines/environments.  
 
 - upload: 
     - ```pph_upload_pip.bat``` to upload library to the pip central server.
-    - ```pph_upload_pip_test.bat``` to upload library to the pip test central server.
+    - ```pph_upload_pip_test.bat``` to upload library to the pip test central 
+      server.
     - ```pph_upload_conda.bat``` to upload library to the conda central server.
+    
   We leave out the complexity of local artifact server setup. Variations are:
     - local pip/anaconda channels, for testing.
     - http tunnel through local channels.
@@ -82,28 +103,35 @@ run subsequent scripts in the environment as well (activate the environment).
     - remote pip/anaconda official/central servers through internet.
     - 3rd party vendors, such as Artifactory servers.
     
-- release: ```pph_release.bat``` to tag versions and bump the current version to the 
-  next. 
+  If you don't use central servers, it's likely you need to come up your own 
+  versions.
+    
+- release: ```pph_release.bat``` 
+
+  Tag the current version in GIT and then bump the current version 
+  to the next. 
   >We use major.minor.patch format in versions. The minor and patch 
-  increments are single digit, bounded by 10. A major version with 81 
-  minors/patches should be enough in normal cases. 
+  increments are bounded by 100 by default. This can be overwritten in
+  app_setup.py.
+
+  >Check in changes first before running this script.
 
 - install/deploy: 
     - lib installation: use pip and/or conda.
     - app deployment: conda can bundle scripts and Python code. So we use conda
       as the transport to deploy apps to conda environments. 
       >There are many other ways, ground or cloud, to deploy apps, such as 
-      kubernetes, Ansible, etc. We leave these out due to high available 
-      customization (i.e., no predictable patterns).
+      kubernetes, Ansible, etc. We leave these out due to high possible 
+      customizations (i.e., no predictable patterns).
 
 
 ## Usage
 
 Add this project as one of the dependencies. The installation installs the
-reusable scripts to <env>\Scripts folder, in addition to the Python
-code installed in <virtual env>\Lib\site_packages\pypigeonhole_build. The
-<env>\Scripts folder should be in PATH so that we can call them. They assume we
-are in the project folder. 
+reusable scripts to ```<env>\Scripts``` folder, in addition to the Python
+code installed in ```<env>\Lib\site_packages\pypigeonhole_build```. 
+The ```<env>\Scripts``` folder should be in PATH so that we can call them. 
+The scripts assume we are in the project folder. 
 
 Add dependencies in the dep_setup.py. Each dependency has the following fields:
 - name: required. If name == python, the "python_requires" field in the 
@@ -117,11 +145,21 @@ Add dependencies in the dep_setup.py. Each dependency has the following fields:
 - url: this is for github+https.
 
 If Conda is used, need to set the CONDA.env field, which is mapped to the first
-line in the environment.yaml. CONDA.channels can be alternated too (default to
-None).
+line in the environment.yml. This is reusable unless you want to customize.
+
+CONDA.channels can be alternated too (default to default, which can be omitted).
+
+In app_setup.py, the only thing we need to change is the version value. Others
+can stay the same or customize it, e.g., change version bump behavior to
+bounded by 10.
 
 Pip can be customized in setup.py, if needed. This file can be reused except
-the import and name in most cases.
+the import in most cases.
+
+In summary, the information we need to code are minimal:
+- dependencies in dep_setup.py
+- version number in app_setup.py
+- imports in setup.py to hook the above 2 files.
 
 Now we could follow the previous SDLC steps.
 
@@ -133,16 +171,14 @@ A sample project is in a separate repo:
 [Project Template](https://github.com/psilons/pypigeonhole-proj-tmplt).
 In fact, we set up this project in the same way mentioned here too.
 
-For more info, see dep_setup.py and unit tests.
-
-If these tools are not suitable, we just create other scripts local to the
-project we work on. The existing scripts / Python code should not interfere
-the extension.
+If these tools are not suitable, you just create other scripts local to the
+project you work on. The existing scripts / Python code should not interfere
+the overwritten/extension.
 
 
 ## Side Notes and Future improvements
 
-- Sometimes, windows is not stable due to locking. Rerun should work.
+- Sometimes, conda on windows is not stable due to locking. Rerun should work.
 - package_data in setup.py is not supported (yet).
-- dependency information is not populated to meta.yaml, used by conda-build
+- dependency information is not populated to meta.yaml, used by conda-build.
 - Need a network storage to store build/test results with http access for CI.

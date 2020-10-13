@@ -27,8 +27,8 @@ and see how it goes.
 - we use python code for configurations, rather than a property file. 
   The drawback is when we update versions, it's ugly to update the code.
   Maybe AST helps, or externalize version information. This is so far the
-  only place where we need to use properties files. Please keep app_version
-  assignment in the code unique so the search on this string returns unique 
+  only place where we need to use properties files. Please keep __app_version
+  assignment in the code unique, so the search on this string returns unique 
   result.
   
 - To manage dependencies, pip is not enough, so we have to use conda. However,
@@ -37,8 +37,8 @@ and see how it goes.
     - do not call conda deactivate in a script with other conda commands. It
       does nothing sometimes.
     - do not call conda activate in a script, expecting you are in that 
-      environment once you are out of the script. You are in that environment
-      only when you are in the script.
+      environment even when you get out of the script. You are in that 
+      environment only when you are in the script.
     - do not call conda clean -a in a script with other conda commands.
     - The error: [Errno 13] Permission denied: '...\\vcruntime140.dll' happens
       when IntelliJ uses this environment, and we want to recreate this env.
@@ -50,17 +50,19 @@ and see how it goes.
 ## Dependency Management
 
 In Python, there are several ways to specify dependent libraries, such as
-requirements.txt, setup.py, or Anaconda's environment.yaml. We want to 
-isolate to one place. 
+requirements.txt, setup.py, or Anaconda's environment.yml. We want to 
+isolate to one place to specify dependencies, and then populate the 
+information to needed area. 
 Furthermore, only setup.py contains the information whether included libs are 
 for installation(runtime) or development. However, setup itself is for 
 installation, not for development environment setup. So we need a better 
-dependency management tool to separate dev env setup and lib installation. 
+dependency management to separate dev env setup and lib installation. 
   
-- We isolate dependency specification to one place (along with the name and
-  version), "src"\<project top package>\dep_setup.py. For example, if a project 
-  folder is foo-bar, then this is the project name and where foo_bar is the top 
-  package name. Then the dependency is in foo-bar\src\foo_bar\dep_setup.py. 
+- We isolate dependency specification to one place, 
+  ```<project root>src\<project top package>\dep_setup.py```. For example, 
+  if a project folder is foo-bar, then this is the project name and foo_bar 
+  is the top package name. Then the dependency is in 
+  foo-bar\src\foo_bar\dep_setup.py. 
   >We have to get hint on where the dependency file is. We don't want to put
   dep_setup.py under src. Otherwise, the installation would put this file
   outside packages under site-packages.
@@ -71,8 +73,8 @@ dependency management tool to separate dev env setup and lib installation.
   back to the current channels since they are widely used and referred.
   Otherwise, we may break a lot of tools based on this information. 
   >Please check in these generated files, but do not manually change them.
-  GitHub uses requirements.txt to figure out the dependencies. Other CI tools
-  may use these files as well.
+  GitHub uses requirements.txt to figure out the dependencies. GitHub action
+  refers environment.yaml. Other CI tools may use these files as well.
  
   We have to deal with these in every project, so we isolate these changes 
   in one place. 
@@ -81,7 +83,7 @@ dependency management tool to separate dev env setup and lib installation.
   setup.py has install_requires and test_require, but environment.yaml and 
   requirements.txt miss it. So we need to fill the gap here. 
   
-- The version is in dep_setup.py too. The release.bat would auto-increment
+- The version is in app_setup.py. The release.bat would auto-increment
   this value.
   
   
@@ -114,7 +116,7 @@ environment, run flake8 and unit tests.
 still pointing to the system wide Python executable. So we have to use 
 ```conda run``` before this gets fixed. 
 
->GitHub CI does not allow scripts, so we can't deletgate to our unittest.sh.
+>GitHub CI does not allow scripts, so we can't delegate to our unittest.sh.
 
 >During CI, we check the svg file back to GIT, so that the above percentage
 shows up. This requires every checkin to re-pull. There are other ways to 
@@ -175,9 +177,3 @@ https://github.com/psilons/pypigeonhole-build/network
 ```pph_cleanup.bat``` to clean all temporary staging folders.
 
 When we commit changes, changes will be all intentional. Check carefully.
-
-## Testing Notes
-For this project's testing, we need to do this for jumpstart:
-set PYTHONPATH=src;%PYTHONPATH%
-
-Library users don't need to do this because they have this lib installed already.
