@@ -47,7 +47,7 @@ class DependencyTest(unittest.TestCase):
     def test_env(self):
         CONDA.env = None
         try:
-            conda_translator.gen_conda_yaml(self.dep_libs, '/tmp/environment.yaml')
+            conda_translator.gen_conda_yaml(self.dep_libs, '/tmp/environment.yml')
         except ValueError as ve:
             self.assertTrue(ve.args[0] == 'Need to define conda env name!')
             print(traceback.format_exc())
@@ -56,7 +56,7 @@ class DependencyTest(unittest.TestCase):
         CONDA.env = 'py385_bld'  # change to your environment name
         CONDA.channels = ['defaults']  # update channels, if needed.
 
-        output_file = '/tmp/environment.yaml'
+        output_file = '/tmp/environment.yml'
         conda_translator.gen_conda_yaml(self.dep_libs, output_file)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))

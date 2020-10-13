@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <recent name="D:\00dev\python\projects\pypigeonhole-build\test\test_pypigeonhole_build" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_app_version_control.FileEditorUtilsTest.test_bump_version">
+  <component name="RunManager" selected="Python tests.Unittests in test_pypigeonhole_build">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -195,8 +195,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_app_version_control.FileEditorUtilsTest.test_bump_version" />
         <item itemvalue="Python tests.Unittests in test_pypigeonhole_build" />
+        <item itemvalue="Python tests.Unittests for test_app_version_control.FileEditorUtilsTest.test_bump_version" />
         <item itemvalue="Python tests.Unittests for test_dep_setup.DepSetupTest.test_setup" />
         <item itemvalue="Python tests.Unittests for test_dep_setup.DepSetupTest" />
         <item itemvalue="Python tests.Unittests for test_app_setup.AppSetupTest" />
@@ -222,7 +222,7 @@
       <workItem from="1602464710350" duration="9634000" />
       <workItem from="1602474604664" duration="32000" />
       <workItem from="1602474643628" duration="9130000" />
-      <workItem from="1602515620952" duration="20599000" />
+      <workItem from="1602515620952" duration="21629000" />
     </task>
     <servers />
   </component>
@@ -321,10 +321,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="542" y="225" key="SettingsEditor/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602125374502" />
-    <state x="782" y="307" width="704" height="534" key="find.popup" timestamp="1602539642732">
+    <state x="782" y="307" width="704" height="534" key="find.popup" timestamp="1602559804337">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602539642732" />
+    <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602559804337" />
     <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602360562474" />
   </component>
   <component name="XDebuggerManager">
