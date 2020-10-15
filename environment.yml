@@ -1,0 +1,16 @@
+name: py390_pypigeonhole_build
+
+channels:
+    - defaults
+
+dependencies:
+    - python>=3.6
+    - pip
+    - coverage==5.3
+    - conda-build
+    - conda-verify
+    - anaconda-client
+    - pip:
+        - pipdeptree
+        - coverage-badge
+        - twine

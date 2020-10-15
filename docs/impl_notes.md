@@ -164,6 +164,14 @@ python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"
 conda remove pypigeonhole-build -y  
 check envs\py390_pypigeonhole_build\Scripts for scripts removal  
 
+## upload
+
+```pph_upload_pip.bat```
+
+```pph_upload_pip_test.bat```
+
+```pph_upload_conda dist_conda\noarch\pypigeonhole-build-0.3.0-py_0.tar.bz2```
+
 ## Release
 
 conda install -c psilons pypigeonhole-build
