@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/app_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/app_setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +58,9 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.19703704" />
+    <property name="project.structure.side.proportion" value="0.28965518" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
   <component name="RecentsManager">
@@ -228,7 +227,8 @@
       <workItem from="1602695981408" duration="5268000" />
       <workItem from="1602737440254" duration="3395000" />
       <workItem from="1602780443407" duration="1219000" />
-      <workItem from="1602782787851" duration="4314000" />
+      <workItem from="1602782787851" duration="5146000" />
+      <workItem from="1602791132164" duration="800000" />
     </task>
     <servers />
   </component>
@@ -246,10 +246,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="130" key="#Project_Structure" timestamp="1602475123320">
+    <state x="542" y="130" key="#Project_Structure" timestamp="1602791168760">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="542" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602475123320" />
+    <state x="542" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602791168760" />
     <state x="2636" y="130" key="#Project_Structure/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602310344910" />
     <state x="516" y="211" width="1297" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602125858032">
       <screen x="0" y="0" width="2048" height="1152" />
@@ -327,10 +327,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="542" y="225" key="SettingsEditor/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602125374502" />
-    <state x="782" y="307" width="704" height="534" key="find.popup" timestamp="1602560695276">
+    <state x="782" y="307" width="704" height="534" key="find.popup" timestamp="1602791048729">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602560695276" />
+    <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602791048729" />
     <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602360562474" />
     <state x="363" y="120" key="new project wizard" timestamp="1602776218853">
       <screen x="0" y="0" width="2048" height="1152" />
