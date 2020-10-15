@@ -174,7 +174,7 @@ check envs\py390_pypigeonhole_build\Scripts for scripts removal
 
 ## Release
 
-conda install -c psilons pypigeonhole-build
+set PYTHONPATH=src;%PYTHONPATH%
 
 ```pph_release``` to bump up version number
 
