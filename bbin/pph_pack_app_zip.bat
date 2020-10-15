@@ -15,5 +15,5 @@ IF EXIST %ProjDir%\dist_bin (
 mkdir %ProjDir%\dist_bin
 
 REM *nix and windows 10 has tar command. tar + zip is best.
-REM assume custom build put artifacts/executables in build_bin
-tar -czf %ProjDir%\dist_bin\%proj_name%.tar.gz bin conf build_bin
+REM assume custom build puts artifacts/executables in dist
+tar -czf %ProjDir%\dist_bin\%proj_name%.tar.gz bin conf dist

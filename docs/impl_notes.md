@@ -186,6 +186,7 @@ https://github.com/psilons/pypigeonhole-build/network
 
 When we commit changes, changes will be all intentional. Check carefully.
 
+```conda deactivate```
 
 ## Notes
 - If I activate an environment from a command window, then the computer dies.
