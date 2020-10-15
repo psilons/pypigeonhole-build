@@ -10,10 +10,10 @@ echo %proj_name%
 
 cd %ProjDir%
 IF EXIST %ProjDir%\dist_bin (
-    RMDIR /Q /S %ProjDir%\dist_bin
+    RMDIR /Q /S %ProjDir%\dist_zip
 )
-mkdir %ProjDir%\dist_bin
+mkdir %ProjDir%\dist_zip
 
 REM *nix and windows 10 has tar command. tar + zip is best.
 REM assume custom build puts artifacts/executables in dist
-tar -czf %ProjDir%\dist_bin\%proj_name%.tar.gz bin conf dist
+tar -czf %ProjDir%\dist_zip\%proj_name%.tar.gz bin conf dist
