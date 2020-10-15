@@ -177,3 +177,11 @@ https://github.com/psilons/pypigeonhole-build/network
 ```pph_cleanup.bat``` to clean all temporary staging folders.
 
 When we commit changes, changes will be all intentional. Check carefully.
+
+
+## Notes
+- If I activate an environment from a command window, then the computer dies.
+  After the computer comes back, the conda base environment points to that
+  environment, not to the real base. I couldn't find a way to restore the base.
+  So I have to reinstall miniconda, which is a pain.
+

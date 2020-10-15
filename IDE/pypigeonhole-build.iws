@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +224,9 @@
       <workItem from="1602474604664" duration="32000" />
       <workItem from="1602474643628" duration="9130000" />
       <workItem from="1602515620952" duration="24199000" />
-      <workItem from="1602562482201" duration="4744000" />
+      <workItem from="1602562482201" duration="6022000" />
+      <workItem from="1602695981408" duration="5268000" />
+      <workItem from="1602737440254" duration="2503000" />
     </task>
     <servers />
   </component>
@@ -271,10 +273,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="554" y="154" width="1411" height="800" key="DiffContextDialog/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602203058143" />
-    <state x="842" y="311" key="FileChooserDialogImpl" timestamp="1602541963988">
+    <state x="842" y="311" key="FileChooserDialogImpl" timestamp="1602776100517">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="842" y="311" key="FileChooserDialogImpl/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602541963988" />
+    <state x="842" y="311" key="FileChooserDialogImpl/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602776100517" />
     <state width="1901" height="215" key="GridCell.Tab.0.bottom" timestamp="1602562471033">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -328,6 +330,10 @@
     </state>
     <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602560695276" />
     <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602360562474" />
+    <state x="363" y="120" key="new project wizard" timestamp="1602776218853">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="363" y="120" key="new project wizard/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602776218853" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

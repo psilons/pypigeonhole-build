@@ -19,10 +19,10 @@ IF NOT EXIST src\%pkg%\dep_setup.py (
 
 set PYTHONPATH=src;%PYTHONPATH%
 
-echo create conda environment.yaml
+echo create conda environment.yml
 python src\%pkg%\dep_setup.py conda
 if errorlevel 1 exit /B 1
-REM environment.yaml should be created for conda installation
+REM environment.yml should be created for conda installation
 
 echo create pip requirements.txt
 REM we need to generate requirements.txt as well since github needs for dependency graph
@@ -44,14 +44,14 @@ IF "%curr_env%" NEQ "" (
 )
 
 REM we have to CALL in the front, otherwise conda stop the whole batch.
-CALL conda env create -f environment.yaml
+CALL conda env create -f environment.yml
 
 if errorlevel 1 (
     ECHO env[%new_env%] exists, removing it ...
     CALL conda env remove -n %new_env%
     if errorlevel 1 exit /B 1
 
-    CALL conda env create -f environment.yaml
+    CALL conda env create -f environment.yml
     if errorlevel 1 exit /B 1
 )
 
