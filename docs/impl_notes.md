@@ -193,4 +193,14 @@ When we commit changes, changes will be all intentional. Check carefully.
   After the computer comes back, the conda base environment points to that
   environment, not to the real base. I couldn't find a way to restore the base.
   So I have to reinstall miniconda, which is a pain.
+- Conda-build cause the environment unstable, need further investigation. This
+  is a good state ![Good](conda_good_state.png)
+  
+  This is not 
+  
+  ![Bad](conda_bad_state.png)
 
+  In this case, as long as we don't switch environments it's OK. Once we are 
+  done, just close the window and start a new one.
+- not sure this will help
+  ```conda config --set auto_activate_base false```
