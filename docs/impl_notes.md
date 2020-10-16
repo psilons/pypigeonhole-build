@@ -194,13 +194,25 @@ When we commit changes, changes will be all intentional. Check carefully.
   environment, not to the real base. I couldn't find a way to restore the base.
   So I have to reinstall miniconda, which is a pain.
 - Conda-build cause the environment unstable, need further investigation. This
-  is a good state ![Good](conda_good_state.png)
+  is a good state 
+  
+  ![Good](conda_good_state.png)
   
   This is not 
   
   ![Bad](conda_bad_state.png)
 
+  This is because the conda path is wrong.
+  
   In this case, as long as we don't switch environments it's OK. Once we are 
   done, just close the window and start a new one.
+- Sometimes, when IDE is open and uses the environment, we run into the
+  following error when re-creating the environment: 
+  
+  ERROR conda.core.link:_execute(698): An error occurred while installing package 'defaults::vs2015_runtime-14.16.27012-hf0eaf9b_3'.
+  Rolling back transaction: ...working... done  
+
+  [Errno 13] Permission denied: 'D:\\0dev\\miniconda3\\envs\\py390_pypigeonhole_build\\vcruntime140.dll'  
+  ()
 - not sure this will help
   ```conda config --set auto_activate_base false```
