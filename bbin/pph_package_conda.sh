@@ -15,3 +15,5 @@ rm -rf $proj_dir/dist_conda
 conda-build bbin/pkg_conda_cfg --output-folder dist_conda
 
 conda build purge
+
+echo "Done."

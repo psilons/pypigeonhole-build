@@ -19,3 +19,5 @@ coverage report --omit test/*
 
 rm -rf coverage.svg
 conda run coverage-badge -o coverage.svg
+
+echo "Done."

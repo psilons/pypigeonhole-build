@@ -8,5 +8,10 @@ echo Project Folder: $proj_dir
 
 rm -rf $proj_dir/build
 rm -rf $proj_dir/dist
+rm -rf $proj_dir/dist_conda
+rm -rf $proj_dir/dist_zip
+
 rm -rf $proj_dir/*.egg-info
 rm -rf $proj_dir/src/*.egg-info
+
+echo "Done"

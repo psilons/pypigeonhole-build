@@ -23,4 +23,4 @@ REM come from pip install -e .
 FOR /d %%G IN ("%ProjDir%\src\*.egg-info") DO RMDIR /Q /S "%%~G"
 
 REM if we miss these 2, that's fine.
-exit /b 0
+echo "Done"

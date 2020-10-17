@@ -29,12 +29,14 @@ git push --tags
 
 export PYTHONPATH=src:$PYTHONPATH
 export new_version=$(python -c "import pypigeonhole_build.app_version_control as fu; import $pkg.app_setup; print(fu.bump_version('$app_version', 'src/$pkg/app_setup.py'))")
+[ $? -eq 0 ] || { echo "New version retrieval failed"; exit 1; }
 echo new version: $new_version
-[ $? -eq 0 ] || { echo "Version bump failed"; exit 1; }
 
 git add src/$pkg/app_setup.py
 git commit -m "release: bump version $app_version up to $new_version"
 
 git pull
 git push
+[ $? -eq 0 ] || { echo "Version bump failed"; exit 1; }
 
+echo "Done"

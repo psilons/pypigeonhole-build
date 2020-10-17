@@ -7,8 +7,17 @@ IF NOT EXIST setup.py (
 )
 echo Project Folder: %ProjDir%
 
+SET curr_env=%CONDA_DEFAULT_ENV%
+ECHO current env: %curr_env%
+IF "%curr_env%" == "" (
+    echo Please activate conda env first!
+)
+
 if exist %ProjDir%\dist_conda RMDIR /Q /S %ProjDir%\dist_conda
 
 conda-build bbin\pkg_conda_cfg --output-folder dist_conda
+if errorlevel 1 exit /B 1
 
 conda build purge
+
+echo "Done."

@@ -17,3 +17,6 @@ mkdir %ProjDir%\dist_zip
 REM *nix and windows 10 has tar command. tar + zip is best.
 REM assume custom build puts artifacts/executables in dist
 tar -czf %ProjDir%\dist_zip\%proj_name%.tar.gz bin conf dist
+if errorlevel 1 exit /B 1
+
+echo "Done."

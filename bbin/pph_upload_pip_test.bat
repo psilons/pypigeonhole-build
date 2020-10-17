@@ -5,4 +5,10 @@ IF NOT EXIST setup.py (
 )
 echo Project Folder: %ProjDir%
 
+SET curr_env=%CONDA_DEFAULT_ENV%
+ECHO current env: %curr_env%
+IF "%curr_env%" == "" (
+    echo Please activate conda env first!
+)
+
 twine upload -r testpypi %ProjDir%/dist/*

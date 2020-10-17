@@ -20,9 +20,11 @@ if errorlevel 1 exit /B 1
 REM Other options are bdist, bdist_egg
 REM wheel with -none-any.whl means pure python and any platform
 python setup.py bdist_wheel sdist
+if errorlevel 1 exit /B 1
 REM artifacts are in dist folder here.
 
 REM Move this out of source folder.
 REM We don't want to delete it in case we need to inspect it.
 REM FOR /d %%G IN ("%ProjDir%\src\*.egg-info") DO MOVE "%%~G" %ProjDir%
 REM Don't do this, it interferes with conda packing. Leave it there.
+echo "Done"

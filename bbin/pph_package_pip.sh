@@ -16,3 +16,5 @@ echo current env: $curr_env
 $script_dir/pph_cleanup.sh
 
 python setup.py bdist_wheel sdist
+
+echo "Done"
