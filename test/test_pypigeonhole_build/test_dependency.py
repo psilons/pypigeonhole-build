@@ -51,7 +51,7 @@ class DependencyTest(unittest.TestCase):
         except ValueError as ve:
             self.assertTrue(ve.args[0] == 'Need to define conda env name!')
             print(traceback.format_exc())
-            print('This error is expected, to test negative case. Please Ignore this error')
+            print('This error is expected, to test negative case. Please Ignore this error.')
 
     def test_conda(self):
         CONDA.env = 'py385_bld'  # change to your environment name

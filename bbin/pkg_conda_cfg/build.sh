@@ -1,11 +1,15 @@
 #!/bin/bash
 
-ls -ltr
-ls -ltr $SRC_DIR
-ls -ltr $PREFIX
-ls -ltr $SCRIPTS
-REM Or use %PREFIX%\Scripts
-cp -R $SRC_DIR\dbin $SCRIPTS
-cp -R $SRC_DIR\bbin $SCRIPTS
+# https://python-packaging-tutorial.readthedocs.io/en/latest/conda.html
 
-$PYTHON -m pip install . --no-deps --ignore-installed -vv
+ls -ltr
+ls -ltr $PREFIX
+
+echo copying scripts to $PREFIX ...
+
+cp -R $SRC_DIR/dbin/* $PREFIX
+cp -R $SRC_DIR/bbin/* $PREFIX
+
+ls -ltr $PREFIX
+
+$PYTHON -m pip install .

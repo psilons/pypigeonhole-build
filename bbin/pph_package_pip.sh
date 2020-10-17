@@ -1,17 +1,18 @@
 #!/bin/bash
 
-export SCRIPT_DIR=$(dirname $(readlink -f $0))
-echo $SCRIPT_DIR
+set -e
 
-export PROJ_DIR=$(pwd)
-if [ ! -f "setup.py"]; then
-    echo "Please go to project folder!"
-    exit 1
-fi
-echo $PROJ_DIR
+export script_dir=$(dirname $(readlink -f $0))
+echo Script Folder: $script_dir
 
-$SCRIPT_DIR/pph_cleanup.sh
+export proj_dir=$(pwd)
+test -f "setup.py" || { echo "Please go to project folder!"; exit 1; }
+echo Project Folder: $proj_dir
+
+export curr_env=$CONDA_DEFAULT_ENV
+echo current env: $curr_env
+[ "$curr_env" != "" ] || { echo "Please activate conda env first!"; exit 1; }
+
+$script_dir/pph_cleanup.sh
 
 python setup.py bdist_wheel sdist
-
-mv $PROJ_DIR/src/*.egg-info $PROJ_DIR

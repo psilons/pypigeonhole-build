@@ -1,15 +1,15 @@
 #!/bin/bash
 
-export PROJ_DIR=$(pwd)
-if [ ! -f "setup.py"]; then
-    echo "Please go to project folder!"
-    exit 1
-fi
-echo $PROJ_DIR
+set -e
 
-if [ -d "$PROJ_DIR/dist"]; then
-    rm -rf $PROJ_DIR/dist
-fi
-mkdir $PROJ_DIR/dist
+export proj_dir=$(pwd)
+test -f "setup.py" || { echo "Please go to project folder!"; exit 1; }
+echo Project Folder: $proj_dir
 
-tar -czf $PROJ_DIR/dist/$PROJ_NAME.tar.gz bin conf src
+export proj_name=$(basename $proj_dir)
+echo project name: $proj_name
+
+rm -rf $proj_dir/dist_zip
+mkdir $proj_dir/dist_zip
+
+tar -czf $proj_dir/dist_zip/$proj_name.tar.gz bin conf dist

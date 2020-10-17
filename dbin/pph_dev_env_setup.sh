@@ -2,7 +2,7 @@
 
 export proj_dir=$(pwd)
 test -f "setup.py" || { echo "Please go to project folder!"; exit 1; }
-echo $proj_dir
+echo Project Folder: $proj_dir
 
 export proj_name=$(basename $proj_dir)
 echo project name: $proj_name

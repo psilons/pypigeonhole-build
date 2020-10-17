@@ -1,13 +1,12 @@
 #!/bin/bash
 
-export PROJ_DIR=$(pwd)
-if [ ! -f "setup.py"]; then
-    echo "Please go to project folder!"
-    exit 1
-fi
-echo $PROJ_DIR
+set -e
 
-rm -rf $PROJ_DIR/build
-rm -rf $PROJ_DIR/dist
-rm -rf $PROJ_DIR/*.egg-info
-rm -rf $PROJ_DIR/src/*.egg-info
+export proj_dir=$(pwd)
+test -f "setup.py" || { echo "Please go to project folder!"; exit 1; }
+echo Project Folder: $proj_dir
+
+rm -rf $proj_dir/build
+rm -rf $proj_dir/dist
+rm -rf $proj_dir/*.egg-info
+rm -rf $proj_dir/src/*.egg-info
