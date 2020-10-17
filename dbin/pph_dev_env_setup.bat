@@ -13,7 +13,7 @@ set pkg=%proj_name:-=_%
 echo top package name: %pkg%
 
 IF NOT EXIST src\%pkg%\dep_setup.py (
-    ECHO Please create dep_setup.py in project src folder first!
+    ECHO Please create dep_setup.py in %ProjDir%\src\%pkg% folder first!
     EXIT /B 1
 )
 

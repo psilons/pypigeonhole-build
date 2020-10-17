@@ -1,21 +1,21 @@
 #!/bin/bash
 
-export PROJ_DIR=$(pwd)
-if [ ! -f "setup.py"]; then
-    echo "Please go to project folder!"
-    exit 1
-fi
-echo $PROJ_DIR
+# exit if error occurs at any line
+set -e
 
-pwd
-ls -ltr
-conda info
-conda list
+export proj_dir=$(pwd)
+test -f "setup.py" || { echo "Please go to project folder!"; exit 1; }
+echo Project Folder: $proj_dir
+
+export curr_env=$CONDA_DEFAULT_ENV
+echo current env: $curr_env
+[ "$curr_env" != "" ] || { echo "Please activate conda env first!"; exit 1; }
+
 which conda
 which python
 
-conda run coverage run --omit test/* -m unittest discover -s test
-conda run coverage report --omit test/*
+coverage run --omit test/* -m unittest discover -s test
+coverage report --omit test/*
 
 rm -rf coverage.svg
 conda run coverage-badge -o coverage.svg
