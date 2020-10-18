@@ -12,7 +12,7 @@ import pypigeonhole_build.app_version_control as vc
 # so don't use this pattern else where. we should not have 2 assignment
 # anyway. Moving this to a text is better, but code is always
 # first choice.
-__app_version = "0.3.5"
+__app_version = "0.3.6"
 
 # overwrite default version bumping in app_version_control.bump_version
 vc.bump_version = vc.bump_version_upto10
