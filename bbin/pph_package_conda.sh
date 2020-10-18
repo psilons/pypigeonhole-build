@@ -16,4 +16,4 @@ conda-build bbin/pkg_conda_cfg --output-folder dist_conda
 
 conda build purge
 
-echo "Done."
+echo "Done, check result in dist_conda"

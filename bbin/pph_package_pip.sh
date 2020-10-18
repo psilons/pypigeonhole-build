@@ -17,4 +17,4 @@ $script_dir/pph_cleanup.sh
 
 python setup.py bdist_wheel sdist
 
-echo "Done"
+echo "Done, check result in dist and build folder."

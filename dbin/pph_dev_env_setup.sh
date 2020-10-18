@@ -64,8 +64,8 @@ pipdeptree
 
 conda deactivate
 
-echo --
+echo ---
 echo run "conda activate $new_env" to activate environment
-echo --
+echo ---
 echo run "conda info --envs" to check current activated environment
-echo --
+echo ---

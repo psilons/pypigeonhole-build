@@ -62,9 +62,10 @@ echo current conda env: %CONDA_DEFAULT_ENV%
 REM print dependency tree
 pipdeptree
 
-echo --
+echo ---
 echo run "conda activate %new_env%" to activate environment
-echo --
+echo ---
 echo run "conda info --envs" to check current activated environment
+echo ---
 
 CALL conda deactivate

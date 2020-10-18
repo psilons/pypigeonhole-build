@@ -39,4 +39,4 @@ git pull
 git push
 [ $? -eq 0 ] || { echo "Version bump failed"; exit 1; }
 
-echo "Done"
+echo "Done, check new version in src/$pkg/app_setup.py"

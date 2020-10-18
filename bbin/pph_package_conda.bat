@@ -20,4 +20,4 @@ if errorlevel 1 exit /B 1
 
 conda build purge
 
-echo "Done."
+echo Done, check result in dist_conda

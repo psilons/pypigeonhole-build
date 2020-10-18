@@ -37,6 +37,8 @@ if [ "$1" == "package" ]; then
     if [ "$2" == "conda" ]; then $script_dir/pph_package_conda.sh; fi
 
     if [ "$2" == "zip" ]; then $script_dir/pph_pack_app_zip.sh; fi
+
+    echo "Unknown package type, type pphsdlc without parameter for help."
 fi
 
 if [ "$1" == "upload" ]; then
@@ -50,6 +52,8 @@ if [ "$1" == "upload" ]; then
     if [ "$2" == "piptest" ]; then $script_dir/pph_upload_pip_test.sh; fi
 
     if [ "$2" == "conda" ]; then $script_dir/pph_upload_conda.sh; fi
+
+    echo "Unknown upload target, type pphsdlc without parameter for help."
 fi
 
 if [ "$1" == "release" ]; then $script_dir/pph_release.sh; fi

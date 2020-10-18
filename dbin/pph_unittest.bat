@@ -26,4 +26,4 @@ del /s coverage.svg
 CALL coverage-badge -o coverage.svg
 if errorlevel 1 exit /B 1
 
-echo "Done."
+echo Done

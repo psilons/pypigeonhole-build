@@ -9,7 +9,7 @@ for %%a in ("%ProjDir%") do set "proj_name=%%~nxa"
 echo %proj_name%
 
 cd %ProjDir%
-IF EXIST %ProjDir%\dist_bin (
+IF EXIST %ProjDir%\dist_zip (
     RMDIR /Q /S %ProjDir%\dist_zip
 )
 mkdir %ProjDir%\dist_zip
@@ -19,4 +19,4 @@ REM assume custom build puts artifacts/executables in dist
 tar -czf %ProjDir%\dist_zip\%proj_name%.tar.gz bin conf dist
 if errorlevel 1 exit /B 1
 
-echo "Done."
+echo Done, check result in dist_zip

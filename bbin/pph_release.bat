@@ -51,4 +51,4 @@ git pull
 git push
 if errorlevel 1 exit /B 1
 
-echo "Done"
+echo Done, check new version in src/%pkg%/app_setup.py

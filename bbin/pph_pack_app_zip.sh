@@ -14,4 +14,4 @@ mkdir $proj_dir/dist_zip
 
 tar -czf $proj_dir/dist_zip/$proj_name.tar.gz bin conf dist
 
-echo "Done."
+echo "Done, check result in dist_zip"
