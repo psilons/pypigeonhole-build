@@ -10,20 +10,6 @@ and see how it goes.
 
 ## Standard Project Structure
 
-- The project folder name is words connected with -. The Python top
-  package name is the project name, replacing - with _ . This package name
-  has to be globally unique, otherwise the first encounter wins during
-  import. We use the top package name for conda environments as well,
-  'py' + python version + '_' + top package name.
-  
-- Hard code "src" and "test" folders for source code and testing code. 
-  >We don't think the naming freedom of these 2 folders help us anything.
-
-  >We want to separate src and test completely, not one inside another.
-
-- For applications, we hard code "bin" folder for start-up and other scripts.
-  We hard code "conf" folder for configurations.
-  
 - we use python code for configurations, rather than a property file. 
   The drawback is when we update versions, it's ugly to update the code.
   Maybe AST helps, or externalize version information. This is so far the
@@ -43,7 +29,7 @@ and see how it goes.
     - The error: [Errno 13] Permission denied: '...\\vcruntime140.dll' happens
       when IntelliJ uses this environment, and we want to recreate this env.
       So close IntelliJ before re-creating conda environments.
-    - conda-build could screw up environments in windows if failed. In that 
+    - conda-build could screw up environments on windows if failed. In that 
       case, open a new command window.
 
 
@@ -103,9 +89,6 @@ then we fall back to pip.
 strength Python has. If we need something faster than Python can do, do it 
 in C++ and wrap it.
 
-All scripts are based on GIT, conda, and pip.
-
-
 ## GitHub CI
 
 .github/workflows/python-package-conda.yaml: Most of the content comes from
@@ -133,11 +116,11 @@ In all cases, check the version deployed.
 ___
 pip uninstall pypigeonhole-build -y  
 pip install dist\pypigeonhole-build-0.2.4.tar.gz  
-python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+python -c "import pypigeonhole_build.app_setup as ds; print(ds.get_app_version())"  
 pip uninstall pypigeonhole-build -y  
 
 pip install dist\pypigeonhole_build-0.2.4-py3-none-any.whl  
-python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+python -c "import pypigeonhole_build.app_setup as ds; print(ds.get_app_version())"  
 pip uninstall pypigeonhole-build -y  
 
 #### To test conda packages locally:
@@ -145,14 +128,14 @@ ___
 conda remove pypigeonhole-build -y  
 conda install dist_conda\noarch\pypigeonhole-build-0.2.4-py_0.tar.bz2  
 check envs\py390_pypigeonhole_build\Scripts for scripts  
-python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+python -c "import pypigeonhole_build.app_setup as ds; print(ds.get_app_version())"  
 conda remove pypigeonhole-build -y  
 
 #### To test pip packages remotely:
 ___
 pip uninstall pypigeonhole-build -y  
 pip install pypigeonhole-build   
-python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+python -c "import pypigeonhole_build.app_setup as ds; print(ds.get_app_version())"  
 pip uninstall pypigeonhole-build -y  
 
 #### To test conda packages remotely:
@@ -160,7 +143,7 @@ ___
 conda remove pypigeonhole-build -y  
 conda install -c psilons pypigeonhole-build  
 check envs\py390_pypigeonhole_build\Scripts for scripts  
-python -c "import pypigeonhole_build.dep_setup as ds; print(ds.app_version)"  
+python -c "import pypigeonhole_build.app_setup as ds; print(ds.get_app_version())"  
 conda remove pypigeonhole-build -y  
 check envs\py390_pypigeonhole_build\Scripts for scripts removal  
 
@@ -206,15 +189,12 @@ When we commit changes, changes will be all intentional. Check carefully.
   happens to conda-build as well. So after each conda build, check with 
   ```conda env list```.
   
-  In this case, as long as we don't switch environments it's OK. Once we are 
+  In this case, as long as we don't touch environments it's OK. Once we are 
   done, just close the window and start a new one.
-- Sometimes, when IDE is open and uses the environment, we run into the
-  following error when re-creating the environment: 
-  
-  ERROR conda.core.link:_execute(698): An error occurred while installing package 'defaults::vs2015_runtime-14.16.27012-hf0eaf9b_3'.
-  Rolling back transaction: ...working... done  
 
-  [Errno 13] Permission denied: 'D:\\0dev\\miniconda3\\envs\\py390_pypigeonhole_build\\vcruntime140.dll'  
-  ()
-- not sure this will help
-  ```conda config --set auto_activate_base false```
+We leave out the complexity of local artifact server setup. Variations are:
+- local pip/anaconda channels, for testing.
+- http tunnel through local channels.
+- local/internal pip/anaconda official servers through vendor support.
+- remote pip/anaconda official/central servers through internet.
+- 3rd party vendors, such as Artifactory servers.
