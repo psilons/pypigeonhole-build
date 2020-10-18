@@ -20,11 +20,13 @@ if [ $# == 0 ] || [ "$1" == "help" ]; then
     echo "    - cleanup: cleanup intermediate results in filesystem"
     echo "    - help or without parameter: this menu"
     echo ""
+
+    exit 0
 fi
 
-if [ "$1" == "setup" ]; then $script_dir/pph_dev_env_setup.sh; fi
+if [ "$1" == "setup" ]; then $script_dir/pph_dev_env_setup.sh; exit 0; fi
 
-if [ "$1" == "test" ]; then $script_dir/pph_unittest.sh; fi
+if [ "$1" == "test" ]; then $script_dir/pph_unittest.sh; exit 0; fi
 
 if [ "$1" == "package" ]; then
     if [ $# == 1 ]; then
@@ -32,11 +34,11 @@ if [ "$1" == "package" ]; then
         exit 1
     fi
 
-    if [ "$2" == "pip" ]; then $script_dir/pph_package_pip.sh; fi
+    if [ "$2" == "pip" ]; then $script_dir/pph_package_pip.sh; exit 0; fi
 
-    if [ "$2" == "conda" ]; then $script_dir/pph_package_conda.sh; fi
+    if [ "$2" == "conda" ]; then $script_dir/pph_package_conda.sh; exit 0; fi
 
-    if [ "$2" == "zip" ]; then $script_dir/pph_pack_app_zip.sh; fi
+    if [ "$2" == "zip" ]; then $script_dir/pph_pack_app_zip.sh; exit 0; fi
 
     echo "Unknown package type, type pphsdlc without parameter for help."
 fi
@@ -47,15 +49,17 @@ if [ "$1" == "upload" ]; then
         exit 1
     fi
 
-    if [ "$2" == "pip" ]; then $script_dir/pph_upload_pip.sh; fi
+    if [ "$2" == "pip" ]; then $script_dir/pph_upload_pip.sh; exit 0; fi
 
-    if [ "$2" == "piptest" ]; then $script_dir/pph_upload_pip_test.sh; fi
+    if [ "$2" == "piptest" ]; then $script_dir/pph_upload_pip_test.sh; exit 0; fi
 
-    if [ "$2" == "conda" ]; then $script_dir/pph_upload_conda.sh $3; fi
+    if [ "$2" == "conda" ]; then $script_dir/pph_upload_conda.sh $3; exit 0; fi
 
     echo "Unknown upload target, type pphsdlc without parameter for help."
 fi
 
-if [ "$1" == "release" ]; then $script_dir/pph_release.sh; fi
+if [ "$1" == "release" ]; then $script_dir/pph_release.sh; exit 0; fi
 
-if [ "$1" == "cleanup" ]; then $script_dir/pph_cleanup.sh; fi
+if [ "$1" == "cleanup" ]; then $script_dir/pph_cleanup.sh; exit 0; fi
+
+echo "Unknown option, type pphsdlc without parameter for help."
