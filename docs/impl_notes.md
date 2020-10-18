@@ -1,4 +1,4 @@
-# Implementation Details
+# Design and Implementation Details
 
 It all started with dependencies, then one thing leads to another.
 Ok, enough is enough once I get spoiled by Java Maven. Just want to see
@@ -8,42 +8,45 @@ and see how it goes.
 
 工欲善其事，必先利其器。
 
-## Standard Project Structure
+## Design
 
-- we use python code for configurations, rather than a property file. 
-  The drawback is when we update versions, it's ugly to update the code.
-  Maybe AST helps, or externalize version information. This is so far the
-  only place where we need to use properties files. Please keep __app_version
-  assignment in the code unique, so the search on this string returns unique 
-  result.
-  
-- To manage dependencies, pip is not enough, so we have to use conda. However,
-  conda is tricky sometimes, especially in scripts and on windows. Here are 
-  what we know unstable practices on windows:
-    - do not call conda deactivate in a script with other conda commands. It
-      does nothing sometimes.
-    - do not call conda activate in a script, expecting you are in that 
-      environment even when you get out of the script. You are in that 
-      environment only when you are in the script.
-    - do not call conda clean -a in a script with other conda commands.
-    - The error: [Errno 13] Permission denied: '...\\vcruntime140.dll' happens
-      when IntelliJ uses this environment, and we want to recreate this env.
-      So close IntelliJ before re-creating conda environments.
-    - conda-build could screw up environments on windows if failed. In that 
-      case, open a new command window.
+- Dependency Management: 
+    - pip is not convenient enough because of the C/C++ compilation. Python, 
+      by nature, could have C/C++ library dependencies, such as numpy, PyQt, 
+      etc. These C/C++ libs require compilation (and a compiler) for
+      different OS. This is sometimes painful, especially on windows.
+      >This does not mean that C/C++ is a drag for Python. In fact, this is a 
+       strength Python has. If we need something faster than Python can do, do it 
+       in C++ and wrap it.
+    - Anaconda deals with this problem using pre-compiled packages. This 
+      results one-click solutions since we don't need to worry about compilation,
+      unless we create C/C++ libraries. we use conda packages whenever possible. 
+      If conda does not have a package, then we fall back to pip.
+    - We have 3 ways to define dependencies, setup.py, requirements.txt,
+      and conda's environment.yml. The same information could duplicate 3
+      times. 
+    - pip can separate libraries between install_requires and tests_require and
+      conda doesn't. Basically, we need to specify a dependency for development,
+      runtime, or both.
+    
+  Based on the above, we create a simple structure to hold dependencies with
+  enough information to cover most cases. It can populate the 
+  dependencies to pip and conda. 
+    
+  we use python code to specify dependencies, rather than a property file.
+  The python syntax check can reduce careless mistakes. The drawback is when 
+  we update versions, we have to run text search on python code. This is so 
+  far the only place where we need to use properties files. Please keep 
+  __app_version assignment in the code unique, so the search on this string 
+  returns unique result.
+
+- Pip packages Python code, but not scripts and configurations for applications.
+  So we employ conda for application assembling. Furthermore, conda serves as
+  the application deployer implicitly.
 
 
-## Dependency Management
+## Implementation
 
-In Python, there are several ways to specify dependent libraries, such as
-requirements.txt, setup.py, or Anaconda's environment.yml. We want to 
-isolate to one place to specify dependencies, and then populate the 
-information to needed area. 
-Furthermore, only setup.py contains the information whether included libs are 
-for installation(runtime) or development. However, setup itself is for 
-installation, not for development environment setup. So we need a better 
-dependency management to separate dev env setup and lib installation. 
-  
 - We isolate dependency specification to one place, 
   ```<project root>src\<project top package>\dep_setup.py```. For example, 
   if a project folder is foo-bar, then this is the project name and foo_bar 
@@ -69,26 +72,27 @@ dependency management to separate dev env setup and lib installation.
   setup.py has install_requires and test_require, but environment.yaml and 
   requirements.txt miss it. So we need to fill the gap here. 
   
-- The version is in app_setup.py. The release.bat would auto-increment
+- The version is in app_setup.py. The release.sh auto-increments
   this value.
-  
-  
-## Scripts Implementing SDLC steps
 
-Pip packages Python code, but not scripts and configurations for applications.
-So we employ conda for application assembling. 
+## Conda
 
-In addition, we use conda to set up virtual environments. Python, by nature, 
-could have some C/C++ library dependencies, such as numpy, PyQt, etc. These 
-C/C++ libs sometimes require compilation (and thus a compiler). This creates 
-headaches in the past, very painful. Anaconda comes with pre-compiled packages 
-and gets rid of these headaches for most commonly used libraries. So we use 
-Anaconda packages whenever possible here. If Anaconda does not have a package, 
-then we fall back to pip.
->This does not mean that C/C++ is a drag for Python. In fact, this is a 
-strength Python has. If we need something faster than Python can do, do it 
-in C++ and wrap it.
-
+Conda is tricky sometimes, especially in scripts on windows. Here are 
+what we know unstable practices on windows:
+  - do not call conda deactivate in a script with other conda commands. It
+    does nothing sometimes.
+  - do not call conda activate in a script, expecting you are in that 
+    environment even when you get out of the script. You are in that 
+    environment only when you are in the script.
+  - do not call conda clean -a in a script with other conda commands.
+  - The error: [Errno 13] Permission denied: '...\\vcruntime140.dll' happens
+    when IntelliJ uses this environment, and we want to recreate this env.
+    So close IntelliJ or temporarily switch to another environment before 
+    re-creating conda environments. In normal cases, we won't create env
+    many times in a project.
+  - conda-build mislabels environments on windows. In that 
+    case, open a new command window.
+      
 ## GitHub CI
 
 .github/workflows/python-package-conda.yaml: Most of the content comes from
@@ -147,30 +151,6 @@ python -c "import pypigeonhole_build.app_setup as ds; print(ds.get_app_version()
 conda remove pypigeonhole-build -y  
 check envs\py390_pypigeonhole_build\Scripts for scripts removal  
 
-## upload
-
-```pph_upload_pip.bat```
-
-```pph_upload_pip_test.bat```
-
-```pph_upload_conda dist_conda\noarch\pypigeonhole-build-0.3.0-py_0.tar.bz2```
-
-## Release
-
-set PYTHONPATH=src;%PYTHONPATH%
-
-```pph_release``` to bump up version number
-
-Check change:
-
-https://github.com/psilons/pypigeonhole-build/network
-
-```pph_cleanup.bat``` to clean all temporary staging folders.
-
-When we commit changes, changes will be all intentional. Check carefully.
-
-```conda deactivate```
-
 ## Notes
 - If I activate an environment from a command window, then the computer dies.
   After the computer comes back, the conda base environment points to that
@@ -193,8 +173,8 @@ When we commit changes, changes will be all intentional. Check carefully.
   done, just close the window and start a new one.
 
 We leave out the complexity of local artifact server setup. Variations are:
-- local pip/anaconda channels, for testing.
-- http tunnel through local channels.
-- local/internal pip/anaconda official servers through vendor support.
-- remote pip/anaconda official/central servers through internet.
-- 3rd party vendors, such as Artifactory servers.
+- local testing: use local files.
+
+- private repo servers:
+    - download/upload files
+    - tunnel through to central servers for downloads.

@@ -9,7 +9,8 @@
 
 
 This is a Python SDLC tool to shorten the time we spend on SDLC without
-sacrificing quality. It does so by hard-coding certain flexible parts. 
+sacrificing quality. It does so by hard-coding certain flexible parts
+(convention over configuration). 
 Flexibility could lead to confusion and low efficiency because there is
 no standard and thus we cannot build tools on top of that to improve
 efficiency. 
@@ -42,7 +43,8 @@ A good example for efficiency is Java's mature tool,
 ## Standard SDLC Process Acceleration
 
 After the initial project setup, the process has the following steps,
-with the script ```pphsdlc```:
+with the script ```pphsdlc.sh or pphsdlc.bat``` (We use the bash name below
+for simplicity):
 - setup: create conda environment specified in dep_setup.py
 - test: run unit tests and collect coverage
 - package: package artifact with pip | conda | zip
@@ -64,7 +66,7 @@ Download miniconda, if needed. Then install pypigeonhole-build through channel
 
 It's the jump start of the process - create other conda environments specified 
 in the dep_setup.py. It installs its scripts in the base env, prefixed by pph_ . 
-The interface is ```pphsdlc``` with the above 6 options. This script should run 
+The interface is ```pphsdlc.sh``` with the above 6 options. This script should run 
 in the project folder and in the conda env, except the first step (setup env).
 
 Next, use your favorite IDE to create the Python project, these are one time 
@@ -112,7 +114,7 @@ process.
   
 ## SDLC Process
 
-- Now we set up the conda env: ```pphsdlc setup```  
+- Now we set up the conda env: ```pphsdlc.sh setup```  
   At the end of the run, it prints out which env it creates and you just
   activate that. If you run into this issue on windows, just rerun the
   script (Maybe the IDE locks this, just a wild guess):  
@@ -131,7 +133,7 @@ process.
   action uses environment.yaml, with "a" in yaml.
 
 - Point IDE to this cond env, we could start coding now.
-- Once the code is done, we could run the unit test: ```pphsdlc test```.
+- Once the code is done, we could run the unit test: ```pphsdlc.sh test```.
   All scripts need to run from project root and in the conda env. This step
   generates test coverage report and coverage badge.
                                                                     
@@ -140,8 +142,8 @@ process.
   the src folder.
   
 - If test coverage is good, we can pack the project, with pip, conda, or zip.
-    - ```pphsdlc package pip```: the target folder is printed at the end.
-    - ```pphsdlc package conda```: we need to create the conda package scripts
+    - ```pphsdlc.sh package pip```: the target folder is printed at the end.
+    - ```pphsdlc.sh package conda```: we need to create the conda package scripts
       first. The location bbin/pkg_conda_cfg is hardcoded in the script. There
       are 3 files under this folder need to be filled in. Check conda-build
       document for this: https://docs.conda.io/projects/conda-build/en/latest/.
@@ -152,7 +154,7 @@ process.
       >One of the reasons we like conda is because it could bundle other files.
       It's more handy than zip because we use it as a transporter as well.
     
-    - ```pphsdlc package zip```: This will zip 3 sub-folders under the project
+    - ```pphsdlc.sh package zip```: This will zip 3 sub-folders under the project
       root, bin for scripts, conf for configurations, and dist for other 
       compiled results, such as executables. Since this is a customized way, 
       there is no associated upload tool and users need to deal with uploading 
@@ -167,12 +169,12 @@ process.
 - Now it's time to run some local sanity checks on the new packages. Install
   these packages in local.
 - To upload packages to central servers, run
-    - ```pphsdlc upload pip```: This uploads to PIP servers. You may 
+    - ```pphsdlc.sh upload pip```: This uploads to PIP servers. You may 
       redirect the servers in settings.
-    - ```pphsdlc upload conda <package>```: This upload to conda repo. You
+    - ```pphsdlc.sh upload conda <package>```: This upload to conda repo. You
       may redirect this too.
   
-- Now we run ```pphsdlc release``` to tag the version in GIT and then bump
+- Now we run ```pphsdlc.sh release``` to tag the version in GIT and then bump
   up the version. PIP or conda do not have the concept snapshot builds as
   in Maven, so we cannot overwrite versions. This step helps us manage the
   versions.
@@ -183,7 +185,7 @@ process.
   
   >Check in changes first before running this script.
   
-- clean up step is optional, ```pphsdlc cleanup``` delete all build folders.
+- clean up step is optional, ```pphsdlc.sh cleanup``` delete all build folders.
 
 ## Side Notes and Future improvements
 
