@@ -14,7 +14,7 @@ echo current env: $curr_env
 which conda
 which python
 
-coverage run --omit test/* -m unittest discover -s test
+coverage run --source=src --omit test/* -m unittest discover -s test
 coverage report --omit test/*
 
 rm -rf coverage.svg
