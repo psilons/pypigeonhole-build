@@ -6,9 +6,14 @@ ls -ltr %PREFIX%
 ls -ltr "%SCRIPTS%"
 REM Or use %PREFIX%\Scripts
 
-REM Windows uses this folder to transport files from package to target env / Scripts folder.
+REM Windows use <env> and <env>\Scripts folders, Linux uses <env> and <env>/bin
+REM So copying to either folder is working. To erase the difference between OS,
+REM use <env>, uniform across platform
 echo copying scripts to %SCRIPTS%...
-xcopy %SRC_DIR%\dbin "%SCRIPTS%"
-xcopy %SRC_DIR%\bbin "%SCRIPTS%"
+REM xcopy %SRC_DIR%\dbin "%SCRIPTS%"
+REM xcopy %SRC_DIR%\bbin "%SCRIPTS%"
+
+xcopy %SRC_DIR%\dbin %PREFIX%
+xcopy %SRC_DIR%\bbin %PREFIX%
 
 %PYTHON% -m pip install .
