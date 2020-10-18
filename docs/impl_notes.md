@@ -202,7 +202,9 @@ When we commit changes, changes will be all intentional. Check carefully.
   
   ![Bad](conda_bad_state.png)
 
-  This is because the conda path is wrong.
+  This is because the conda path is wrong. The issue https://github.com/conda/conda-build/issues/3813
+  happens to conda-build as well. So after each conda build, check with 
+  ```conda env list```.
   
   In this case, as long as we don't switch environments it's OK. Once we are 
   done, just close the window and start a new one.

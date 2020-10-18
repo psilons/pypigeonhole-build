@@ -56,7 +56,7 @@ if "%~1" == "upload" (
     )
 
     if "%~2" == "conda" (
-        CALL %script_dir%pph_upload_conda.bat
+        CALL %script_dir%pph_upload_conda.bat %3
         GOTO end
     )
 

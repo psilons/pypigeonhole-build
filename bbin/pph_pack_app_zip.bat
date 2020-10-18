@@ -6,7 +6,7 @@ IF NOT EXIST setup.py (
 echo Project Folder: %ProjDir%
 
 for %%a in ("%ProjDir%") do set "proj_name=%%~nxa"
-echo %proj_name%
+echo project name: %proj_name%
 
 cd %ProjDir%
 IF EXIST %ProjDir%\dist_zip (

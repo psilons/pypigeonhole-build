@@ -51,7 +51,7 @@ if [ "$1" == "upload" ]; then
 
     if [ "$2" == "piptest" ]; then $script_dir/pph_upload_pip_test.sh; fi
 
-    if [ "$2" == "conda" ]; then $script_dir/pph_upload_conda.sh; fi
+    if [ "$2" == "conda" ]; then $script_dir/pph_upload_conda.sh $3; fi
 
     echo "Unknown upload target, type pphsdlc without parameter for help."
 fi
