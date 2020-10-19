@@ -29,10 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,6 +268,7 @@
       <workItem from="1602966935481" duration="32000" />
       <workItem from="1602966994851" duration="97000" />
       <workItem from="1602967117802" duration="5550000" />
+      <workItem from="1603047957554" duration="4315000" />
     </task>
     <task id="LOCAL-00001" summary="fix release bug">
       <created>1603001209900</created>

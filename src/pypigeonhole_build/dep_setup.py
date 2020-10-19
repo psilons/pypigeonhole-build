@@ -6,13 +6,13 @@ from pypigeonhole_build.dependency import Dependency, INSTALL, DEV, PIP
 import pypigeonhole_build.conda_translator as conda_translator
 from pypigeonhole_build.conda_translator import CONDA
 
-import pypigeonhole_build.app_setup as app_setup
-
 # ##############################################################################
 # These are application specific information. We leave some flexibility here
 # for further customization. Don't want to tie the knots too much.
 # This file is used by setup.py for users and conda env setup script for dev.
 # ##############################################################################
+import pypigeonhole_build.app_setup as app_setup
+
 __python_version = 'py390'  # take 3 digits, major, minor, patch
 
 CONDA.env = __python_version + '_' + app_setup.get_top_pkg()

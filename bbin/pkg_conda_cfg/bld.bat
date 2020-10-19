@@ -9,7 +9,7 @@ REM Or use %PREFIX%\Scripts
 REM Windows use <env> and <env>\Scripts folders, Linux uses <env> and <env>/bin
 REM So copying to either folder is working. To erase the difference between OS,
 REM use <env>, uniform across platform
-echo copying scripts to %SCRIPTS%...
+echo copying scripts to %PREFIX%...
 REM xcopy %SRC_DIR%\dbin "%SCRIPTS%"
 REM xcopy %SRC_DIR%\bbin "%SCRIPTS%"
 

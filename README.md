@@ -53,14 +53,14 @@ for simplicity):
 - cleanup: cleanup intermediate results in filesystem
 - help or without any parameter: this menu
 
-These 6 steps should be enough for most projects (minus testing), and
-they are simple steps, as simple as Maven.
+These 6 steps (minus help) should be enough for most projects (excluding 
+integration testing/etc), and they are simple steps, as simple as Maven.
 
 
 ## Project Setup
 
-Download miniconda, if needed. Then install pypigeonhole-build through channel
--c psilons
+Download miniconda, if needed. Then install pypigeonhole-build to the base
+environment
 
 ```conda install -c psilons pypigeonhole-build```
 
@@ -78,14 +78,15 @@ setup:
    
   >We want to separate src and test completely, not one inside another.
     
-- under src create the top package folder, it's the project name with -
-  replaced by _ . Since the top package has to be globally unique, choose
-  it wisely. This top package name is also part of the cond env name.
+- under src create the top package folder, it's the project name with "-"
+  replaced by "_" . In this case, it's pypigeonhole_build. Since the top 
+  package has to be globally unique, choose it wisely. This top package name 
+  is also part of the conda env name.
 - copy app_setup.py and dep_setup.py from here to the top package, and 
   modify them:
     - modify the version number in app_setup.py: __app_version. This 
       variable name is hardcoded in the version bumping script. You may 
-      choose a different bumping strategy. That's it.
+      choose a different bumping strategy. 
     - modify the settings and add dependencies in the marked region in
       dep_setup.py. Each dependency has the following fields:
         - name: required. If name == python, the "python_requires" field in the 
@@ -97,6 +98,7 @@ setup:
         - installer: default to PIP, could be PIP/CONDA. Extendable to other 
           installers.
         - url: this is for github+https.
+		
       If Conda is used, need to set the CONDA.env field, which is mapped to the first
       line in the environment.yml. You may overwrite the default. If you 
       have extra channels here, make sure you add them to the conda config:
@@ -185,7 +187,8 @@ process.
   
   >Check in changes first before running this script.
   
-- clean up step is optional, ```pphsdlc.sh cleanup``` delete all build folders.
+- clean up step is optional, ```pphsdlc.sh cleanup``` deletes all build folders.
+  Make sure you are not inside those folders.
 
 ## Side Notes and Future improvements
 
