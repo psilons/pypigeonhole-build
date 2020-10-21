@@ -10,9 +10,7 @@ export curr_env=$CONDA_DEFAULT_ENV
 echo current env: $curr_env
 [ "$curr_env" != "" ] || { echo "Please activate conda env first!"; exit 1; }
 
-[ $# != 0 ] || { echo "Please pass in <artifact path>/<artifact name>.tar.bz2"; exit 1; }
-
-SET channel=$CONDA_UPLOAD_CHANNEL
+export channel=$CONDA_UPLOAD_CHANNEL
 
 # use anaconda
 if [ "$channel" == "" ]; then
@@ -39,6 +37,7 @@ if [[ $channel == file://* ]]; then
     done
 
     echo "done"
+    exit 0
 fi
 
 echo unknown destination
