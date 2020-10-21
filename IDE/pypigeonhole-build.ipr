@@ -43,6 +43,7 @@
     </data-source>
     <data-source name="[2]" uuid="ae8ff295-0527-4fb2-bd7f-86a58229d678">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
   </component>

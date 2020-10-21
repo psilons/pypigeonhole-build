@@ -18,6 +18,6 @@ if [ "$1" == "" ]; then
     fi
 fi
 
-ECHO use PIP repository: $repo
+echo use PIP repository: $repo
 
 twine upload -r $repo $proj_dir/dist/*
