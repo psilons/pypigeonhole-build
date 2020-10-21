@@ -30,8 +30,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip_test.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip_test.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pphsdlc.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pphsdlc.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pphsdlc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pphsdlc.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +274,7 @@
       <workItem from="1602966935481" duration="32000" />
       <workItem from="1602966994851" duration="97000" />
       <workItem from="1602967117802" duration="5550000" />
-      <workItem from="1603047957554" duration="4315000" />
+      <workItem from="1603047957554" duration="24143000" />
     </task>
     <task id="LOCAL-00001" summary="fix release bug">
       <created>1603001209900</created>
@@ -404,15 +410,16 @@
       <screen x="0" y="27" width="2048" height="1060" />
     </state>
     <state x="579" y="292" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2048.1060@0.27.2048.1060" timestamp="1603001216588" />
-    <state x="640" y="138" width="838" height="949" key="dock-window-1" timestamp="1603002469435">
-      <screen x="0" y="27" width="2048" height="1060" />
-    </state>
-    <state x="640" y="138" width="838" height="949" key="dock-window-1/0.27.2048.1060@0.27.2048.1060" timestamp="1603002469435" />
-    <state x="782" y="307" width="704" height="534" key="find.popup" timestamp="1602791048729">
+    <state x="701" y="22" width="1416" height="992" key="dock-window-1" timestamp="1603252718998">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
+    <state x="701" y="22" width="1416" height="992" key="dock-window-1/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1603252718998" />
+    <state x="640" y="138" width="838" height="949" key="dock-window-1/0.27.2048.1060@0.27.2048.1060" timestamp="1603002469435" />
+    <state x="2868" y="307" width="691" height="624" key="find.popup" timestamp="1603178256514">
+      <screen x="2110" y="0" width="1986" height="1152" />
+    </state>
     <state x="782" y="307" width="704" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602791048729" />
-    <state x="2868" y="307" width="691" height="534" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1602360562474" />
+    <state x="2868" y="307" width="691" height="624" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1603178256514" />
     <state x="363" y="120" key="new project wizard" timestamp="1602776218853">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

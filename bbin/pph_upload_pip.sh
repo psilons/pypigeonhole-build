@@ -10,6 +10,14 @@ export curr_env=$CONDA_DEFAULT_ENV
 echo current env: $curr_env
 [ "$curr_env" != "" ] || { echo "Please activate conda env first!"; exit 1; }
 
-echo "Please make sure you login to pypi already ... "
+export repo=$1
+if [ "$1" == "" ]; then
+    export repo=$PIP_UPLOAD_REPO
+    if [ "$1" == "" ]; then
+        export repo=pypi
+    fi
+fi
 
-twine upload -r pypi $proj_dir/dist/*
+ECHO use PIP repository: $repo
+
+twine upload -r $repo $proj_dir/dist/*

@@ -12,6 +12,33 @@ echo current env: $curr_env
 
 [ $# != 0 ] || { echo "Please pass in <artifact path>/<artifact name>.tar.bz2"; exit 1; }
 
-echo "Please make sure you login to anaconda already ... "
+SET channel=$CONDA_UPLOAD_CHANNEL
 
-anaconda upload $1
+# use anaconda
+if [ "$channel" == "" ]; then
+    for f in $(find dist_conda -name "*.tar.bz2"); do
+        echo "upload files: $f ..."
+        anaconda upload $f
+    done
+
+    echo done
+    exit 0
+fi
+
+# use local file
+if [[ $channel == file://* ]]; then
+    echo "file channel: $channel"
+    export target=${channel#"file://"}
+    echo "target root folder: $target"
+
+    for f in $(find dist_conda -name "*.tar.bz2"); do
+        echo "copying file: $f ..."
+        arch=$(basename $(dirname $f))
+        echo arch folder: $arch
+        yes | cp $f $target/$arch/
+    done
+
+    echo "done"
+fi
+
+echo unknown destination

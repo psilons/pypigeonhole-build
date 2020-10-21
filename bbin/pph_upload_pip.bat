@@ -11,5 +11,15 @@ IF "%curr_env%" == "" (
     echo Please activate conda env first!
 )
 
-REM make sure the setup in ~/.pyirc has pypi entry
-twine upload -r pypi %ProjDir%/dist/*
+SET repo=%1
+if "%repo%" == "" (
+    SET repo=%PIP_UPLOAD_REPO%
+    if "%repo%" == "" (
+        SET repo=pypi
+    )
+)
+
+REM make sure the repository is defined in ~/.pypirc.
+ECHO use PIP repository: %repo%
+
+twine upload -r %repo% %ProjDir%/dist/*

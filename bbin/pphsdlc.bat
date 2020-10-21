@@ -46,12 +46,7 @@ if "%~1" == "upload" (
     )
 
     if "%~2" == "pip" (
-        CALL %script_dir%pph_upload_pip.bat
-        GOTO end
-    )
-
-    if "%~2" == "piptest" (
-        CALL %script_dir%pph_upload_pip_test.bat
+        CALL %script_dir%pph_upload_pip.bat %3
         GOTO end
     )
 

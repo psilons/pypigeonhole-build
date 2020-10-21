@@ -15,14 +15,40 @@ IF "%curr_env%" == "" (
     echo Please activate conda env first!
 )
 
-REM This is not working yet
-if "%~1"=="" (
-    echo Please pass in artifact path/name.tar.bz2
-    exit /B 1
-)
-SET pkg=%1
 REM conda convert --platform all %pkg% -o conda_output/
 
-REM anaconda login
+SET channel=%CONDA_UPLOAD_CHANNEL%
+REM use anaconda
+if "%channel%" == "" (
+    for /f "delims=" %%I in ('dir dist_conda\* /s/b ^| findstr \.tar.bz2$') do (
+        echo upload file: %%I ...
+        anaconda upload %%I
+    )
 
-anaconda upload %pkg%
+    echo done
+    exit /B 0
+)
+
+REM use local file
+if "%channel:~0,8%" == "file:///" (
+    echo file channel: %channel%
+    set target=%channel:~8%
+    echo target root folder: %target%
+
+    for /f "delims=" %%I in ('dir dist_conda\* /s/b ^| findstr \.tar.bz2$') do (
+        echo copying file: %%I ...
+        set f=%%I
+        for %%a in ("%%I") do for %%b in ("%%~dpa\.") do set "arch=%%~nxb"
+        echo folder: %arch%
+        xcopy /Y %%I %target%\%arch%
+    )
+
+    echo index repo ...
+    conda index %target%\..
+    echo done
+    exit /B 0
+)
+
+echo unknown destination
+
+

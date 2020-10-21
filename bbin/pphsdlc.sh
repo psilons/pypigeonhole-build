@@ -49,9 +49,7 @@ if [ "$1" == "upload" ]; then
         exit 1
     fi
 
-    if [ "$2" == "pip" ]; then $script_dir/pph_upload_pip.sh; exit 0; fi
-
-    if [ "$2" == "piptest" ]; then $script_dir/pph_upload_pip_test.sh; exit 0; fi
+    if [ "$2" == "pip" ]; then $script_dir/pph_upload_pip.sh $3; exit 0; fi
 
     if [ "$2" == "conda" ]; then $script_dir/pph_upload_conda.sh $3; exit 0; fi
 
