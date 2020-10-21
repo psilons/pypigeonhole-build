@@ -30,14 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip_test.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip_test.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pphsdlc.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pphsdlc.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pphsdlc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pphsdlc.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +267,7 @@
       <workItem from="1602966935481" duration="32000" />
       <workItem from="1602966994851" duration="97000" />
       <workItem from="1602967117802" duration="5550000" />
-      <workItem from="1603047957554" duration="24143000" />
+      <workItem from="1603047957554" duration="25609000" />
     </task>
     <task id="LOCAL-00001" summary="fix release bug">
       <created>1603001209900</created>

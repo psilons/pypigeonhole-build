@@ -144,8 +144,10 @@ process.
   the src folder.
   
 - If test coverage is good, we can pack the project, with pip, conda, or zip.
-    - ```pphsdlc.sh package pip```: the target folder is printed at the end.
-    - ```pphsdlc.sh package conda```: we need to create the conda package scripts
+    - ```pphsdlc.sh package pip``` the target folder is printed at the end. It
+      takes another parameter from .pypirc, such as testpypi. The default is
+      pypi.
+    - ```pphsdlc.sh package conda``` we need to create the conda package scripts
       first. The location bbin/pkg_conda_cfg is hardcoded in the script. There
       are 3 files under this folder need to be filled in. Check conda-build
       document for this: https://docs.conda.io/projects/conda-build/en/latest/.
@@ -156,6 +158,14 @@ process.
       >One of the reasons we like conda is because it could bundle other files.
       It's more handy than zip because we use it as a transporter as well.
     
+      The default upload server is conda central server. To use another server,
+      check anaconda documents. To use a local file system, there is an env
+      variable CONDA_UPLOAD_CHANNEL you can set. If this is empty, it uploads
+      files to conda central. If this is set, e.g.,
+      
+      ```set CONDA_UPLOAD_CHANNEL=file:///D:\repo\channel```
+      
+      it copies .tar.bz2 files to here and run indexing.
     - ```pphsdlc.sh package zip```: This will zip 3 sub-folders under the project
       root, bin for scripts, conf for configurations, and dist for other 
       compiled results, such as executables. Since this is a customized way, 
