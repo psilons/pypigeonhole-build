@@ -36,6 +36,10 @@ if [[ $channel == file://* ]]; then
         yes | cp $f $target/$arch/
     done
 
+    echo "index repo ..."
+    conda index $target/..
+
+    echo "indexing is done, please run: conda search <lib name> to verify"
     echo "done"
     exit 0
 fi

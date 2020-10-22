@@ -28,12 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" afterDir="false" />
-    </list>
+    <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="JupyterTrust" id="8ec8592a-434e-4a90-ad23-7454a3621128" />
+  <component name="JupyterTrust" id="0f2245f7-2e08-4298-a8a0-4eee9328be5b" />
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -112,24 +107,24 @@
       <module />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,11 +151,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -421,32 +416,32 @@
     <state x="363" y="120" key="new project wizard/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602776218853" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_setup_AppSetupTest_test_get_app_version.coverage" NAME="Unittests for test_app_setup.AppSetupTest.test_get_app_version Coverage Results" MODIFIED="1602547249934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_pip.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_pip Coverage Results" MODIFIED="1602039863161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_app_version_control_py.coverage" NAME="Unittests in test_app_version_control.py Coverage Results" MODIFIED="1602547202363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_pip_req_txt.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_pip_req_txt Coverage Results" MODIFIED="1602106705562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_DepSetupTest_test_setup.coverage" NAME="Unittests for test_dep_setup.DepSetupTest.test_setup Coverage Results" MODIFIED="1602547728583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_version_control_FileEditorUtilsTest_test_version_inc.coverage" NAME="Unittests for test_app_version_control.FileEditorUtilsTest.test_version_inc Coverage Results" MODIFIED="1602543436500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest Coverage Results" MODIFIED="1602189445034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_app_setup_py.coverage" NAME="Unittests in test_app_setup.py Coverage Results" MODIFIED="1602547223428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_replace_line.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_replace_line Coverage Results" MODIFIED="1602119771501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest Coverage Results" MODIFIED="1602122022701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_file_edit_utils_py.coverage" NAME="Unittests in test_file_edit_utils.py Coverage Results" MODIFIED="1602123047045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_DepSetupTest_test_setup.coverage" NAME="Unittests for test_dep_setup.DepSetupTest.test_setup Coverage Results" MODIFIED="1602547728583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_DepSetupTest.coverage" NAME="Unittests for test_dep_setup.DepSetupTest Coverage Results" MODIFIED="1602547662543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_setup_AppSetupTest.coverage" NAME="Unittests for test_app_setup.AppSetupTest Coverage Results" MODIFIED="1602547382019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_conda.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_conda Coverage Results" MODIFIED="1602057059845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_conda_env_not_set.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_conda_env_not_set Coverage Results" MODIFIED="1602039405410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_version_inc_1.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_version_inc_1 Coverage Results" MODIFIED="1602122045651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_version_control_FileEditorUtilsTest_test_bump_version.coverage" NAME="Unittests for test_app_version_control.FileEditorUtilsTest.test_bump_version Coverage Results" MODIFIED="1602554928632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_file_edit_utils_py.coverage" NAME="Unittests in test_file_edit_utils.py Coverage Results" MODIFIED="1602123047045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_DepSetupTest.coverage" NAME="Unittests for test_dep_setup.DepSetupTest Coverage Results" MODIFIED="1602547662543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_setup_AppSetupTest_test_get_app_name.coverage" NAME="Unittests for test_app_setup.AppSetupTest.test_get_app_name Coverage Results" MODIFIED="1602547244297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$dep_setup.coverage" NAME="dep_setup Coverage Results" MODIFIED="1602458133159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../src/pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$test_app_setup.coverage" NAME="test_app_setup Coverage Results" MODIFIED="1602967383858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_setup_AppSetupTest.coverage" NAME="Unittests for test_app_setup.AppSetupTest Coverage Results" MODIFIED="1602547382019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_version_inc.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_version_inc Coverage Results" MODIFIED="1602122144871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_url.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_url Coverage Results" MODIFIED="1602193047782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_bump_version.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_bump_version Coverage Results" MODIFIED="1602123038387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_conda.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_conda Coverage Results" MODIFIED="1602057059845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1602469473034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_dep_setup_utils_py.coverage" NAME="Unittests in test_dep_setup_utils.py Coverage Results" MODIFIED="1602192382237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
-    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_pypigeonhole_build.coverage" NAME="Unittests in test_pypigeonhole_build Coverage Results" MODIFIED="1602559981387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_pip.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_pip Coverage Results" MODIFIED="1602039863161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
     <SUITE FILE_PATH="coverage/pypigeonhole_build$file_edit_utils.coverage" NAME="file_edit_utils Coverage Results" MODIFIED="1602118892658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../src/pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$dep_setup.coverage" NAME="dep_setup Coverage Results" MODIFIED="1602458133159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../src/pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_bump_version.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_bump_version Coverage Results" MODIFIED="1602123038387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_replace_line.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_replace_line Coverage Results" MODIFIED="1602119771501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest Coverage Results" MODIFIED="1602122022701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_app_version_control_py.coverage" NAME="Unittests in test_app_version_control.py Coverage Results" MODIFIED="1602547202363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_setup_AppSetupTest_test_get_app_version.coverage" NAME="Unittests for test_app_setup.AppSetupTest.test_get_app_version Coverage Results" MODIFIED="1602547249934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_url.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_url Coverage Results" MODIFIED="1602193047782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1602469473034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_version_inc.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_version_inc Coverage Results" MODIFIED="1602122144871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_dep_setup_utils_py.coverage" NAME="Unittests in test_dep_setup_utils.py Coverage Results" MODIFIED="1602192382237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest_test_pip_req_txt.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest.test_pip_req_txt Coverage Results" MODIFIED="1602106705562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_version_control_FileEditorUtilsTest_test_version_inc.coverage" NAME="Unittests for test_app_version_control.FileEditorUtilsTest.test_version_inc Coverage Results" MODIFIED="1602543436500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_dep_setup_utils_DependencyTest.coverage" NAME="Unittests for test_dep_setup_utils.DependencyTest Coverage Results" MODIFIED="1602189445034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$test_app_setup.coverage" NAME="test_app_setup Coverage Results" MODIFIED="1602967383858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_app_version_control_FileEditorUtilsTest_test_bump_version.coverage" NAME="Unittests for test_app_version_control.FileEditorUtilsTest.test_bump_version Coverage Results" MODIFIED="1602554928632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
+    <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_in_test_pypigeonhole_build.coverage" NAME="Unittests in test_pypigeonhole_build Coverage Results" MODIFIED="1602559981387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
   </component>
 </project>
