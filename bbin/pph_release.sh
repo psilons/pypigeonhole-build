@@ -27,6 +27,7 @@ git pull
 git push --tags
 [ $? -eq 0 ] || { echo "Tagging failed"; exit 1; }
 
+echo "------------------------------------------------------------------------------"
 export PYTHONPATH=src:$PYTHONPATH
 export new_version=$(python -c "import pypigeonhole_build.app_version_control as fu; import $pkg.app_setup; print(fu.bump_version('$app_version', 'src/$pkg/app_setup.py'))")
 [ $? -eq 0 ] || { echo "New version retrieval failed"; exit 1; }
