@@ -39,15 +39,12 @@ git pull
 git push --tags
 if errorlevel 1 exit /B 1
 
-setlocal
 set PYTHONPATH=src;%PYTHONPATH%
 REM bump_version1 keeps single digit on minor and patch, xx.x.x
 FOR /F %%I IN ('python -c "import pypigeonhole_build.app_version_control as fu; import %pkg%.app_setup; print(fu.bump_version(""%app_version%"", ""src/%pkg%/app_setup.py""))"') DO SET new_version=%%I
 if errorlevel 1 (
-    endlocal
     exit /B 1
 )
-endlocal
 echo new version: %new_version%
 
 git add src\%pkg%\app_setup.py
