@@ -150,10 +150,13 @@ process.
     - ```pphsdlc.sh package conda``` we need to create the conda package scripts
       first. The location bbin/pkg_conda_cfg is hardcoded in the script. There
       are 3 files under this folder need to be filled in. Check conda-build
-      document for this: https://docs.conda.io/projects/conda-build/en/latest/.
+      document for this: https://docs.conda.io/projects/conda-build/en/latest/.     
       >There is a bug in conda-build for windows. After the build, the conda
       envs are mislabeled. So close the window and open a new one. Conda build
       on linux is just fine. 
+      >>We found out that if we run this command outside any conda environment,
+      everything works fine. We filed a issue ticket with conda build:
+      https://github.com/conda/conda-build/issues/4112
      
       >One of the reasons we like conda is because it could bundle other files.
       It's more handy than zip because we use it as a transporter as well.
