@@ -35,6 +35,8 @@ if "%channel:~0,8%" == "file:///" (
     set target=%channel:~8%
     echo target root folder: %target%
 
+    icacls %target%\%arch% /grant Everyone:M
+
     for /f "delims=" %%I in ('dir dist_conda\* /s/b ^| findstr \.tar.bz2$') do (
         echo copying file: %%I ...
         set f=%%I
