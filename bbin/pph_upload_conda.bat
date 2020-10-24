@@ -46,7 +46,7 @@ if "%channel:~0,8%" == "file:///" (
     )
 
     echo index repo ...
-    conda index %target%\..
+    conda index %target%
 
     echo indexing is done, please run: conda search <lib name> to verify
     echo done

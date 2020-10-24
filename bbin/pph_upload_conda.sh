@@ -30,7 +30,7 @@ if [[ $channel == file://* ]]; then
     echo "target root folder: $target"
 
     chmod 755 $target/$arch/
-    
+
     for f in $(find dist_conda -name "*.tar.bz2"); do
         echo "copying file: $f ..."
         arch=$(basename $(dirname $f))
@@ -39,7 +39,7 @@ if [[ $channel == file://* ]]; then
     done
 
     echo "index repo ..."
-    conda index $target/..
+    conda index $target
 
     echo "indexing is done, please run: conda search <lib name> to verify"
     echo "done"
