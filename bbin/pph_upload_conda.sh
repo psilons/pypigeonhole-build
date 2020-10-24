@@ -29,6 +29,8 @@ if [[ $channel == file://* ]]; then
     export target=${channel#"file://"}
     echo "target root folder: $target"
 
+    chmod 755 $target/$arch/
+    
     for f in $(find dist_conda -name "*.tar.bz2"); do
         echo "copying file: $f ..."
         arch=$(basename $(dirname $f))
