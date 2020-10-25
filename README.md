@@ -155,8 +155,10 @@ process.
       envs are mislabeled. So close the window and open a new one. Conda build
       on linux is just fine. 
       >>We found out that if we run this command outside any conda environment,
-      everything works fine. We filed a issue ticket with conda build:
-      https://github.com/conda/conda-build/issues/4112
+      everything works fine. We filed a issue ticket with conda build:      
+      https://github.com/conda/conda-build/issues/4112.
+      In order to run conda build outside environments, we need to install
+      conda-build and conda-verify packages.
      
       >One of the reasons we like conda is because it could bundle other files.
       It's more handy than zip because we use it as a transporter as well.
