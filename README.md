@@ -126,6 +126,11 @@ process.
   [Errno 13] Permission denied: 'D:\\0dev\\miniconda3\\envs\\py390_pypigeonhole_build\\vcruntime140.dll'    
   ()     
 
+  >If repeat runs fail, you may have some python processes running in the 
+  background. One typical indicator is when you see messages saying can't
+  delete files. Kill those processes and delete the entire folder of the old
+  environment.
+  
   >The existing conda environment with same env name will be deleted, and a 
   new environment will be created. 
   
