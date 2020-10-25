@@ -30,8 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,18 +88,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin\conda" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\dbin" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\00dev\python\projects\pypigeonhole-build\docs" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\test\test_pypigeonhole_build" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin\conda" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\dbin" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
     </key>
   </component>
   <component name="RunManager" selected="Python.test_app_setup">
@@ -272,6 +271,7 @@
       <workItem from="1603566662404" duration="613000" />
       <workItem from="1603570747688" duration="1986000" />
       <workItem from="1603573429657" duration="4352000" />
+      <workItem from="1603595192693" duration="1800000" />
     </task>
     <task id="LOCAL-00001" summary="fix release bug">
       <created>1603001209900</created>

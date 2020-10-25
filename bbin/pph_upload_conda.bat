@@ -35,13 +35,14 @@ if "%channel:~0,8%" == "file:///" (
     set target=%channel:~8%
     echo target root folder: %target%
 
-    icacls %target%\%arch% /grant Everyone:M
+    echo set permission on channel ...
+    icacls %target% /grant Everyone:M
 
     for /f "delims=" %%I in ('dir dist_conda\* /s/b ^| findstr \.tar.bz2$') do (
         echo copying file: %%I ...
-        set f=%%I
+
         for %%a in ("%%I") do for %%b in ("%%~dpa\.") do set "arch=%%~nxb"
-        echo folder: %arch%
+        echo platform folder: %target%\%arch%
         xcopy /Y %%I %target%\%arch%
     )
 
@@ -54,5 +55,4 @@ if "%channel:~0,8%" == "file:///" (
 )
 
 echo unknown destination
-
-
+exit /B 1
