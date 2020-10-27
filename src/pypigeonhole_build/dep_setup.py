@@ -18,7 +18,7 @@ __python_version = 'py390'  # take 3 digits, major, minor, patch
 CONDA.env = __python_version + '_' + app_setup.get_top_pkg()
 CONDA.channels = ['defaults']  # update channels, if needed.
 
-_dependent_libs = [
+dependent_libs = [
     Dependency(name='python', version='>=3.6', scope=INSTALL, installer=CONDA),
     Dependency(name='pip', installer=CONDA),  # Without this Conda complains
     Dependency(name='coverage', version='==5.3', installer=CONDA, desc='test coverage'),  # DEV
@@ -35,24 +35,26 @@ _dependent_libs = [
 # ##############################################################################
 
 # used by setup.py, hide details - how we compute these values.
-install_required = pip_translator.get_install_required(_dependent_libs)
+install_required = pip_translator.get_install_required(dependent_libs)
 
-test_required = pip_translator.get_test_required(_dependent_libs)
+test_required = pip_translator.get_test_required(dependent_libs)
 
-python_required = pip_translator.get_python_requires(_dependent_libs)
+python_required = pip_translator.get_python_requires(dependent_libs)
 
-# we can't abstract this out since it knows pip and conda, maybe more tools
-# later on, such as poetry.
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
+
+def main(args):
+    if len(args) < 2:
         raise ValueError('need to pass in parameters: pip, conda, conda_env, etc')
-
     # scripts use these
-    if sys.argv[1] == 'pip':
-        pip_translator.gen_req_txt(_dependent_libs, 'requirements.txt')
-    elif sys.argv[1] == 'conda':
-        conda_translator.gen_conda_yaml(_dependent_libs, 'environment.yml')
-    elif sys.argv[1] == 'conda_env':
+    if args[1] == 'pip':
+        pip_translator.gen_req_txt(dependent_libs, 'requirements.txt')
+    elif args[1] == 'conda':
+        conda_translator.gen_conda_yaml(dependent_libs, 'environment.yml')
+    elif args[1] == 'conda_env':
         print(CONDA.env)
     else:
-        raise ValueError(f'unknown parameter {sys.argv[1]}')
+        raise ValueError(f'unknown parameter {args[1]}')
+
+
+if __name__ == "__main__":
+    main(sys.argv)

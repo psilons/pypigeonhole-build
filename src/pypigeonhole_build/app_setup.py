@@ -25,6 +25,14 @@ def get_app_version():  # used by setup.py
     return __app_version
 
 
+# if app name == app directory name == top package name with - to _
+# then scripts and python code can ride on this smoothly.
+def get_app_name():  # used by setup.py
+    top_pkg = get_top_pkg()
+    app_name = top_pkg.replace('_', '-')
+    return app_name
+
+
 # may overwrite these 2 methods, e.g., return constant strings
 def get_top_pkg():  # part of conda environment name
     # assume this file's folder is the top package
@@ -34,11 +42,3 @@ def get_top_pkg():  # part of conda environment name
     curr_dir = os.path.dirname(os.path.realpath(__file__))
     top_pkg = os.path.basename(curr_dir)
     return top_pkg
-
-
-# if app name == app directory name == top package name with - to _
-# then scripts and python code can ride on this smoothly.
-def get_app_name():  # used by setup.py
-    top_pkg = get_top_pkg()
-    app_name = top_pkg.replace('_', '-')
-    return app_name
