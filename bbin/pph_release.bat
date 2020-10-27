@@ -9,6 +9,7 @@ SET curr_env=%CONDA_DEFAULT_ENV%
 ECHO current env: %curr_env%
 IF "%curr_env%" == "" (
     echo Please activate conda env first!
+    EXIT /B 1
 )
 
 for %%a in ("%ProjDir%") do set "proj_name=%%~nxa"

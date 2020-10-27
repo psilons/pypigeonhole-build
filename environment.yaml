@@ -1,4 +1,4 @@
-name: py390_pypigeonhole_build
+name: py385_pypigeonhole_build
 
 channels:
     - defaults
@@ -11,6 +11,6 @@ dependencies:
     - conda-verify
     - anaconda-client
     - pip:
-        - pipdeptree
-        - coverage-badge
-        - twine
+          - pipdeptree
+          - coverage-badge
+          - twine

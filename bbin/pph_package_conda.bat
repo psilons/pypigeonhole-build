@@ -11,6 +11,7 @@ SET curr_env=%CONDA_DEFAULT_ENV%
 ECHO current env: %curr_env%
 IF "%curr_env%" == "" (
     echo Please activate conda env first!
+    REM EXIT /B 1
 )
 
 if exist %ProjDir%\dist_conda RMDIR /Q /S %ProjDir%\dist_conda

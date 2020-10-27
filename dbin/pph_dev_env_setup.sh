@@ -9,23 +9,19 @@ echo project name: $proj_name
 export pkg=$(echo $proj_name | tr - _)
 echo top package name: $pkg
 
-test -f "src/$pkg/dep_setup.py" || { cho "Please create dep_setup.py in $proj_dir/src/$pkg first!"; exit 1; }
-#if [ ! -f "src/$pkg/dep_setup.py" ]; then
-#    echo "Please create dep_setup.py in $proj_dir/src/$pkg first!"
-#    exit 1
-#fi
+test -f "src/$pkg/app_setup.py" || { cho "Please create app_setup.py in $proj_dir/src/$pkg first!"; exit 1; }
 
 export PYTHONPATH=src:$PYTHONPATH
 
 echo create conda environment.yml
-python src/$pkg/dep_setup.py conda
+python src/$pkg/app_setup.py conda
 [ $? -eq 0 ] || { echo "error on generating environment.yml"; exit 1; }
 
 echo create pip requirements.txt
-python src/$pkg/dep_setup.py pip
+python src/$pkg/app_setup.py pip
 [ $? -eq 0 ] || { echo "error on generating requirements.txt"; exit 1; }
 
-export new_env=$(python src/$pkg/dep_setup.py conda_env)
+export new_env=$(python src/$pkg/app_setup.py conda_env)
 [ $? -eq 0 ] || { echo "error on getting new env"; exit 1; }
 echo new env: $new_env
 

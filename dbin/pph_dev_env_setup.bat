@@ -9,27 +9,27 @@ echo Project Folder: %ProjDir%
 
 for %%a in ("%ProjDir%") do set "proj_name=%%~nxa"
 echo project name: %proj_name%
+
 set pkg=%proj_name:-=_%
 echo top package name: %pkg%
 
-IF NOT EXIST src\%pkg%\dep_setup.py (
-    ECHO Please create dep_setup.py in %ProjDir%\src\%pkg% folder first!
+IF NOT EXIST src\%pkg%\app_setup.py (
+    ECHO Please create app_setup.py in %ProjDir%\src\%pkg% folder first!
     EXIT /B 1
 )
 
 set PYTHONPATH=src;%PYTHONPATH%
 
 echo create conda environment.yml
-python src\%pkg%\dep_setup.py conda
+python src\%pkg%\app_setup.py conda
 if errorlevel 1 exit /B 1
-REM environment.yml should be created for conda installation
 
 echo create pip requirements.txt
 REM we need to generate requirements.txt as well since github needs for dependency graph
-python src\%pkg%\dep_setup.py pip
+python src\%pkg%\app_setup.py pip
 if errorlevel 1 exit /B 1
 
-FOR /F %%I IN ('python src\%pkg%\dep_setup.py conda_env') DO SET new_env=%%I
+FOR /F %%I IN ('python src\%pkg%\app_setup.py conda_env') DO SET new_env=%%I
 if errorlevel 1 exit /B 1
 echo new env: %new_env%
 

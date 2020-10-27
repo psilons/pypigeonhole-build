@@ -116,7 +116,7 @@ process.
   
 ## SDLC Process
 
-- Now we set up the conda env: ```pphsdlc.sh setup```  
+- Now we set up the conda env: ```pphsdlc.sh setup 2>&1 | tee a.log```  
   At the end of the run, it prints out which env it creates and you just
   activate that. If you run into this issue on windows, just rerun the
   script (Maybe the IDE locks this, just a wild guess):  
@@ -191,9 +191,9 @@ process.
 - Now it's time to run some local sanity checks on the new packages. Install
   these packages in local.
 - To upload packages to central servers, run
-    - ```pphsdlc.sh upload pip```: This uploads to PIP servers. You may 
+    - ```pphsdlc.sh upload pip``` This uploads to PIP servers. You may 
       redirect the servers in settings.
-    - ```pphsdlc.sh upload conda <package>```: This upload to conda repo. You
+    - ```pphsdlc.sh upload conda <package>``` This upload to conda repo. You
       may redirect this too.
   
 - Now we run ```pphsdlc.sh release``` to tag the version in GIT and then bump

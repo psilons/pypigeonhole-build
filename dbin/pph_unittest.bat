@@ -11,6 +11,7 @@ SET curr_env=%CONDA_DEFAULT_ENV%
 ECHO current env: %curr_env%
 IF "%curr_env%" == "" (
     echo Please activate conda env first!
+    EXIT /B 1
 )
 
 REM Need to make sure the test coverage is only for src, not for both src and test

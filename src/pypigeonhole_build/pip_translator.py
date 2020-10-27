@@ -33,7 +33,7 @@ def get_python_requires(libs):
             print('use python version: ' + lib.version, file=sys.stderr)
             return lib.version
 
-    return None
+    return '>=3.5'
 
 
 def gen_req_txt(libs, target_file):
