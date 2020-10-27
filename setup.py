@@ -11,7 +11,6 @@ sys.path.append(src_path)
 HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
-
 # If this is needed during dev by others, cd this folder and run pip install -e .
 # This is reusable in normal cases.
 setup(name=app_setup.app_name(),
