@@ -14,7 +14,7 @@ __app_name = os.path.basename(proj_dir)
 # ##############################################################################
 # These are the settings for the app.
 # ##############################################################################
-__app_version = "0.4.5"
+__app_version = "0.4.6"
 vc.bump_version = vc.bump_version_upto10
 
 __python_version = 'py385'  # take 3 digits, major, minor, patch
