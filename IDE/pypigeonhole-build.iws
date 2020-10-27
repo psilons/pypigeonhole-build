@@ -29,23 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_package_conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_package_conda.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_dev_env_setup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dbin/pph_unittest.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_unittest.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../environment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/app_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/app_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/dep_setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pypigeonhole_build/pip_translator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_app_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_app_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test/test_pypigeonhole_build/test_dep_setup.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +283,7 @@
       <workItem from="1603573429657" duration="4352000" />
       <workItem from="1603595192693" duration="1800000" />
       <workItem from="1603599713368" duration="1124000" />
-      <workItem from="1603742413732" duration="13669000" />
+      <workItem from="1603742413732" duration="14781000" />
     </task>
     <task id="LOCAL-00001" summary="fix release bug">
       <created>1603001209900</created>
@@ -440,10 +424,10 @@
     </state>
     <state x="701" y="22" width="1416" height="992" key="dock-window-1/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1603252718998" />
     <state x="640" y="138" width="838" height="949" key="dock-window-1/0.27.2048.1060@0.27.2048.1060" timestamp="1603002469435" />
-    <state x="782" y="307" width="704" height="558" key="find.popup" timestamp="1603743968350">
+    <state x="782" y="307" width="704" height="558" key="find.popup" timestamp="1603782633266">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="782" y="307" width="704" height="558" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1603743968350" />
+    <state x="782" y="307" width="704" height="558" key="find.popup/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1603782633266" />
     <state x="2868" y="307" width="691" height="624" key="find.popup/0.0.2048.1152/2110.0.1986.1152@2110.0.1986.1152" timestamp="1603178256514" />
     <state x="363" y="120" key="new project wizard" timestamp="1602776218853">
       <screen x="0" y="0" width="2048" height="1152" />

@@ -1,7 +1,5 @@
-REM No need to use this script:
-REM     the artifact name and path are not predictable
-REM     anaconda login is not re-entrant: if I am in, leave me alone.
-REM In contrast, PIP is better.
+@echo off
+
 SET ProjDir=%cd%
 IF NOT EXIST setup.py (
     ECHO Please go to project folder!

@@ -1,3 +1,4 @@
+@echo off
 SET ProjDir=%cd%
 IF NOT EXIST setup.py (
     ECHO Please go to project folder!
