@@ -3,10 +3,10 @@ import pathlib
 import os
 import sys
 
-import pypigeonhole_build.app_setup as app_setup
-
 src_path = os.path.join(os.path.dirname(__file__), 'src')
 sys.path.append(src_path)
+
+import pypigeonhole_build.app_setup as app_setup
 
 HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()

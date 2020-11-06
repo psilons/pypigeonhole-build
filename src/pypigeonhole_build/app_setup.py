@@ -8,8 +8,10 @@ import pypigeonhole_build.app_version_control as vc
 import pypigeonhole_build.dep_manager as dep_manager
 
 curr_dir = os.path.dirname(os.path.realpath(__file__))
-proj_dir = os.path.dirname(os.path.dirname(curr_dir))  # skip top package and src
-__app_name = os.path.basename(proj_dir)
+# This way does not work for conda build!
+# proj_dir = os.path.dirname(os.path.dirname(curr_dir))  # skip top package and src
+# __app_name = os.path.basename(proj_dir)
+__app_name = os.path.basename(curr_dir).replace('_', '-')
 
 # ##############################################################################
 # These are the settings for the app.

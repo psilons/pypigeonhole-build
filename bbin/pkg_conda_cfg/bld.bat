@@ -15,5 +15,5 @@ REM xcopy %SRC_DIR%\bbin "%SCRIPTS%"
 
 xcopy %SRC_DIR%\dbin %PREFIX%
 xcopy %SRC_DIR%\bbin %PREFIX%
-
-%PYTHON% -m pip install .
+vv
+%PYTHON% -m pip install . --ignore-installed -vv
