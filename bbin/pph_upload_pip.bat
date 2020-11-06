@@ -24,4 +24,9 @@ if "%repo%" == "" (
 REM make sure the repository is defined in ~/.pypirc.
 ECHO use PIP repository: %repo%
 
-twine upload -r %repo% %ProjDir%/dist/*
+SET conf_file=%PYPI_CONF_FILE%
+if "%conf_file%" == "" (
+    SET conf_file=%USERPROFILE%\.pypirc
+)
+
+twine upload -r %repo% --config-file %conf_file% %ProjDir%/dist/*

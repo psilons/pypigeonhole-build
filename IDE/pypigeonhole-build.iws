@@ -29,9 +29,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../docs/graphviz.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docs/gviz_test.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/impl_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/impl_notes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bbin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../docs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -87,20 +92,22 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28965518" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin\conda" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\dbin" />
-      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\00dev\python\projects\pypigeonhole-build\docs" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\src" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
       <recent name="D:\00dev\python\projects\pypigeonhole-build\test\test_pypigeonhole_build" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\docs" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\bbin\conda" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\dbin" />
+      <recent name="D:\00dev\python\projects\pypigeonhole-build\src\pypigeonhole_build" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests in test_pypigeonhole_build">
@@ -233,9 +240,9 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_app_setup" />
+      <item itemvalue="Python.app_setup" />
       <item itemvalue="Python tests.Unittests in test_pypigeonhole_build" />
       <item itemvalue="Python tests.Unittests in test_dep_setup.py" />
-      <item itemvalue="Python.app_setup" />
       <item itemvalue="Python tests.Unittests for test_dep_manager.DepManagerTest.test_main" />
     </list>
     <recent_temporary>
@@ -286,6 +293,8 @@
       <workItem from="1603595192693" duration="1800000" />
       <workItem from="1603599713368" duration="1124000" />
       <workItem from="1603742413732" duration="20499000" />
+      <workItem from="1604349933824" duration="643000" />
+      <workItem from="1604628468617" duration="8604000" />
     </task>
     <task id="LOCAL-00001" summary="fix release bug">
       <created>1603001209900</created>
@@ -337,10 +346,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="516" y="211" width="1297" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1602125858032" />
-    <state x="825" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603780288158">
+    <state x="825" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604632995098">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="825" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1603780288158" />
+    <state x="825" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1152/2110.0.1986.1152@0.0.2048.1152" timestamp="1604632995098" />
     <state x="792" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603779673143">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

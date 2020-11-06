@@ -20,4 +20,7 @@ fi
 
 echo use PIP repository: $repo
 
-twine upload -r $repo $proj_dir/dist/*
+export conf_file=${PYPI_CONF_FILE:-~/.pypirc}
+echo use PYPI RC file: $conf_file
+
+twine upload -r $repo --config-file $conf_file $proj_dir/dist/*

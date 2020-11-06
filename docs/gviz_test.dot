@@ -1,0 +1,5 @@
+// Test whether graphviz installation works
+// dot -Tpng -ogviz_test.png gviz_test.dot
+graph {
+    A -- B
+}

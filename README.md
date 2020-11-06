@@ -19,7 +19,7 @@ This tool is built on top of Conda, PIP and GIT.
 
 Specifically, we tackle the following areas:
 - dependency management: create central structure and populate information to 
-  setup.py and requirements.txt/environment.yml.
+  setup.py, pip's requirements.txt and conda's environment.yml.
 - version management: tag GIT code with the current version and then bump the 
   version (save back to GIT too).
 - identify the key steps in terms of scripts. These scripts' functionalities 
@@ -45,13 +45,13 @@ A good example for efficiency is Java's mature tool,
 After the initial project setup, the process has the following steps,
 with the script ```pphsdlc.sh or pphsdlc.bat``` (We use the bash name below
 for simplicity):
-- setup: create conda environment specified in dep_setup.py
-- test: run unit tests and collect coverage
-- package: package artifact with pip | conda | zip
-- upload: upload to pip | piptest | conda
-- release: tag the current version in git and then bump the version
-- cleanup: cleanup intermediate results in filesystem
-- help or without any parameter: this menu
+- **setup**: create conda environment specified in dep_setup.py
+- **test**: run unit tests and collect coverage
+- **package**: package artifact with pip | conda | zip
+- **upload**: upload to pip | piptest | conda
+- **release**: tag the current version in git and then bump the version
+- **cleanup**: cleanup intermediate results in filesystem
+- **help** or without any parameter: this menu
 
 These 6 steps (minus help) should be enough for most projects (excluding 
 integration testing/etc), and they are simple steps, as simple as Maven.
@@ -64,8 +64,8 @@ environment
 
 ```conda install -c psilons pypigeonhole-build```
 
-It's the jump start of the process - create other conda environments specified 
-in the dep_setup.py. It installs its scripts in the base env, prefixed by pph_ . 
+This is the jump start of the process - create other conda environments specified 
+in the app_setup.py. It installs its scripts in the base env, prefixed by pph_ . 
 The interface is ```pphsdlc.sh``` with the above 6 options. This script should run 
 in the project folder and in the conda env, except the first step (setup env).
 
@@ -81,14 +81,13 @@ setup:
 - under src create the top package folder, it's the project name with "-"
   replaced by "_" . In this case, it's pypigeonhole_build. Since the top 
   package has to be globally unique, choose it wisely. This top package name 
-  is also part of the conda env name.
-- copy app_setup.py and dep_setup.py from here to the top package, and 
-  modify them:
+  is also part of the conda env name by default (can be overwritten).
+- copy app_setup.py from here to the top package, and modify them:
     - modify the version number in app_setup.py: __app_version. This 
       variable name is hardcoded in the version bumping script. You may 
-      choose a different bumping strategy. 
+      choose a different bumping strategy in the next line. 
     - modify the settings and add dependencies in the marked region in
-      dep_setup.py. Each dependency has the following fields:
+      app_setup.py. Each dependency has the following fields:
         - name: required. If name == python, the "python_requires" field in the 
           setup.py will be touched.
         - version: default to latest. Need full format: '==2.5'
@@ -107,7 +106,10 @@ setup:
                                                                                   
       Otherwise, the conda-build would fail later on.
 - copy the setup.py to the project root, change the imports around line 
-  14/15 to match your top package. 
+  6 near the top to match your top package. copy the test_app_setup.py in the
+  test folder as well. In addition, copy the __init__.py in the 
+  test/<top package> as well - we need this for unit test run from command
+  line.
 
 These are the minimal information we need in order to carry out the SDLC 
 process. 
@@ -119,7 +121,7 @@ process.
 - Now we set up the conda env: ```pphsdlc.sh setup 2>&1 | tee a.log```  
   At the end of the run, it prints out which env it creates and you just
   activate that. If you run into this issue on windows, just rerun the
-  script (Maybe the IDE locks this, just a wild guess):  
+  script (Maybe the IDE locks the environment created previously):  
   >ERROR conda.core.link:_execute(698): An error occurred while installing 
   package 'defaults::vs2015_runtime-14.16.27012-hf0eaf9b_3'. Rolling back 
   transaction: ...working... done   
@@ -145,7 +147,7 @@ process.
   generates test coverage report and coverage badge.
                                                                     
   >In order to run test from the project root folder, we add a src reference in
-  the __init__.py under test top package. Otherwise, tests can run only from
+  the \_\_init__.py under test top package. Otherwise, tests can run only from
   the src folder.
   
 - If test coverage is good, we can pack the project, with pip, conda, or zip.
@@ -239,3 +241,11 @@ Future considerations:
 - package_data in setup.py is not supported (yet).
 - dependency information is not populated to meta.yaml, used by conda-build.
 - Need a network storage to store build/test results with http access for CI.
+
+Use ```python -m pip``` instead of ```pip```:  
+https://adamj.eu/tech/2020/02/25/use-python-m-pip-everywhere/
+
+PIP install from GIT directly:
+- https://adamj.eu/tech/2019/03/11/pip-install-from-a-git-repository/  
+- https://blog.abelotech.com/posts/how-download-github-tarball-using-curl-wget/
+- https://stackoverflow.com/questions/22241420/execution-of-python-code-with-m-option-or-not

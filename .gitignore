@@ -5,3 +5,4 @@ __pycache__
 /dist
 /dist_conda
 /dist_zip
+/docs/gviz_test.png
