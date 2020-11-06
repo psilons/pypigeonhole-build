@@ -48,15 +48,15 @@ and see how it goes.
 ## Implementation
 
 - We isolate dependency specification to one place, 
-  ```<project root>src\<project top package>\dep_setup.py```. For example, 
+  ```<project root>src\<project top package>\app_setup.py```. For example, 
   if a project folder is foo-bar, then this is the project name and foo_bar 
   is the top package name. Then the dependency is in 
-  foo-bar\src\foo_bar\dep_setup.py. 
+  foo-bar\src\foo_bar\app_setup.py. 
   >We have to get hint on where the dependency file is. We don't want to put
   dep_setup.py under src. Otherwise, the installation would put this file
   outside packages under site-packages.
   
-- The file name dep_setup.py is hard-coded as well. It's used to generate
+- The file name app_setup.py is hard-coded as well. It's used to generate
   PIP's requirements.txt and Anaconda's environment.yaml, and version changes. 
   setup.py refers to this file as well. Basically we retrofit the information
   back to the current channels since they are widely used and referred.

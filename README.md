@@ -8,7 +8,7 @@
 ![License](https://anaconda.org/psilons/pypigeonhole-build/badges/license.svg)
 
 
-This is a Python SDLC tool to shorten the time we spend on SDLC without
+This is a simple Python SDLC tool to shorten the time we spend on SDLC without
 sacrificing quality. It does so by hard-coding certain flexible parts
 (convention over configuration). 
 Flexibility could lead to confusion and low efficiency because there is
@@ -41,6 +41,8 @@ A good example for efficiency is Java's mature tool,
   
   
 ## Standard SDLC Process Acceleration
+
+![SDLC](docs/sdlc.png)
 
 After the initial project setup, the process has the following steps,
 with the script ```pphsdlc.sh or pphsdlc.bat``` (We use the bash name below

@@ -17,10 +17,8 @@ __app_name = os.path.basename(proj_dir)
 __app_version = "0.4.7"
 vc.bump_version = vc.bump_version_upto10
 
-__python_version = 'py385'  # take 3 digits, major, minor, patch
-
 top_pkg = __app_name.replace('-', '_')
-CONDA.env = __python_version + '_' + top_pkg  # _ is easier to copy the word
+CONDA.env = top_pkg  # _ is easier to copy the word
 CONDA.channels = ['defaults']  # update channels, if needed.
 
 dependent_libs = [
