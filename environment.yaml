@@ -11,6 +11,6 @@ dependencies:
     - conda-verify
     - anaconda-client
     - pip:
-          - pipdeptree
-          - coverage-badge
-          - twine
+        - pipdeptree
+        - coverage-badge
+        - twine
