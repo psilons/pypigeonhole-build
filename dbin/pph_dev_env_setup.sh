@@ -40,7 +40,7 @@ if [ "$curr_env" != "" ]; then  # this is why we do not use set -e
 fi
 
 echo create new env ...
-conda env create -f environment.yaml
+conda env create -f environment.yml
 
 if [[ $? -ne 0 ]]; then
     echo env[$new_env] exists, removing it ...

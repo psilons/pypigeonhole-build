@@ -2,7 +2,8 @@
 
 set -e
 
-export script_dir=$(dirname $(readlink -f $0))
+# export script_dir=$(dirname $(readlink -f $0))
+export script_dir=$(readlink -f $0)
 echo Script Folder: $script_dir
 
 export proj_dir=$(pwd)
