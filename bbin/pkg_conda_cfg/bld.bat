@@ -13,7 +13,7 @@ echo copying scripts to %PREFIX%...
 REM xcopy %SRC_DIR%\dbin "%SCRIPTS%"
 REM xcopy %SRC_DIR%\bbin "%SCRIPTS%"
 
-xcopy %SRC_DIR%\dbin\*.bat %PREFIX%\Scripts\
-xcopy %SRC_DIR%\bbin\*.bat %PREFIX%\Scripts\
+xcopy %SRC_DIR%\dbin\* %PREFIX%\bin\
+xcopy %SRC_DIR%\bbin\* %PREFIX%\bin\
 
 %PYTHON% -m pip install . --ignore-installed -vv

@@ -28,12 +28,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="fix release bug">
-      <change beforePath="$PROJECT_DIR$/pypigeonhole-build.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.ipr" afterDir="false" />
+    <list default="true" id="d6ac9be6-a383-46cb-9ab2-9d007547f37e" name="Default Changelist" comment="fix mac related scripts">
       <change beforePath="$PROJECT_DIR$/pypigeonhole-build.iws" beforeDir="false" afterPath="$PROJECT_DIR$/pypigeonhole-build.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/bld.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pkg_conda_cfg/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bbin/pph_package_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_package_pip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_cleanup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_cleanup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_pack_app_zip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_package_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_package_conda.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_release.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_release.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_conda.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pph_upload_pip.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bbin/pphsdlc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../bbin/pphsdlc.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dbin/pph_unittest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../dbin/pph_unittest.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +314,7 @@
       <workItem from="1604690003866" duration="1395000" />
       <workItem from="1604691842021" duration="1953000" />
       <workItem from="1633353402417" duration="6839000" />
-      <workItem from="1633395251089" duration="4446000" />
+      <workItem from="1633395251089" duration="8402000" />
     </task>
     <task id="LOCAL-00001" summary="fix release bug">
       <created>1603001209900</created>
@@ -324,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633395540948</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix mac related scripts">
+      <created>1633399873600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633399873600</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +368,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix release bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix release bug" />
+    <MESSAGE value="fix mac related scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix mac related scripts" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pypigeonhole_build$Unittests_for_test_file_edit_utils_FileEditorUtilsTest_test_version_inc.coverage" NAME="Unittests for test_file_edit_utils.FileEditorUtilsTest.test_version_inc Coverage Results" MODIFIED="1602122144871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test/test_pypigeonhole_build" />
