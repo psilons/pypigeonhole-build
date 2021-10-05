@@ -251,3 +251,6 @@ PIP install from GIT directly:
 - https://adamj.eu/tech/2019/03/11/pip-install-from-a-git-repository/  
 - https://blog.abelotech.com/posts/how-download-github-tarball-using-curl-wget/
 - https://stackoverflow.com/questions/22241420/execution-of-python-code-with-m-option-or-not
+
+Conda build on windows turns LF to CRLF, so we need dos2unix on Mac or Linux.
+On Mac, use brew install dos2unix
