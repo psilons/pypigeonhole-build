@@ -149,7 +149,7 @@ process.
   generates test coverage report and coverage badge.
                                                                     
   >In order to run test from the project root folder, we add a src reference in
-  the \_\_init__.py under test top package. Otherwise, tests can run only from
+  the `__init__.py` under test top package. Otherwise, tests can run only from
   the src folder.
   
 - If test coverage is good, we can pack the project, with pip, conda, or zip.
