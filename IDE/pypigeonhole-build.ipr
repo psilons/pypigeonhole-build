@@ -65,7 +65,7 @@
       <module fileurl="file://$PROJECT_DIR$/pypigeonhole-build.iml" filepath="$PROJECT_DIR$/pypigeonhole-build.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="true" project-jdk-name="Python 3.8 (py385_pypigeonhole_build)" project-jdk-type="Python SDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="true" project-jdk-name="Python 3.8 (pypigeonhole_simple_utils)" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="VcsDirectoryMappings">
