@@ -16,7 +16,7 @@ __app_name = os.path.basename(curr_dir).replace('_', '-')
 # ##############################################################################
 # These are the settings for the app.
 # ##############################################################################
-__app_version = "0.5.1"
+__app_version = "0.5.2"
 vc.bump_version = vc.bump_version_upto10
 
 top_pkg = __app_name.replace('-', '_')
