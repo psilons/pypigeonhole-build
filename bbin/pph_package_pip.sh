@@ -3,10 +3,10 @@
 set -e
 
 export osname=$(uname)
-if [ "$osname" == "Darwin"]; then # Mac
+if [ "$osname" == "Darwin" ]; then # Mac
     export script_dir=$(cd "$(dirname "$0")"; pwd -P)
 else
-    export script_dir=$(readlink -f $0)
+    export script_dir=$(dirname $(readlink -f $0))
 fi
 echo Script Folder: $script_dir
 
