@@ -13,7 +13,8 @@ echo copying scripts to %PREFIX%...
 REM xcopy %SRC_DIR%\dbin "%SCRIPTS%"
 REM xcopy %SRC_DIR%\bbin "%SCRIPTS%"
 
-xcopy %SRC_DIR%\dbin\* %PREFIX%\bin\
-xcopy %SRC_DIR%\bbin\* %PREFIX%\bin\
+REM Do not add subfolder after %PREFIX%, otherwise the build will fail.
+xcopy %SRC_DIR%\dbin\* %PREFIX%
+xcopy %SRC_DIR%\bbin\* %PREFIX%
 
 %PYTHON% -m pip install . --ignore-installed -vv

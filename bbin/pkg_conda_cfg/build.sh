@@ -7,14 +7,11 @@ ls -ltr $PREFIX
 
 echo copying scripts to $PREFIX ...
 
-cp $SRC_DIR/dbin/pph* $PREFIX/bin
-cp $SRC_DIR/bbin/pph* $PREFIX/bin
+cp $SRC_DIR/dbin/pph* $PREFIX
+cp $SRC_DIR/bbin/pph* $PREFIX
 
-for f in $PREFIX/bin/pph*; do
-    sed 's/\r//g' < $f > $f
-done
 
-chmod 755 $PREFIX/bin/pph*
+chmod 755 $PREFIX/pph*
 
 ls -ltr $PREFIX
 
