@@ -14,7 +14,12 @@ REM xcopy %SRC_DIR%\dbin "%SCRIPTS%"
 REM xcopy %SRC_DIR%\bbin "%SCRIPTS%"
 
 REM Do not add subfolder after %PREFIX%, otherwise the build will fail.
+mkdir %PREFIX%\bin
 xcopy %SRC_DIR%\dbin\* %PREFIX%
 xcopy %SRC_DIR%\bbin\* %PREFIX%
+REM copying break this again, so reset
+dos2unix %PREFIX%\*
+REM this is still not working! copying alternates this!
+icacls %PREFIX%\* /grant Everyone:RX
 
 %PYTHON% -m pip install . --ignore-installed -vv

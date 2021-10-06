@@ -254,3 +254,6 @@ PIP install from GIT directly:
 
 Conda build on windows turns LF to CRLF, so we need dos2unix on Mac or Linux.
 On Mac, use brew install dos2unix
+
+https://waterlan.home.xs4all.nl/dos2unix.html
+
