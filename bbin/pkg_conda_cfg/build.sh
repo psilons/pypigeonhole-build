@@ -9,9 +9,7 @@ echo copying scripts to $PREFIX ...
 
 cp $SRC_DIR/dbin/pph* $PREFIX
 cp $SRC_DIR/bbin/pph* $PREFIX
-dos2unix $PREFIX/*
-
-chmod 755 $PREFIX/pph*
+dos2unix $PREFIX/pph*
 
 ls -ltr $PREFIX
 

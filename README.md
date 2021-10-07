@@ -255,5 +255,10 @@ PIP install from GIT directly:
 Conda build on windows turns LF to CRLF, so we need dos2unix on Mac or Linux.
 On Mac, use brew install dos2unix
 
-https://waterlan.home.xs4all.nl/dos2unix.html
+To remove ^M on Mac or Linux:
+- https://waterlan.home.xs4all.nl/dos2unix.html
+- or use sed: ```sed 's/\r//g' < setup.py > setup.py```
+- or in vi do ```:set fileformat=unix```
+
+A similar tool is: https://github.com/python-poetry/poetry
 
