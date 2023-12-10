@@ -262,3 +262,4 @@ To remove ^M on Mac or Linux:
 
 A similar tool is: https://github.com/python-poetry/poetry
 
+https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda
